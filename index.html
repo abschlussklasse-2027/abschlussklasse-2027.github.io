@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Unsere Abschlussparty 2027</title>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="skip" href="#fragen-bereich">Direkt zu den Fragen</a>
+<header class="kopf">
+  <p class="emoji" aria-hidden="true">🎉🎈🎓</p>
+  <h1>Unsere Abschlussparty 2027</h1>
+  <p class="unter">Wir bauen unsere eigene Seite, mit KI und ganz ohne Kosten</p>
+  <p class="wann"><span>📅 Datum: kommt noch</span><span>📍 Ort: kommt noch</span></p>
+</header>
+<main>
+<section class="block">
+  <h2>Die Idee in drei Sätzen</h2>
+  <ol class="drei">
+    <li>Die Seite liegt bei GitHub und kostet nichts.</li>
+    <li>Hinter der Seite arbeitet ein KI-Helfer: Ihr sagt oder schreibt einen Wunsch, er baut die Seite dazu.</li>
+    <li>Fotos ladet ihr direkt vom Handy hoch.</li>
+  </ol>
+</section>
+
+<section class="block video-block" aria-labelledby="vt">
+  <h2 id="vt">Unser Video</h2>
+  <div class="videorahmen">
+    <video id="video" controls playsinline preload="metadata" hidden aria-label="Unser Video">
+      <source src="video/abschlussparty.mp4" type="video/mp4">
+    </video>
+    <div id="video-platzhalter" class="platzhalter"><span aria-hidden="true">🎬</span><strong>Das Video kommt gleich</strong></div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>So funktioniert es</h2>
+  <ul class="punkte">
+    <li><b>1. Die Seite.</b> Die Seite gehört der Klasse und läuft auf einem eigenen Konto, das später übergeben werden kann.</li>
+    <li><b>2. Der KI-Helfer.</b> Ihr sagt per Sprache oder schiebt mit dem Finger Bausteine herum, der KI-Helfer baut den Vorschlag, online geht er erst nach Freigabe des Gremiums.</li>
+    <li><b>3. Fotos.</b> Fotos kommen direkt vom Handy auf die Seite oder per Mail.</li>
+  </ul>
+</section>
+
+<section class="block">
+  <h2>Was es kostet</h2>
+  <ul class="punkte">
+    <li>Seite und Adresse abschlussklasse-2027.github.io kosten nichts. Die Gratis-Adresse von GitHub ist entschieden.</li>
+    <li>Der KI-Helfer ist «gesponsert von Louisas Papa» und hat ein festes Limit.</li>
+  </ul>
+</section>
+
+<section class="block datenschutz" aria-labelledby="dt">
+  <h2 id="dt">🔒 Wichtig: Fotos und Einverständnis</h2>
+  <p>Alle in der Klasse sind unter 16. Fotos und Namen kommen nur auf die Seite, wenn die Person selbst und ihre Eltern ausdrücklich zugestimmt haben. Wer nicht möchte, bleibt draußen, und jedes Foto kann jederzeit gelöscht werden.</p>
+  <p>Im Gratis-Tarif von GitHub ist alles öffentlich: Jede Person im Internet kann die Seite und alle Bilder sehen. Deshalb braucht jedes Foto, auf dem jemand zu erkennen ist, das Einverständnis der Person und der Eltern.</p>
+  <p>Hier unten gibst du <b>keinen Namen</b> und keine E-Mail-Adresse an. Deine Kreuze sind anonym.</p>
+  <p class="klein">Das ist keine Rechtsberatung. Bei unter 16-Jährigen soll nach der Datenschutz-Grundverordnung die Zustimmung der Eltern vorliegen.</p>
+</section>
+
+<section id="fragen-bereich" class="block">
+  <h2>Eure Entscheidungen zum Ankreuzen</h2>
+  <div id="formular">
+    <div class="fortschritt" role="progressbar" aria-label="Fortschritt" aria-valuemin="0" aria-valuenow="0">
+      <div id="fortschritt-balken"></div>
+    </div>
+    <p id="fortschritt-text" class="fortschritt-text" aria-live="polite">0 Fragen beantwortet</p>
+    <div id="fragen"></div>
+    <p id="hinweis-leer" class="warn" tabindex="-1" hidden>Kreuze bitte mindestens eine Antwort an.</p>
+    <button id="abschicken" class="gross" type="button">Abschicken</button>
+  </div>
+  <div id="danke" class="danke" tabindex="-1" hidden>
+    <p class="emoji" aria-hidden="true">🎉</p>
+    <h3>Danke, deine Stimme ist angekommen!</h3>
+    <p>Eure Antworten helfen uns, die Seite so zu bauen, wie ihr sie haben wollt.</p>
+  </div>
+</section>
+</main>
+<footer class="fuss"><p>Abschlussparty 2027 · Von der Klasse, für die Klasse</p></footer>
+<script src="fragen.js"></script>
+<script src="senden.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
