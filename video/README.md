@@ -1,7 +1,7 @@
-# Hier kommt das Video hin
+# Videos
 
-Datei: `abschlussparty.mp4` in diesen Ordner legen, dann committen und pushen.
+- `abschlussparty.mp4` (Hauptvideo, 9:16, ca. 7:56) mit `abschlussparty.vtt` / `.srt` und `abschlussparty-poster.jpg`
+- `spielregeln-lehrkraefte.mp4` (Video für Lehrkräfte und Eltern, 9:16, ca. 3:27) mit `.vtt` / `.srt` und `spielregeln-poster.jpg`; wird auf der Seite nur auf Knopfdruck geladen, nie automatisch
 
-- Format: MP4, am besten H.264, 1080p
-- Größe: nicht über ca. 50 MB (GitHub Pages ist für kleine Dateien gedacht)
-- Solange die Datei fehlt, zeigt die Seite "Das Video kommt gleich". Danach erscheint das Video von selbst.
+Beide Dateien bleiben unter ca. 50 MB (GitHub Pages ist für kleine Dateien gedacht).
+Der Hauptfilm ist ein KI-Avatar (im Video gekennzeichnet).

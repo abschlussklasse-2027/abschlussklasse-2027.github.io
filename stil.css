@@ -13,7 +13,6 @@ main{max-width:920px;margin:0 auto;padding:20px 16px 8px}
 .block{background:var(--kart);border-radius:22px;padding:22px 24px;margin:0 0 20px;box-shadow:0 2px 0 var(--rand);border:2px solid var(--rand)}
 h2{font-size:1.6rem;margin:0 0 .6em;color:var(--blau)}
 .drei{padding-left:1.3em;margin:0}.drei li{margin:.5em 0;font-size:1.15rem}
-.punkte{list-style:none;padding:0;margin:0}.punkte li{margin:.7em 0}
 .datenschutz{background:#eefaf4;border-color:var(--gruen)}.datenschutz h2{color:#0b6e4b}
 .klein{font-size:.95rem;color:var(--leise)}
 .videorahmen{border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#c7d2fe,#fbcfe8);aspect-ratio:16/9}
@@ -62,26 +61,44 @@ h2{font-size:1.6rem;margin:0 0 .6em;color:var(--blau)}
 .kapitel button:focus-visible{outline:4px solid var(--blau);outline-offset:2px}
 .kapitel button.aktiv{background:var(--blau);color:#fff}
 @media (max-width:700px){.videolayout{flex-direction:column;align-items:center}.videoseite{max-width:none;width:100%}.videorahmen.hoch{height:min(75vh,75dvh,640px)}}
-.helfer .schau{max-width:640px;margin:0 auto}
-.folien{display:grid;touch-action:pan-y}
-.folie{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility 0s linear .6s;text-align:center;background:#f6f7ff;border:2px solid var(--rand);border-radius:22px;padding:18px 18px 22px}
-.folie.aktiv{opacity:1;visibility:visible;transition:opacity .6s ease}
-.folie .bild img{width:min(62%,240px);height:auto;aspect-ratio:1;border-radius:50%;display:block;margin:0 auto;border:5px solid #fff;box-shadow:0 4px 0 var(--rand)}.helfer-satz{font-size:1.15rem;margin:0 0 14px}.nachweis{font-size:.85rem;color:var(--leise);margin:.6em 0 0}.nachweis a{color:var(--blau)}.warum{margin:.2em 0 0;font-weight:700}.folie{border-top:10px solid var(--c,var(--blau))}.folie.salt{--c:#1aa6a0}.folie.pepper{--c:#f08a24}.folie.chili{--c:#d93025}
+.helfer-satz{font-size:1.15rem;margin:0 0 14px}.nachweis{font-size:.85rem;color:var(--leise);margin:.6em 0 0}.nachweis a{color:var(--blau)}
 .name{font-size:2.2rem;margin:.1em 0 .2em}
-.satz{font-size:1.2rem;margin:0 auto;max-width:30em}
-.steuer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
-.pfeil{font:inherit;font-weight:800;font-size:1.15rem;min-height:56px;min-width:56px;padding:8px 18px;border:0;border-radius:16px;background:var(--blau);color:#fff;cursor:pointer}
-.pfeil:focus-visible,.punkt:focus-visible{outline:4px solid var(--rosa);outline-offset:3px}
-.punkte-nav{display:flex;gap:6px}
-.punkt{width:48px;height:48px;border:0;background:transparent;cursor:pointer;position:relative;padding:0}
-.punkt::after{content:"";position:absolute;left:12px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--rand)}
-.punkt.aktiv::after{background:var(--rosa)}
-@media (prefers-reduced-motion:reduce){.folie,.folie.aktiv{transition:none}}
-.pfeil{white-space:nowrap}
-@media (max-width:520px){.pfeil{font-size:1rem;padding:8px 10px}.punkte-nav{gap:0}.punkt{width:40px}.punkt::after{left:8px}}
 
 .steck{text-align:left;margin:14px auto 0;max-width:30em;background:#fff;border:2px solid var(--rand);border-radius:16px;padding:12px 16px}
 .steck dl{margin:0}.steck dl div{display:flex;gap:12px;font-size:.95rem;margin:2px 0}.steck dt{font-weight:800;flex:none;width:3.2em}.steck dd{margin:0;overflow-wrap:anywhere}
 .skillzahl{margin:.4em 0 .2em;font-size:1.5rem;font-weight:800;line-height:1.1;color:var(--c,var(--blau))}
 .skills{margin:0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.82rem;line-height:1.5;color:var(--leise)}
 .kioder{background:#f3f8ff;border-color:var(--blau)}.kioder p{margin:.6em 0}
+
+.karten3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.hk{background:#f6f7ff;border:2px solid var(--rand);border-top:10px solid var(--c,var(--blau));border-radius:20px;padding:14px 12px 12px;text-align:center;min-width:0}
+.hk.salt{--c:#1aa6a0}.hk.pepper{--c:#f08a24}.hk.chili{--c:#d93025}
+.hk>img{width:96px;height:96px;border-radius:50%;display:block;margin:0 auto;border:4px solid #fff;box-shadow:0 3px 0 var(--rand)}
+.hk .name{font-size:1.5rem;margin:.2em 0 .1em}
+.hk .satz{font-size:.95rem;line-height:1.35;margin:0 auto;overflow-wrap:anywhere}
+.steck.kurz{margin:10px 0 0;padding:8px 10px}
+.steck .typ{margin:0;font-size:.85rem;font-weight:700;overflow-wrap:anywhere}
+.hk .skillzahl{font-size:1.25rem}.hk .skills{font-size:.75rem}
+.mehr{margin-top:8px;text-align:left}
+.mehr summary{cursor:pointer;min-height:48px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--blau);border:2px solid var(--blau);border-radius:14px;background:#fff;list-style:none;padding:6px 10px;text-align:center;font-size:.95rem}
+.mehr summary::-webkit-details-marker{display:none}
+.mehr summary:focus-visible,.lehrer summary:focus-visible{outline:4px solid var(--rosa);outline-offset:2px}
+.mehr[open] summary{background:var(--blau);color:#fff}
+.mehr .steck{margin-top:8px}
+@media (max-width:600px){.karten3{grid-template-columns:1fr}.hk{display:grid;grid-template-columns:96px 1fr;column-gap:12px;text-align:left;align-items:center}.hk>img{grid-row:1/3}.hk .name,.hk .satz{grid-column:2}.hk .steck.kurz,.hk .mehr{grid-column:1/3}}
+.plan{background:#fff3c4;border:2px solid #e0a800;border-radius:14px;padding:10px 14px}
+.schritte4{padding-left:1.3em;margin:.6em 0}.schritte4 li{margin:.4em 0}
+.beispiel{background:#fff8fc;border:2px dashed var(--rosa);border-radius:18px;padding:12px 18px;margin:14px 0}
+.beispiel h3{margin:.1em 0 .4em;color:var(--rosa);font-size:1.4rem}.bkopf{margin:0;font-size:.9rem;font-weight:800;color:var(--leise)}
+.felder{margin:0}.felder div{display:flex;flex-wrap:wrap;gap:4px 12px;margin:.35em 0}.felder dt{font-weight:800;color:var(--blau);flex:0 0 11em;max-width:100%}.felder dd{margin:0;flex:1 1 10em;min-width:0;overflow-wrap:anywhere}
+.lehrer{background:#f7f7fb}
+.lehrer summary{cursor:pointer;min-height:56px;display:flex;align-items:center;font-weight:800;font-size:1.2rem;color:var(--blau);list-style:none}
+.lehrer summary::-webkit-details-marker{display:none}
+.lehrer summary::before{content:"▸";margin-right:.6em;flex:none}.lehrer details[open]>summary::before{content:"▾"}
+.lehrer h3{margin:1.4em 0 .4em;font-size:1.25rem}
+.gross.zweit{background:var(--blau)}
+.lehrer .videorahmen.hoch{margin:12px auto}
+.tabwrap{overflow-x:auto}.stunden{border-collapse:collapse;width:100%;min-width:300px}
+.stunden caption{text-align:left;font-weight:800;padding:0 0 8px}.stunden th,.stunden td{padding:8px 10px;border-bottom:2px solid var(--rand);text-align:left}.stunden td{text-align:right;white-space:nowrap}.stunden thead th{color:var(--leise);font-size:.95rem}.stunden thead th:not(:first-child){text-align:right}
+.flyerlink{display:inline-flex;align-items:center;min-height:48px;font-weight:800;color:var(--blau)}
+@media (max-width:520px){.stunden{min-width:0}.stunden td{white-space:normal}.stunden th,.stunden td{padding:8px 6px}}
