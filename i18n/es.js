@@ -201,6 +201,8 @@ window.I18N = {
  "meta.ogimagealt": "Nuestra fiesta de graduación 2027 con bola de discoteca y forma de onda",
  "sw.aria": "Elegir idioma",
  "sw.suche": "Buscar idioma …",
+ "sw.tipp": "Idioma|Sprache|Language|Langue|Lingua|Dil|Język|Мова",
+ "sw.tipp.1": "Idioma · Language · Langue",
  "sw.leer": "No se ha encontrado ningún idioma",
  "vl.aria": "Lectura en voz alta",
  "vl.start": "Leer la página en voz alta",

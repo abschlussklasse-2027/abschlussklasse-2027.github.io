@@ -201,6 +201,8 @@ window.I18N = {
  "meta.ogimagealt": "Unsere Abschlussparty 2027 mit Disco-Kugel und Wellenform",
  "sw.aria": "Sprache wählen",
  "sw.suche": "Sprache suchen …",
+ "sw.tipp": "Sprache|Language|Langue|Lingua|Idioma|Dil|Język|Мова",
+ "sw.tipp.1": "Sprache · Language · Langue",
  "sw.leer": "Keine Sprache gefunden",
  "vl.aria": "Vorlesen",
  "vl.start": "Seite vorlesen",

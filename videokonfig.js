@@ -20,5 +20,5 @@ window.VIDEO_KONFIG = {
       abschnitte: [0, 14.9, 28.1, 70.8, 88.5, 113.6, 127.2, 164.1]
     }
   },
-  version: "en1"
+  version: "en2"
 };

@@ -41,6 +41,38 @@
     });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && offen) { zeigen(false); knopf.focus(); } });
     document.addEventListener("click", function (e) { if (offen && !$("sprachwahl").contains(e.target)) zeigen(false); });
+
+    /* ---------- Hinweis auf den Schalter: Neon-Auftritt (einmal je Sitzung) und Sprechblase (einmal je Browser) ---------- */
+    var reduziert = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var SK = "abschlussparty-sw-intro", TK = "abschlussparty-sw-tipp", tipp = $("sw-tipp"), tt = $("sw-tipp-t");
+    function lese(st, k) { try { return window[st].getItem(k); } catch (e) { return null; } }
+    function schreibe(st, k) { try { window[st].setItem(k, "1"); } catch (e) {} }
+    if (!reduziert && !lese("sessionStorage", SK)) {
+      schreibe("sessionStorage", SK);
+      knopf.classList.add("sw-intro");
+      knopf.addEventListener("animationend", function (e) { if (e.animationName === "sw-puls") knopf.classList.remove("sw-intro"); });
+    }
+    if (tipp && tt && !lese("localStorage", TK)) {
+      var wort = (tt.getAttribute("data-wechsel") || "").split("|").filter(Boolean), wi = 0, wt = null, zt = null, aus = null;
+      var verstecken = function () {
+        clearInterval(wt); clearTimeout(zt); clearTimeout(aus);
+        tipp.classList.remove("zeigen"); setTimeout(function () { tipp.hidden = true; }, 450);
+      };
+      zt = setTimeout(function () {
+        if (offen) return;
+        schreibe("localStorage", TK);
+        tipp.hidden = false; void tipp.offsetWidth; tipp.classList.add("zeigen");
+        if (!reduziert && wort.length > 1) {
+          wt = setInterval(function () {
+            tt.classList.add("aus");
+            setTimeout(function () { wi = (wi + 1) % wort.length; tt.textContent = wort[wi]; tt.classList.remove("aus"); }, 260);
+          }, 1300);
+        }
+        aus = setTimeout(verstecken, 6000);
+      }, reduziert ? 400 : 1200);
+      knopf.addEventListener("click", function () { schreibe("localStorage", TK); verstecken(); });
+      tipp.addEventListener("click", verstecken);
+    }
   }
 
   /* ---------- Seite vorlesen ---------- */

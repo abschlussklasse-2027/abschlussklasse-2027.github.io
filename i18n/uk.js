@@ -201,6 +201,8 @@ window.I18N = {
  "meta.ogimagealt": "Наша випускна вечірка 2027 з диско-кулею та звуковою хвилею",
  "sw.aria": "Обрати мову",
  "sw.suche": "Шукати мову …",
+ "sw.tipp": "Мова|Sprache|Language|Langue|Lingua|Idioma|Dil|Język",
+ "sw.tipp.1": "Мова · Language · Langue",
  "sw.leer": "Мову не знайдено",
  "vl.aria": "Озвучення",
  "vl.start": "Озвучити сторінку",

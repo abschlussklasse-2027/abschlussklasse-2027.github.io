@@ -201,6 +201,8 @@ window.I18N = {
  "meta.ogimagealt": "Nasza impreza pożegnalna 2027 z kulą disco i falą dźwięku",
  "sw.aria": "Wybierz język",
  "sw.suche": "Szukaj języka …",
+ "sw.tipp": "Język|Sprache|Language|Langue|Lingua|Idioma|Dil|Мова",
+ "sw.tipp.1": "Język · Language · Langue",
  "sw.leer": "Nie znaleziono języka",
  "vl.aria": "Czytanie na głos",
  "vl.start": "Przeczytaj stronę na głos",

@@ -201,6 +201,8 @@ window.I18N = {
  "meta.ogimagealt": "Disko topu ve ses dalgası ile Mezuniyet partimiz 2027",
  "sw.aria": "Dil seç",
  "sw.suche": "Dil ara …",
+ "sw.tipp": "Dil|Sprache|Language|Langue|Lingua|Idioma|Język|Мова",
+ "sw.tipp.1": "Dil · Language · Langue",
  "sw.leer": "Dil bulunamadı",
  "vl.aria": "Sesli okuma",
  "vl.start": "Sayfayı sesli oku",

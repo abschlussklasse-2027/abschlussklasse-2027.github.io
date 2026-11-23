@@ -201,6 +201,8 @@ window.I18N = {
  "meta.ogimagealt": "Notre fête de fin d'année 2027 avec une boule à facettes et une forme d'onde",
  "sw.aria": "Choisir la langue",
  "sw.suche": "Chercher une langue …",
+ "sw.tipp": "Langue|Sprache|Language|Lingua|Idioma|Dil|Język|Мова",
+ "sw.tipp.1": "Langue · Language · Lingua",
  "sw.leer": "Aucune langue trouvée",
  "vl.aria": "Lecture à voix haute",
  "vl.start": "Lire la page à voix haute",
