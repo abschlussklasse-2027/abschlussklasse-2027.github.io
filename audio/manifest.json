@@ -1,0 +1,16 @@
+{
+ "de": {
+  "sekunden": 667,
+  "stand": "2026-11-23",
+  "stimme": "de-DE-Seraphina:DragonHDLatestNeural",
+  "zeichen": 8878,
+  "hash": "d67d65412077a834"
+ },
+ "en": {
+  "sekunden": 617,
+  "stand": "2026-11-23",
+  "stimme": "en-US-Ava:DragonHDLatestNeural",
+  "zeichen": 8714,
+  "hash": "d71010fffcb8ac6d"
+ }
+}
