@@ -104,3 +104,4 @@ h2{font-size:1.6rem;margin:0 0 .6em;color:var(--blau)}
 @media (max-width:520px){.stunden{min-width:0}.stunden td{white-space:normal}.stunden th,.stunden td{padding:8px 6px}}
 
 .beispiel .foto{margin:0 auto 12px;max-width:260px;text-align:center}.beispiel .foto img{width:100%;height:auto;border-radius:16px;border:2px solid var(--rand)}.beispiel .foto figcaption{font-size:.8rem;margin-top:6px}
+.beispiele{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:16px 0}.beispiele .beispiel{margin:0}
