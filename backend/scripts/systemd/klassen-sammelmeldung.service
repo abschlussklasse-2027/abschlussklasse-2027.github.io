@@ -1,0 +1,7 @@
+[Unit]
+Description=Klassen-Umfrage: Sammelmeldung und Sicherung (ein Lauf)
+
+[Service]
+Type=oneshot
+ExecStart=%h/abschlussklasse-2027/backend/scripts/sammelmeldung.py
+Nice=10

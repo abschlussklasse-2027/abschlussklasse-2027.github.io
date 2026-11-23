@@ -1,25 +1,19 @@
-name = "klassen-sammelpunkt"
+name = "abschlussklasse-2027"
 main = "src/index.js"
 compatibility_date = "2024-11-01"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "klassen-sammelpunkt"
+database_name = "abschlussklasse-2027"
 database_id = "00000000-0000-0000-0000-000000000000"  # Platzhalter, Phase B: echte ID eintragen
 migrations_dir = "migrations"
 
-[[r2_buckets]]
-binding = "SICHERUNG"
-bucket_name = "klassen-sammelpunkt-sicherung"
-
 [triggers]
-crons = ["30 2 * * *", "0 5 * * *"]   # 02:30 UTC R2-Sicherung, 05:00 UTC Sammelmeldung
+crons = ["0 5 * * *"]   # 05:00 UTC: alte Zaehler aufraeumen (keine Mails aus dem Worker)
 
 [vars]
 KLASSE = "abschlussklasse-2027"
 ERLAUBTER_ORIGIN = "https://abschlussklasse-2027.github.io"
-RATE_MAX = "20"
-MAIL_ADAPTER = "konsole"      # konsole | resend
-MAIL_AN = ""                  # Phase B: Empfaengeradresse
-MAIL_VON = ""                 # Phase B: Absender (beim Anbieter verifiziert)
-# Secrets (nie hier): ADMIN_TOKEN, MAIL_KEY, RATE_SALT. Lokal in .dev.vars.
+RATE_MAX = "20"               # Stimmen je Tag und Absender-Hash
+TAGESMAX = "3000"             # Stimmen je Tag insgesamt (Free-Limit D1: 100 000 Schreibzeilen/Tag)
+# Secrets (nie hier): ADMIN_TOKEN, RATE_SALT. Lokal in .dev.vars.

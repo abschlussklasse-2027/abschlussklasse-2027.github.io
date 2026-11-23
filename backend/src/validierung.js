@@ -1,6 +1,7 @@
 import FRAGEN from "./fragen.json";
 
-export const MAX_BYTES = 20 * 1024;
+export const MAX_BYTES = 8 * 1024;       // eine Stimme ist unter 2 KB
+export const MAX_BYTES_ADMIN = 64 * 1024; // Admin-Aufrufe (z. B. 1000 Ereignis-Ids)
 export const MAX_ANDERES = 100;
 export const SCHEMA_VERSION = 1;
 

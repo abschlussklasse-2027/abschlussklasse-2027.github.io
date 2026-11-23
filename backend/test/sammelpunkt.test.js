@@ -1,8 +1,6 @@
 import { env, SELF } from "cloudflare:test";
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect } from "vitest";
 import worker from "../src/index.js";
-import { mailSammelmeldung, gesendet } from "../src/mail.js";
-import { r2Sicherung } from "../src/sicherung.js";
 import FRAGEN from "../src/fragen.json";
 
 const ORIGIN = "https://abschlussklasse-2027.github.io";
@@ -30,9 +28,13 @@ describe("Stimmen", () => {
       const r = await post(b, {}, frischeIp()); expect(r.status).toBe(400);
     }
   });
-  it("lehnt zu grosse Bodies ab (20 KB)", async () => {
-    const r = await post(JSON.stringify({ A: ["x".repeat(25000)] }), {}, frischeIp());
+  it("lehnt zu grosse Bodies ab (8 KB)", async () => {
+    const r = await post(JSON.stringify({ A: ["x".repeat(9000)] }), {}, frischeIp());
     expect(r.status).toBe(413);
+    // auch ohne Content-Length (Stream) wird abgebrochen
+    const strom = new ReadableStream({ start(c) { c.enqueue(new TextEncoder().encode('{"A":["' + "x".repeat(9000) + '"]}')); c.close(); } });
+    const r2 = await SELF.fetch("https://x/api/stimmen", { method: "POST", headers: { "cf-connecting-ip": frischeIp() }, body: strom, duplex: "half" });
+    expect(r2.status).toBe(413);
   });
   it("Honeypot: stillschweigend verworfen, nichts gespeichert", async () => {
     const vorher = (await env.DB.prepare("SELECT COUNT(*) c FROM ereignisse").first()).c;
@@ -125,49 +127,51 @@ describe("Entscheidungen und Verarbeitung", () => {
   });
 });
 
-describe("Mail und R2", () => {
-  beforeEach(() => { gesendet.length = 0; });
-  it("Sammelmeldung nur mit neuen Ereignissen, nicht doppelt", async () => {
-    const e = { ...env, MAIL_AN: "test@example.invalid", MAIL_ADAPTER: "konsole" };
-    await mailSammelmeldung(e); // alles Bisherige wegsenden
-    gesendet.length = 0;
-    expect((await mailSammelmeldung(e)).gesendet).toBe(false);
-    expect(gesendet).toHaveLength(0);
-    const i1 = (await (await post(stimmeBody({ D_anderes: "NeuText1" }), {}, frischeIp())).json()).id;
-    const i2 = (await (await post(stimmeBody(), {}, frischeIp())).json()).id;
-    const r = await mailSammelmeldung(e);
-    expect(r).toEqual({ gesendet: true, anzahl: 2 });
-    expect(gesendet).toHaveLength(1);
-    const m = gesendet[0];
-    const ids = m.anhang.inhalt.trim().split("\n").map((z) => JSON.parse(z).id);
-    expect(ids).toEqual([i1, i2]);
-    expect(m.text).not.toContain("NeuText1"); expect(m.anhang.inhalt).toContain("NeuText1");
-    expect((await mailSammelmeldung(e)).gesendet).toBe(false);
-    expect(gesendet).toHaveLength(1);
-    const i3 = (await (await post(stimmeBody(), {}, frischeIp())).json()).id;
-    await mailSammelmeldung(e);
-    expect(gesendet).toHaveLength(2);
-    expect(gesendet[1].anhang.inhalt.trim().split("\n").map((z) => JSON.parse(z).id)).toEqual([i3]);
-  });
-  it("Senden schlaegt fehl: nichts markiert, naechster Lauf sendet", async () => {
-    const e = { ...env, MAIL_AN: "test@example.invalid", MAIL_ADAPTER: "resend", MAIL_KEY: "x" };
+describe("Sicherung", () => {
+  it("Export-Endpunkt liefert alles als JSON, nur mit Token", async () => {
+    await postAdmin("/api/entscheidungen", { thema: "T", frage: "F", entscheidung: "E", von: "Test" });
     await post(stimmeBody(), {}, frischeIp());
-    const orig = globalThis.fetch; globalThis.fetch = async () => new Response("no", { status: 500 });
-    try { await expect(mailSammelmeldung(e)).rejects.toThrow(); } finally { globalThis.fetch = orig; }
-    const ok = await mailSammelmeldung({ ...e, MAIL_ADAPTER: "konsole" });
-    expect(ok.gesendet).toBe(true);
+    expect((await get("/admin/export", {})).status).toBe(401);
+    const x = await (await get("/admin/export")).json();
+    expect(x.ereignisse.length).toBeGreaterThan(0); expect(x.entscheidungen.length).toBeGreaterThan(0);
+    expect(x.ereignisse[0]).toHaveProperty("nutzlast"); expect(Array.isArray(x.verarbeitung)).toBe(true);
   });
-  it("R2-Sicherung schreibt NDJSON aller Ereignisse", async () => {
-    await post(stimmeBody(), {}, frischeIp());
-    const r = await r2Sicherung(env);
-    const o = await env.SICHERUNG.get(r.key);
-    const text = await o.text();
-    expect(text.trim().split("\n")).toHaveLength(r.anzahl);
-    expect(r.anzahl).toBeGreaterThan(0);
-    await r2Sicherung(env); // wiederholbar
+  it("scheduled-Handler raeumt alte Zaehler auf", async () => {
+    await env.DB.prepare("INSERT OR IGNORE INTO ratenzaehler (tag, ip_hash, n) VALUES ('2000-01-01','alt',1)").run();
+    await worker.scheduled({ cron: "0 5 * * *" }, env);
+    expect(await env.DB.prepare("SELECT 1 FROM ratenzaehler WHERE tag = '2000-01-01'").first()).toBeNull();
   });
-  it("scheduled-Handler laeuft", async () => {
-    await worker.scheduled({ cron: "30 2 * * *" }, env);
-    await worker.scheduled({ cron: "0 5 * * *" }, { ...env, MAIL_AN: "" });
+});
+
+describe("Kostenschutz", () => {
+  it("Tagesgrenze insgesamt: danach 429 mit freundlicher Meldung, nichts mehr gespeichert, kein Zaehler-Anstieg", async () => {
+    const t = new Date().toISOString().slice(0, 10);
+    const aktuell = async () => (await env.DB.prepare("SELECT n FROM ratenzaehler WHERE tag = ? AND ip_hash = '*gesamt*'").bind(t).first())?.n ?? 0;
+    const grenze = (await aktuell()) + 2;
+    const e = { ...env, TAGESMAX: String(grenze) };
+    const send = (ip) => worker.fetch(new Request("https://x/api/stimmen", { method: "POST", headers: { "cf-connecting-ip": ip }, body: JSON.stringify(stimmeBody()) }), e);
+    expect((await send(frischeIp())).status).toBe(200);
+    expect((await send(frischeIp())).status).toBe(200);
+    const vorher = (await env.DB.prepare("SELECT COUNT(*) c FROM ereignisse").first()).c;
+    const r = await send(frischeIp());
+    expect(r.status).toBe(429);
+    expect((await r.json()).fehler).toMatch(/morgen/i);
+    expect((await env.DB.prepare("SELECT COUNT(*) c FROM ereignisse").first()).c).toBe(vorher);
+    expect(await aktuell()).toBe(grenze);
+  });
+  it("Ungueltige Anfragen verbrauchen die Tagesgrenze nicht", async () => {
+    const t = new Date().toISOString().slice(0, 10);
+    const aktuell = async () => (await env.DB.prepare("SELECT n FROM ratenzaehler WHERE tag = ? AND ip_hash = '*gesamt*'").bind(t).first())?.n ?? 0;
+    const vorher = await aktuell();
+    for (let i = 0; i < 3; i++) await post({ A: ["erfunden"] }, {}, frischeIp());
+    expect(await aktuell()).toBe(vorher);
+  });
+  it("Absender-Grenze schreibt ueber dem Limit nicht weiter", async () => {
+    const ip = frischeIp();
+    for (let i = 0; i < 3; i++) await post(stimmeBody(), {}, ip);
+    const zeile = () => env.DB.prepare("SELECT n FROM ratenzaehler WHERE ip_hash != '*gesamt*' ORDER BY rowid DESC LIMIT 1").first();
+    const r = await post(stimmeBody(), {}, ip);
+    expect(r.status).toBe(429);
+    expect((await zeile()).n).toBe(3);
   });
 });
