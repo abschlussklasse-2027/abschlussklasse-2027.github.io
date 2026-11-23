@@ -1,0 +1,17 @@
+{
+  "name": "klassen-sammelpunkt",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --persist-to .wrangler/state",
+    "migrate": "wrangler d1 migrations apply DB --local --persist-to .wrangler/state",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.8.71",
+    "@vitest/runner": "^3.2.4",
+    "@vitest/snapshot": "^3.2.4",
+    "vitest": "^3.2.4",
+    "wrangler": "^3.114.17"
+  }
+}

@@ -1,0 +1,100 @@
+[
+ {
+  "id": "A",
+  "art": "ein",
+  "optionen": [
+   "Louisa allein",
+   "Ein Team aus drei Personen (zwei müssen zustimmen)",
+   "Eine Lehrperson oder ein Elternteil",
+   "Niemand, Änderungen gehen sofort online (nicht empfohlen)"
+  ],
+  "anderes": false
+ },
+ {
+  "id": "B",
+  "art": "ein",
+  "optionen": [
+   "Öffentlich, aber nur Fotos mit Einverständnis aller Abgebildeten",
+   "Öffentlich nur Fotos ohne erkennbare Gesichter (Deko, Location, Gruppenbild von hinten); alle anderen Fotos in einem geschlossenen Album außerhalb der Seite",
+   "Gar keine Fotos von Personen auf der Seite"
+  ],
+  "anderes": false
+ },
+ {
+  "id": "C",
+  "art": "ein",
+  "optionen": [
+   "Dieselben Personen wie bei A",
+   "Ein eigenes Foto-Team",
+   "Niemand, Fotos erscheinen sofort (nicht empfohlen)"
+  ],
+  "anderes": false
+ },
+ {
+  "id": "D",
+  "art": "mehr",
+  "optionen": [
+   "Startseite mit Datum, Ort und Countdown",
+   "Programm des Abends",
+   "Fotogalerie",
+   "Sponsoren mit Bannern",
+   "Unterschriften und Grüße der Klasse",
+   "Steckbriefe (nur Vorname und Spruch)",
+   "Musikwünsche"
+  ],
+  "anderes": true
+ },
+ {
+  "id": "F",
+  "art": "ein",
+  "optionen": [
+   "Alle in der Klasse (über das Formular mit Klassen-Passwort)",
+   "Nur das Team aus A"
+  ],
+  "anderes": false
+ },
+ {
+  "id": "G",
+  "art": "ein",
+  "optionen": [
+   "Die Seite bleibt als Erinnerung stehen, eine Person übernimmt das Konto",
+   "Die Seite wird nach einem Jahr gelöscht",
+   "Die Seite wird direkt nach dem Schuljahr gelöscht"
+  ],
+  "anderes": false
+ },
+ {
+  "id": "H",
+  "art": "mehr",
+  "optionen": [
+   "Alle melden sich mit ihrer E-Mail-Adresse an und bekommen einen Anmeldelink. Jede Anfrage landet zuerst in einem Klick-Portal, das Gremium gibt sie frei oder lehnt sie ab.",
+   "Nur Namen aus der Klassenliste kommen rein, Fremde werden abgewiesen.",
+   "Das Gremium besteht aus drei Personen, zwei müssen zustimmen.",
+   "Das Gremium besteht aus fünf Personen, drei müssen zustimmen.",
+   "Die ganze Klasse ist das Gremium, die Mehrheit entscheidet.",
+   "Louisa und eine Lehrperson haben zusätzlich ein Vetorecht."
+  ],
+  "anderes": false
+ },
+ {
+  "id": "I",
+  "art": "ein",
+  "optionen": [
+   "Per Sprache: «Mach die Seite grün», «bau mir eine Sponsorenseite» (läuft auf dem iPad direkt im Browser).",
+   "Per Finger: Bausteine auf dem iPad herumschieben, Texte und Bilder einsetzen.",
+   "Beides, damit alle lernen, dass beide Wege gehen."
+  ],
+  "anderes": false
+ },
+ {
+  "id": "J",
+  "art": "ein",
+  "optionen": [
+   "Ankreuzfeld bei der Anmeldung: «Ich habe die Zustimmung meiner Eltern.» Ohne Haken kommt kein Anmeldelink (einfach, aber als Nachweis schwach).",
+   "Zustimmungszettel für die Eltern: Louisa verteilt ihn in der Klasse, eine Lehrperson sammelt ihn ein. Erst danach wird die Person freigeschaltet.",
+   "Beides: Haken bei der Anmeldung und Zettel für alle, die Fotos hochladen.",
+   "Die Schule fragen, welche Form sie verlangt."
+  ],
+  "anderes": false
+ }
+]
