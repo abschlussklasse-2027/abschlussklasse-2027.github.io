@@ -11,7 +11,7 @@ window.VIDEO_KONFIG = {
       mp4: "video/en/abschlussparty-en.mp4",
       vtt: "video/en/abschlussparty-en.vtt",
       poster: "video/en/abschlussparty-en-poster.jpg",
-      kapitel: [0, 11.8, 24.7, 45.7, 54.6, 73.2, 112.1, 118.3, 125.9, 175.7, 188.6]
+      kapitel: [0, 11.8, 24.2, 45.8, 55.0, 74.6, 114.3, 120.8, 128.5, 176.7, 189.9]
     },
     lehrer: {
       mp4: "video/en/spielregeln-teachers-en.mp4",
@@ -20,5 +20,5 @@ window.VIDEO_KONFIG = {
       abschnitte: [0, 14.9, 28.1, 70.8, 88.5, 113.6, 127.2, 164.1]
     }
   },
-  version: "en2"
+  version: "r9"
 };
