@@ -85,7 +85,7 @@ h2{font-size:1.6rem;margin:0 0 .6em;color:var(--blau)}
 .mehr summary:focus-visible,.lehrer summary:focus-visible{outline:4px solid var(--rosa);outline-offset:2px}
 .mehr[open] summary{background:var(--blau);color:#fff}
 .mehr .steck{margin-top:8px}
-@media (max-width:600px){.karten3{grid-template-columns:1fr}.hk{display:grid;grid-template-columns:96px 1fr;column-gap:12px;text-align:left;align-items:center}.hk>img{grid-row:1/3}.hk .name,.hk .satz{grid-column:2}.hk .steck.kurz,.hk .mehr{grid-column:1/3}}
+@media (max-width:600px){.karten3{grid-template-columns:1fr}.hk{display:grid;grid-template-columns:96px 1fr;column-gap:12px;text-align:left;align-items:center}.hk>img{grid-row:1/3}.hk .name,.hk .satz{grid-column:2}.hk .steck,.hk .nachweis{grid-column:1/3}}
 .plan{background:#fff3c4;border:2px solid #e0a800;border-radius:14px;padding:10px 14px}
 .schritte4{padding-left:1.3em;margin:.6em 0}.schritte4 li{margin:.4em 0}
 .beispiel{background:#fff8fc;border:2px dashed var(--rosa);border-radius:18px;padding:12px 18px;margin:14px 0}
@@ -102,3 +102,5 @@ h2{font-size:1.6rem;margin:0 0 .6em;color:var(--blau)}
 .stunden caption{text-align:left;font-weight:800;padding:0 0 8px}.stunden th,.stunden td{padding:8px 10px;border-bottom:2px solid var(--rand);text-align:left}.stunden td{text-align:right;white-space:nowrap}.stunden thead th{color:var(--leise);font-size:.95rem}.stunden thead th:not(:first-child){text-align:right}
 .flyerlink{display:inline-flex;align-items:center;min-height:48px;font-weight:800;color:var(--blau)}
 @media (max-width:520px){.stunden{min-width:0}.stunden td{white-space:normal}.stunden th,.stunden td{padding:8px 6px}}
+
+.beispiel .foto{margin:0 auto 12px;max-width:260px;text-align:center}.beispiel .foto img{width:100%;height:auto;border-radius:16px;border:2px solid var(--rand)}.beispiel .foto figcaption{font-size:.8rem;margin-top:6px}
