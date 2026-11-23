@@ -1,1254 +1,602 @@
 1
-00:00:00,150 --> 00:00:00,534
-Hallo!
+00:00:00,150 --> 00:00:02,756
+Hey, ich bin Clement,
+ein KI-Avatar.
 
 2
-00:00:00,584 --> 00:00:02,622
-Ich bin Luca, ein KI-Avatar.
+00:00:02,806 --> 00:00:05,518
+Wir bauen eure
+Abschlussparty-Seite, mit
 
 3
-00:00:02,672 --> 00:00:04,939
-Wir bauen eine
-eigene Seite für eure
+00:00:05,568 --> 00:00:07,230
+KI, und sie kostet nichts.
 
 4
-00:00:04,989 --> 00:00:07,381
-Abschlussparty, mit
-KI, und sie kostet
+00:00:07,250 --> 00:00:09,892
+Und ich bin Casey,
+ebenfalls KI-Avatar.
 
 5
-00:00:07,431 --> 00:00:07,882
-nichts.
-
-6
-00:00:07,932 --> 00:00:10,048
+00:00:09,942 --> 00:00:11,975
 Gleich kommen ein
 paar Fragen, bei denen
 
-7
-00:00:10,098 --> 00:00:11,104
+6
+00:00:12,025 --> 00:00:12,991
 ihr mitentscheidet.
 
-8
-00:00:11,150 --> 00:00:12,150
+7
+00:00:13,037 --> 00:00:14,037
 Kapitel: Anmeldung
 
+8
+00:00:14,107 --> 00:00:15,364
+Los geht's mit
+der Anmeldung.
+
 9
-00:00:12,220 --> 00:00:14,009
-Kapitel eins: die Anmeldung.
+00:00:15,414 --> 00:00:17,572
+So soll es werden:
+Ihr meldet euch mit
 
 10
-00:00:14,059 --> 00:00:15,194
-So wird es funktionieren.
+00:00:17,622 --> 00:00:19,553
+eurer E-Mail-Adresse
+an, ganz ohne
 
 11
-00:00:15,244 --> 00:00:17,423
-Jede und jeder von
-euch meldet sich mit
+00:00:19,603 --> 00:00:19,997
+Passwort.
 
 12
-00:00:17,473 --> 00:00:19,151
-der eigenen
-E-Mail-Adresse an.
+00:00:20,017 --> 00:00:22,004
+Erst tippt ihr eure
+E-Mail-Adresse ins
 
 13
-00:00:19,201 --> 00:00:21,519
-Dazu braucht ihr kein
-kompliziertes Konto
+00:00:22,054 --> 00:00:22,421
+Portal.
 
 14
-00:00:21,569 --> 00:00:23,717
-und kein Passwort,
-das ihr euch merken
+00:00:22,471 --> 00:00:26,002
+Dann bekommt ihr eine
+Mail mit einem Link.
 
 15
-00:00:23,767 --> 00:00:23,990
-müsst.
+00:00:26,052 --> 00:00:28,211
+Den tippt ihr an, so
+weiß das Portal, dass
 
 16
-00:00:24,010 --> 00:00:25,761
-Der erste Schritt:
-Ihr tippt eure
+00:00:28,261 --> 00:00:29,496
+die Adresse euch gehört.
 
 17
-00:00:25,811 --> 00:00:27,404
-E-Mail-Adresse
-ins Portal ein.
+00:00:29,546 --> 00:00:31,969
+Danach meldet ihr
+euch richtig an: Mail,
 
 18
-00:00:27,454 --> 00:00:29,480
-Der zweite Schritt:
-Kurz danach bekommt
+00:00:32,019 --> 00:00:32,813
+Link, fertig.
 
 19
-00:00:29,530 --> 00:00:31,608
-ihr eine Mail zur
-Bestätigung, mit einem
-
-20
-00:00:31,658 --> 00:00:32,231
-Link darin.
-
-21
-00:00:32,281 --> 00:00:34,912
-Der dritte Schritt:
-Ihr tippt den Link an.
-
-22
-00:00:34,962 --> 00:00:37,278
-Jetzt wisst das Portal
-und wir, dass die
-
-23
-00:00:37,328 --> 00:00:39,009
-Adresse wirklich
-euch gehört.
-
-24
-00:00:39,059 --> 00:00:41,244
-Der vierte Schritt:
-Danach könnt ihr euch
-
-25
-00:00:41,294 --> 00:00:42,610
-richtig am Portal anmelden.
-
-26
-00:00:42,630 --> 00:00:44,582
-Neue Leute gibt am
-Anfang eine kleine
-
-27
-00:00:44,632 --> 00:00:46,847
-Gruppe frei, damit
-niemand Fremdes auf die
-
-28
-00:00:46,897 --> 00:00:47,532
-Seite kommt.
-
-29
-00:00:47,582 --> 00:00:49,976
-Das ist die Gruppe,
-die entscheidet, das
-
-30
-00:00:50,026 --> 00:00:50,512
-Gremium.
-
-31
-00:00:50,562 --> 00:00:52,152
-Mehr dazu bei Frage H.
-
-32
-00:00:52,202 --> 00:00:54,825
-Zum Merken: E-Mail
-eingeben, Link in der
-
-33
-00:00:54,875 --> 00:00:56,325
-Mail antippen, fertig.
-
-34
-00:00:56,370 --> 00:00:57,370
+00:00:32,867 --> 00:00:33,867
 Kapitel: Editor
 
-35
-00:00:57,440 --> 00:00:59,287
-Kapitel zwei: der Editor.
+20
+00:00:33,937 --> 00:00:36,326
+Dann der Editor,
+euer Werkzeug.
 
-36
-00:00:59,337 --> 00:01:01,418
-Das ist das Werkzeug,
-mit dem ihr die
+21
+00:00:36,376 --> 00:00:38,848
+Programmieren müsst
+ihr nichts, ein Finger
 
-37
-00:01:01,468 --> 00:01:02,765
-Seite selbst gestaltet.
+22
+00:00:38,898 --> 00:00:40,617
+reicht, am besten
+auf dem iPad.
 
-38
-00:01:02,815 --> 00:01:04,545
-Ihr müsst dafür
-nichts programmieren.
+23
+00:00:40,637 --> 00:00:43,389
+Links liegen Bausteine,
+etwa Überschrift,
 
-39
-00:01:04,595 --> 00:01:06,929
-Es reicht, wenn ihr
-einen Finger habt, am
+24
+00:00:43,439 --> 00:00:45,190
+Text, Foto oder Countdown.
 
-40
-00:01:06,979 --> 00:01:08,000
-besten auf dem iPad.
+25
+00:00:45,240 --> 00:00:47,485
+Ihr tippt einen an
+und schiebt ihn dahin,
 
-41
-00:01:08,020 --> 00:01:10,449
-Links seht ihr
-Bausteine, zum Beispiel
+26
+00:00:47,535 --> 00:00:48,359
+wo er hin soll.
 
-42
-00:01:10,499 --> 00:01:12,928
-eine Überschrift,
-einen Text, ein Foto
+27
+00:00:48,409 --> 00:00:50,255
+Gefällt es euch
+nicht, schiebt ihr ihn
 
-43
-00:01:12,978 --> 00:01:15,217
-oder einen Countdown
-bis zur Party.
+28
+00:00:50,305 --> 00:00:50,717
+wieder weg.
 
-44
-00:01:15,267 --> 00:01:17,527
-Ihr tippt einen
-Baustein an und schiebt
-
-45
-00:01:17,577 --> 00:01:19,837
-ihn mit dem Finger
-auf die Seite, genau
-
-46
-00:01:19,887 --> 00:01:21,166
-dahin, wo er hin soll.
-
-47
-00:01:21,216 --> 00:01:23,841
-Dann tippt ihr den
-Text ein oder setzt ein
-
-48
-00:01:23,891 --> 00:01:24,463
-Bild ein.
-
-49
-00:01:24,513 --> 00:01:26,603
-Wenn euch etwas nicht
-gefällt, schiebt ihr
-
-50
-00:01:26,653 --> 00:01:27,629
-es einfach wieder weg.
-
-51
-00:01:27,649 --> 00:01:29,755
+29
+00:00:50,737 --> 00:00:53,203
 Wichtig: Was ihr
-im Editor baut, ist
+baut, ist erst mal nur
 
-52
-00:01:29,805 --> 00:01:31,269
-zuerst nur ein Vorschlag.
+30
+00:00:53,253 --> 00:00:54,147
+ein Vorschlag.
 
-53
-00:01:31,319 --> 00:01:33,748
-Online geht er erst,
-wenn die Gruppe, die
+31
+00:00:54,197 --> 00:00:56,091
+Online geht es
+erst, wenn die
 
-54
-00:01:33,798 --> 00:01:35,460
-entscheidet, zugestimmt hat.
+32
+00:00:56,141 --> 00:00:58,359
+entscheidende
+Gruppe, das Gremium,
 
-55
-00:01:35,510 --> 00:01:38,106
-Kurz gesagt: antippen,
-verschieben, Text
+33
+00:00:58,409 --> 00:00:59,007
+zustimmt.
 
-56
-00:01:38,156 --> 00:01:40,624
-und Bild einsetzen,
-und dann kommt die
-
-57
-00:01:40,674 --> 00:01:41,270
-Freigabe.
-
-58
-00:01:41,317 --> 00:01:42,317
+34
+00:00:59,057 --> 00:01:00,057
 Kapitel: Sprache
 
-59
-00:01:42,387 --> 00:01:44,526
-Kapitel drei: die
-Spracheingabe.
+35
+00:01:00,127 --> 00:01:01,268
+Keine Lust zu tippen?
 
-60
-00:01:44,576 --> 00:01:46,452
-Vielleicht habt ihr
-gerade keine Lust zu
+36
+00:01:01,318 --> 00:01:03,878
+Sagt dem KI-Helfer
+einfach, was er bauen
 
-61
-00:01:46,502 --> 00:01:46,827
-tippen.
+37
+00:01:03,928 --> 00:01:06,488
+soll, zum Beispiel:
+Mach die Seite grün.
 
-62
-00:01:46,877 --> 00:01:48,111
-Dann sprecht ihr einfach.
+38
+00:01:06,538 --> 00:01:08,278
+Ihr seht den
+Vorschlag sofort.
 
-63
-00:01:48,161 --> 00:01:50,219
-Auf dem iPad könnt
-ihr dem KI-Helfer
-
-64
-00:01:50,269 --> 00:01:51,587
-sagen, was er bauen soll.
-
-65
-00:01:51,607 --> 00:01:53,442
-Ihr sagt zum Beispiel:
-Mach die Seite
-
-66
-00:01:53,492 --> 00:01:53,740
-grün.
-
-67
-00:01:53,790 --> 00:01:56,339
-Oder: Bau eine Seite
-für unsere Sponsoren.
-
-68
-00:01:56,389 --> 00:01:58,942
-Der KI-Helfer versteht
-das und baut daraus
-
-69
-00:01:58,992 --> 00:01:59,971
-einen Vorschlag.
-
-70
-00:02:00,021 --> 00:02:01,797
-Den könnt ihr euch
-sofort ansehen.
-
-71
-00:02:01,847 --> 00:02:03,876
-Aber auch hier gilt:
-Online geht der
-
-72
-00:02:03,926 --> 00:02:05,956
-Vorschlag erst,
+39
+00:01:08,328 --> 00:01:10,763
+Online geht er erst,
 wenn das Gremium ihn
 
-73
-00:02:06,006 --> 00:02:06,518
+40
+00:01:10,813 --> 00:01:11,354
 freigibt.
 
-74
-00:02:06,568 --> 00:02:08,719
-Und jeder darf nur ein
-paar Wünsche am Tag
-
-75
-00:02:08,769 --> 00:02:10,807
-abgeben, damit nichts
-aus dem Ruder läuft.
-
-76
-00:02:10,827 --> 00:02:13,366
-Zum Merken: Wunsch
-sprechen, Vorschlag
-
-77
-00:02:13,416 --> 00:02:15,225
-ansehen, Freigabe abwarten.
-
-78
-00:02:15,275 --> 00:02:17,490
-So kann nichts Falsches
-online gehen, auch
-
-79
-00:02:17,540 --> 00:02:19,228
-wenn sich mal
-jemand verspricht.
-
-80
-00:02:19,277 --> 00:02:20,277
+41
+00:01:11,417 --> 00:01:12,417
 Kapitel: Die Helfer
 
-81
-00:02:20,347 --> 00:02:21,644
-Und wer baut das alles?
+42
+00:01:12,487 --> 00:01:14,142
+Drei KI-Helfer bauen mit.
 
-82
-00:02:21,694 --> 00:02:24,373
-Hinter der Seite
-arbeiten drei KI-Helfer.
+43
+00:01:14,192 --> 00:01:16,978
+Salt, der Quality-Bot,
+prüft alle zehn
 
-83
-00:02:24,423 --> 00:02:25,521
-Ich stelle sie
-euch kurz vor.
-
-84
-00:02:25,541 --> 00:02:27,025
-Zuerst Salt.
-
-85
-00:02:27,075 --> 00:02:28,973
-Salt sagt: Hoi,
-ich bin Salt.
-
-86
-00:02:29,023 --> 00:02:32,276
-Ich bin gründlich und
-bringe jede Sache zu
-
-87
-00:02:32,326 --> 00:02:32,737
-Ende.
-
-88
-00:02:32,787 --> 00:02:35,532
-Salt ist der Quality-Bot,
-er prüft alle
-
-89
-00:02:35,582 --> 00:02:38,118
-zehn Minuten die
+44
+00:01:17,028 --> 00:01:19,304
+Minuten die
 Qualität und hat 79
 
-90
-00:02:38,168 --> 00:02:38,931
+45
+00:01:19,354 --> 00:01:20,127
 Fähigkeiten.
 
-91
-00:02:38,951 --> 00:02:39,842
-Dann Pepper.
+46
+00:01:20,147 --> 00:01:22,891
+Pepper, der Response-Bot,
+schaut alle zehn
 
-92
-00:02:39,892 --> 00:02:41,987
-Pepper sagt: Hoi,
-ich bin Pepper.
-
-93
-00:02:42,037 --> 00:02:44,066
-Ich bin flink und
-bringe dir Antworten
-
-94
-00:02:44,116 --> 00:02:44,493
-sofort.
-
-95
-00:02:44,543 --> 00:02:46,925
-Pepper ist der
-Response-Bot, er schaut
-
-96
-00:02:46,975 --> 00:02:49,544
-alle zehn Minuten ins
+47
+00:01:22,941 --> 00:01:24,970
+Minuten ins
 Postfach und hat 54
 
-97
-00:02:49,594 --> 00:02:50,231
+48
+00:01:25,020 --> 00:01:25,707
 Fähigkeiten.
 
-98
-00:02:50,251 --> 00:02:51,471
-Und zuletzt Chili.
+49
+00:01:25,727 --> 00:01:27,646
+Und Chili, der Security- und
 
-99
-00:02:51,521 --> 00:02:54,027
-Chili sagt: Hoi, ich
-bin Chili und tue,
+50
+00:01:27,696 --> 00:01:30,566
+Litigation-Bot, achtet
+rund um die Uhr auf
 
-100
-00:02:54,077 --> 00:02:56,583
-was ein Security-
-und Litigation-Bot so
+51
+00:01:30,616 --> 00:01:33,146
+Datenschutz und
+Urheberrecht, mit 133
 
-101
-00:02:56,633 --> 00:02:56,902
-tut.
+52
+00:01:33,196 --> 00:01:34,028
+Fähigkeiten.
 
-102
-00:02:56,952 --> 00:02:58,071
-Ich schlafe nie.
+53
+00:01:34,097 --> 00:01:35,097
+Kapitel: Steckbrief
+und Porträt
 
-103
-00:02:58,121 --> 00:03:00,736
-Chili arbeitet rund
-um die Uhr, hat 133
+54
+00:01:35,167 --> 00:01:37,497
+Jetzt zum Mitmachen:
+Steckbrief oder
 
-104
-00:03:00,786 --> 00:03:03,601
-Fähigkeiten und achtet
-auf Datenschutz und
+55
+00:01:37,547 --> 00:01:38,076
+Porträt.
 
-105
-00:03:03,651 --> 00:03:04,533
-Urheberrecht.
+56
+00:01:38,126 --> 00:01:39,838
+Ein Kind kann
+von einem anderen
 
-106
-00:03:04,581 --> 00:03:05,581
-Kapitel: Euer
-Steckbrief oder Porträt
+57
+00:01:39,888 --> 00:01:42,206
+beschrieben werden,
+freundlich und nur mit
 
-107
-00:03:05,651 --> 00:03:08,514
-Jetzt etwas zum
-Mitmachen: Euer Steckbrief
+58
+00:01:42,256 --> 00:01:44,298
+Positivem, als
+Steckbrief oder kurzes
 
-108
-00:03:08,564 --> 00:03:09,463
-oder Porträt.
+59
+00:01:44,348 --> 00:01:44,537
+Porträt.
 
-109
-00:03:09,513 --> 00:03:11,616
-Jedes Kind kann von
-einem anderen Kind
-
-110
-00:03:11,666 --> 00:03:12,721
-beschrieben werden.
-
-111
-00:03:12,771 --> 00:03:15,365
-Es gibt zwei Formen:
-den Steckbrief mit
-
-112
-00:03:15,415 --> 00:03:17,811
-festen Feldern, in
-dem nur Positives
-
-113
-00:03:17,861 --> 00:03:20,322
-steht, und das
-Porträt, einen kurzen,
-
-114
-00:03:20,372 --> 00:03:22,702
-freundlichen Text
-mit höchstens 120
-
-115
-00:03:22,752 --> 00:03:23,171
-Wörtern.
-
-116
-00:03:23,191 --> 00:03:24,303
+60
+00:01:44,557 --> 00:01:45,862
 So soll es ablaufen.
 
-117
-00:03:24,353 --> 00:03:26,615
+61
+00:01:45,912 --> 00:01:48,159
 Erstens: Ein Kind
 schreibt über ein
 
-118
-00:03:26,665 --> 00:03:27,515
-anderes Kind.
+62
+00:01:48,209 --> 00:01:48,733
+anderes.
 
-119
-00:03:27,565 --> 00:03:29,910
-Zweitens: Beim Schreiben
-wird geprüft, und
+63
+00:01:48,783 --> 00:01:51,582
+Zweitens: Gemeines
+wird sofort gestoppt.
 
-120
-00:03:29,960 --> 00:03:32,027
-Gemeines wird sofort
-gestoppt und gar
-
-121
-00:03:32,077 --> 00:03:33,086
-nicht gespeichert.
-
-122
-00:03:33,136 --> 00:03:35,513
+64
+00:01:51,632 --> 00:01:53,878
 Drittens: Das beschriebene
 Kind sieht den
 
-123
-00:03:35,563 --> 00:03:37,650
-Text zuerst ganz
-allein und darf ihn
+65
+00:01:53,928 --> 00:01:55,628
+Text zuerst allein
+und darf ihn
 
-124
-00:03:37,700 --> 00:03:38,344
+66
+00:01:55,678 --> 00:01:56,284
 verbessern.
 
-125
-00:03:38,394 --> 00:03:40,158
-Viertens: Das
-beschriebene Kind
+67
+00:01:56,334 --> 00:01:58,933
+Viertens: Es entscheidet,
+ob er erscheint,
 
-126
-00:03:40,208 --> 00:03:42,426
-entscheidet, ob der
-Text erscheint, und
+68
+00:01:58,983 --> 00:02:01,151
+und unter 16 stimmen
+die Eltern zu.
 
-127
-00:03:42,476 --> 00:03:44,581
-bei Kindern unter
-16 stimmen auch die
+69
+00:02:01,201 --> 00:02:02,677
+Es hat das letzte Wort.
 
-128
-00:03:44,631 --> 00:03:45,081
-Eltern zu.
+70
+00:02:02,727 --> 00:02:05,402
+Ohne sein Ja wird
+alles nach 30 Tagen
 
-129
-00:03:45,101 --> 00:03:47,238
-Das beschriebene Kind
-hat immer das letzte
+71
+00:02:05,452 --> 00:02:05,997
+gelöscht.
 
-130
-00:03:47,288 --> 00:03:47,543
-Wort.
+72
+00:02:06,017 --> 00:02:09,352
+Zwei Beispiele auf
+der Seite: Louis, 15,
 
-131
-00:03:47,593 --> 00:03:50,019
-Ohne sein Ja erscheint
-nichts, und es kann
+73
+00:02:09,402 --> 00:02:12,820
+mag Döner extra scharf,
+skatet und mischt
 
-132
-00:03:50,069 --> 00:03:52,141
-sein Ja später
-jederzeit zurückziehen.
+74
+00:02:12,870 --> 00:02:13,397
+Musik.
 
-133
-00:03:52,161 --> 00:03:53,794
-Hier ein paar
-lustige Beispiele mit
+75
+00:02:13,447 --> 00:02:16,453
+Lollo, 16, fotografiert
+und sorgt dafür,
 
-134
-00:03:53,844 --> 00:03:54,729
-erfundenen Figuren.
+76
+00:02:16,503 --> 00:02:19,359
+dass auf jedem Foto
+alle gut aussehen.
 
-135
-00:03:54,779 --> 00:03:57,551
-Kapitän Kichererbse
-mag am liebsten Pizza
-
-136
-00:03:57,601 --> 00:03:58,357
-mit Ananas.
-
-137
-00:03:58,407 --> 00:04:00,558
-Die Wetterfee Wolkine
-kann besonders gut
-
-138
-00:04:00,608 --> 00:04:01,525
-Wolken sortieren.
-
-139
-00:04:01,575 --> 00:04:03,680
-Und über den Zauberer
-Brummel steht im
-
-140
-00:04:03,730 --> 00:04:06,056
-Porträt: Er findet für
-jedes Problem einen
-
-141
-00:04:06,106 --> 00:04:07,921
-Trick und lacht
-dabei am lautesten.
-
-142
-00:04:07,941 --> 00:04:10,470
+77
+00:02:19,409 --> 00:02:22,612
 Habt Mut und reicht
-witzige, lustige und
+kreative Seiten ein!
 
-143
-00:04:10,520 --> 00:04:12,042
-interessante Seiten ein!
-
-144
-00:04:12,092 --> 00:04:14,897
-Je bunter, desto
-besser, und alles bleibt
-
-145
-00:04:14,947 --> 00:04:15,712
-freundlich.
-
-146
-00:04:15,752 --> 00:04:16,752
+78
+00:02:22,667 --> 00:02:23,667
 Kapitel: KI oder von Hand
 
-147
-00:04:16,822 --> 00:04:19,168
-Noch ein wichtiger
-Punkt: KI oder von
+79
+00:02:23,737 --> 00:02:25,255
+KI oder von Hand?
 
-148
-00:04:19,218 --> 00:04:19,546
-Hand?
+80
+00:02:25,305 --> 00:02:27,633
+Ihr entscheidet,
+beides ist gleich gut.
 
-149
-00:04:19,596 --> 00:04:20,763
-Ihr entscheidet.
-
-150
-00:04:20,813 --> 00:04:22,807
-Ihr könnt die Seite
-ganz normal von Hand
-
-151
-00:04:22,857 --> 00:04:24,801
-bauen, so wie man es
-schon immer macht,
-
-152
-00:04:24,851 --> 00:04:26,297
-oder mit Hilfe
-der KI-Helfer.
-
-153
-00:04:26,347 --> 00:04:28,928
-Beides ist gleich gut,
-und niemand muss KI
-
-154
-00:04:28,978 --> 00:04:29,422
-benutzen.
-
-155
-00:04:29,442 --> 00:04:31,557
-KI wird heute auch
-dort eingesetzt, wo
-
-156
-00:04:31,607 --> 00:04:33,168
-Menschen eingeschränkt sind.
-
-157
-00:04:33,218 --> 00:04:35,233
-Wer die Hände nicht
-für eine Tastatur
-
-158
-00:04:35,283 --> 00:04:37,515
-nutzen kann, steuert
-den Computer mit der
-
-159
-00:04:37,565 --> 00:04:37,950
-Stimme.
-
-160
-00:04:38,000 --> 00:04:39,978
-In Pflegeheimen
-wird KI heute schon
-
-161
-00:04:40,028 --> 00:04:42,118
-ausprobiert und
-genutzt: zum Sprechen
-
-162
-00:04:42,168 --> 00:04:44,315
-statt Tippen bei der
-Dokumentation, in
-
-163
-00:04:44,365 --> 00:04:46,681
-Sensoren, die einen
-Sturz melden, und mit
-
-164
-00:04:46,731 --> 00:04:48,935
-Roboter-Robben, die
-Menschen mit Demenz
-
-165
-00:04:48,985 --> 00:04:49,949
-beruhigen sollen.
-
-166
-00:04:49,999 --> 00:04:52,096
-Die Ergebnisse
-sind gemischt, und
-
-167
-00:04:52,146 --> 00:04:54,749
-Fachleute sagen: KI
-ersetzt keine Pflege,
-
-168
-00:04:54,799 --> 00:04:55,962
-sie kann nur helfen.
-
-169
-00:04:55,982 --> 00:04:58,703
-Wer mag, probiert die
-KI als Werkzeug aus.
-
-170
-00:04:58,753 --> 00:05:00,668
-Wer nicht mag,
-baut von Hand.
-
-171
-00:05:00,718 --> 00:05:03,357
+81
+00:02:27,683 --> 00:02:30,437
 Ihr bleibt die Autorinnen
-und Autoren: Die
+und Autoren, die
 
-172
-00:05:03,407 --> 00:05:05,921
-KI macht nur Vorschläge,
-und das Gremium
+82
+00:02:30,487 --> 00:02:32,068
+KI macht nur Vorschläge.
 
-173
-00:05:05,971 --> 00:05:06,609
-gibt frei.
-
-174
-00:05:06,672 --> 00:05:07,672
+83
+00:02:32,114 --> 00:02:33,114
 Kapitel: Alle Klassen
 
-175
-00:05:07,742 --> 00:05:10,185
-Kapitel vier, und das
-ist mir wichtig: Das
+84
+00:02:33,184 --> 00:02:34,866
+Das gilt nicht nur
+für diese Klasse.
 
-176
-00:05:10,235 --> 00:05:12,273
-alles gilt nicht
-nur für diese eine
+85
+00:02:34,916 --> 00:02:37,193
+Jede Klasse der Schule
+kann die Seite für
 
-177
-00:05:12,323 --> 00:05:12,737
-Klasse.
+86
+00:02:37,243 --> 00:02:38,578
+die eigene Party nutzen.
 
-178
-00:05:12,787 --> 00:05:15,240
-Die Idee ist, dass
-jede Klasse der Schule
+87
+00:02:38,628 --> 00:02:41,166
+Ihr seid die Ersten,
+und eure Erfahrungen
 
-179
-00:05:15,290 --> 00:05:17,564
-die Seite für ihre
-eigene Party nutzen
+88
+00:02:41,216 --> 00:02:42,029
+helfen allen.
 
-180
-00:05:17,614 --> 00:05:17,802
-kann.
-
-181
-00:05:17,822 --> 00:05:20,218
-Jede Klasse bekommt
-ihre eigene Seite, mit
-
-182
-00:05:20,268 --> 00:05:22,664
-eigenen Fragen, eigenen
-Farben und eigenen
-
-183
-00:05:22,714 --> 00:05:23,574
-Entscheidungen.
-
-184
-00:05:23,624 --> 00:05:25,883
-Was wir hier zuerst
-mit euch ausprobieren,
-
-185
-00:05:25,933 --> 00:05:28,031
-können später alle
-anderen Klassen auch
-
-186
-00:05:28,081 --> 00:05:28,460
-nutzen.
-
-187
-00:05:28,510 --> 00:05:30,629
-Ihr seid also die
-Ersten, und eure
-
-188
-00:05:30,679 --> 00:05:32,240
-Erfahrungen helfen allen.
-
-189
-00:05:32,312 --> 00:05:33,312
+89
+00:02:42,079 --> 00:02:43,079
 Kapitel: Die Fragen
 
-190
-00:05:33,382 --> 00:05:34,048
-Frage A.
+90
+00:02:43,149 --> 00:02:45,794
+Frage A: Wer gibt
+Änderungen frei, bevor
 
-191
-00:05:34,098 --> 00:05:36,904
-Wer gibt Änderungen
-frei, bevor sie online
+91
+00:02:45,844 --> 00:02:46,977
+sie online gehen?
 
-192
-00:05:36,954 --> 00:05:37,369
-gehen?
+92
+00:02:50,375 --> 00:02:52,211
+Frage B, ganz
+wichtig: Fotos.
 
-193
-00:05:37,419 --> 00:05:40,218
-Ein Team, eine
-Lehrperson oder nur eine
+93
+00:02:52,261 --> 00:02:54,903
+Fotos kommen nur mit
+dem Ja der Person
 
-194
-00:05:40,268 --> 00:05:40,788
-Person?
+94
+00:02:54,953 --> 00:02:57,526
+selbst, und wer
+unter 16 ist, braucht
 
-195
-00:05:40,838 --> 00:05:43,043
-Tippt einfach an,
-was ihr am besten
+95
+00:02:57,576 --> 00:02:59,596
+zusätzlich das
+Ja der Eltern.
 
-196
-00:05:43,093 --> 00:05:43,422
-findet.
+96
+00:03:02,995 --> 00:03:05,652
+Frage C: Wer prüft
+eingeschickte Fotos,
 
-197
-00:05:43,442 --> 00:05:45,961
-Frage B ist ganz
-wichtig: die Fotos.
-
-198
-00:05:46,011 --> 00:05:47,629
-Wir sind alle unter 16.
-
-199
-00:05:47,679 --> 00:05:49,838
-Darum müssen ihr
-selbst und eure Eltern
-
-200
-00:05:49,888 --> 00:05:52,047
-zustimmen, bevor ein
-Foto auf die Seite
-
-201
-00:05:52,097 --> 00:05:52,433
-kommt.
-
-202
-00:05:52,483 --> 00:05:54,341
-Wer nicht möchte,
-bleibt draußen.
-
-203
-00:05:54,391 --> 00:05:56,522
-Tippt an, wie wir
-mit Fotos umgehen.
-
-204
-00:05:56,542 --> 00:05:57,177
-Frage C.
-
-205
-00:05:57,227 --> 00:05:59,412
-Wer schaut sich
-eingeschickte Fotos an,
-
-206
-00:05:59,462 --> 00:06:00,642
+97
+00:03:05,702 --> 00:03:07,141
 bevor sie erscheinen?
 
-207
-00:06:00,692 --> 00:06:03,216
-Zum Beispiel dieselben
-Personen wie bei A,
+98
+00:03:10,575 --> 00:03:13,193
+Frage D: Welche
+Seiten wollen wir?
 
-208
-00:06:03,266 --> 00:06:04,782
-oder ein eigenes Foto-Team.
+99
+00:03:13,243 --> 00:03:15,252
+Mehrere Kreuze sind erlaubt.
 
-209
-00:06:04,802 --> 00:06:05,584
-Frage D.
+100
+00:03:18,675 --> 00:03:21,480
+Frage F: Wer darf
+dem KI-Helfer Wünsche
 
-210
-00:06:05,634 --> 00:06:07,261
-Welche Seiten wollen wir?
+101
+00:03:21,530 --> 00:03:22,194
+schicken?
 
-211
-00:06:07,311 --> 00:06:09,661
-Zum Beispiel Programm,
-Fotogalerie oder
+102
+00:03:25,615 --> 00:03:28,476
+Frage G: Was passiert
+nach der Party?
 
-212
-00:06:09,711 --> 00:06:10,500
-Musikwünsche.
+103
+00:03:28,526 --> 00:03:30,454
+Bleibt die Seite
+stehen oder wird sie
 
-213
-00:06:10,550 --> 00:06:12,603
-Hier dürft ihr
-mehrere ankreuzen.
+104
+00:03:30,504 --> 00:03:30,974
+gelöscht?
 
-214
-00:06:12,653 --> 00:06:14,516
-Und wenn euch etwas
-fehlt, schreibt es
+105
+00:03:34,395 --> 00:03:37,027
+Frage H: Wer darf auf
+die Seite, und wer
 
-215
-00:06:14,566 --> 00:06:15,082
-einfach dazu.
+106
+00:03:37,077 --> 00:03:38,335
+gehört zum Gremium?
 
-216
-00:06:15,102 --> 00:06:15,980
-Frage F.
+107
+00:03:38,385 --> 00:03:40,261
+Mehrere Kreuze sind erlaubt.
 
-217
-00:06:16,030 --> 00:06:18,519
-Wer darf dem KI-Helfer
-Wünsche schicken?
+108
+00:03:43,665 --> 00:03:45,680
+Frage I: Wie
+wollen wir bauen?
 
-218
-00:06:18,569 --> 00:06:20,873
-Alle aus der Klasse,
-oder nur das kleine
+109
+00:03:45,730 --> 00:03:48,474
+Mit Sprache, mit dem
+Finger oder beides?
 
-219
-00:06:20,923 --> 00:06:21,102
-Team?
+110
+00:03:51,885 --> 00:03:54,469
+Frage J: Wie holen
+wir die Zustimmung der
 
-220
-00:06:21,122 --> 00:06:21,983
-Frage G.
+111
+00:03:54,519 --> 00:03:55,221
+Eltern ein?
 
-221
-00:06:22,033 --> 00:06:23,823
-Was passiert nach der Party?
+112
+00:03:55,271 --> 00:03:57,399
+Ohne Zustimmung keine Fotos.
 
-222
-00:06:23,873 --> 00:06:25,896
-Bleibt die Seite als
-Erinnerung stehen,
+113
+00:04:00,825 --> 00:04:01,922
+Alles angekreuzt?
 
-223
-00:06:25,946 --> 00:06:27,503
-oder wird sie
-wieder gelöscht?
+114
+00:04:01,972 --> 00:04:03,632
+Dann tippt auf Abschicken.
 
-224
-00:06:27,553 --> 00:06:28,762
-Das entscheidet ihr.
+115
+00:04:03,682 --> 00:04:05,974
+Eure Kreuze sind
+anonym, die Antworten
 
-225
-00:06:28,782 --> 00:06:29,722
-Frage H.
+116
+00:04:06,024 --> 00:04:08,257
+bleiben vorerst nur
+in eurem Browser.
 
-226
-00:06:29,772 --> 00:06:32,333
-Wer darf auf die Seite,
-und wer gehört zur
-
-227
-00:06:32,383 --> 00:06:33,852
-Gruppe, die entscheidet?
-
-228
-00:06:33,902 --> 00:06:35,760
-Diese Gruppe
-nennt man Gremium.
-
-229
-00:06:35,810 --> 00:06:38,146
-Sie gibt neue Leute
-und Änderungen frei.
-
-230
-00:06:38,196 --> 00:06:40,342
-Hier dürft ihr
-mehrere Kreuze setzen.
-
-231
-00:06:40,362 --> 00:06:41,051
-Frage I.
-
-232
-00:06:41,101 --> 00:06:42,318
-Wie wollen wir bauen?
-
-233
-00:06:42,368 --> 00:06:44,482
-Ihr könnt dem KI-Helfer
-etwas sagen, zum
-
-234
-00:06:44,532 --> 00:06:46,118
-Beispiel: Mach
-die Seite grün.
-
-235
-00:06:46,168 --> 00:06:48,227
-Oder ihr schiebt
-auf dem iPad mit dem
-
-236
-00:06:48,277 --> 00:06:49,559
-Finger Bausteine herum.
-
-237
-00:06:49,609 --> 00:06:50,412
-Oder beides.
-
-238
-00:06:50,432 --> 00:06:51,413
-Frage J.
-
-239
-00:06:51,463 --> 00:06:53,418
-Wie holen wir die
-Zustimmung der Eltern
-
-240
-00:06:53,468 --> 00:06:53,668
-ein?
-
-241
-00:06:53,718 --> 00:06:56,020
-Zum Beispiel mit
-einem Haken bei der
-
-242
-00:06:56,070 --> 00:06:58,499
-Anmeldung oder mit
-einem Zettel für zu
-
-243
-00:06:58,549 --> 00:06:58,944
-Hause.
-
-244
-00:06:58,994 --> 00:07:00,757
-Auch hier gilt: Ohne
-Zustimmung keine
-
-245
-00:07:00,807 --> 00:07:00,992
-Fotos.
-
-246
-00:07:01,012 --> 00:07:03,051
-Wenn ihr alles
-angekreuzt habt, tippt
-
-247
-00:07:03,101 --> 00:07:04,260
-unten auf Abschicken.
-
-248
-00:07:04,310 --> 00:07:06,505
-Ihr schreibt keinen
-Namen dazu, eure
-
-249
-00:07:06,555 --> 00:07:07,718
-Kreuze sind anonym.
-
-250
-00:07:07,768 --> 00:07:09,133
-Danke fürs Mitmachen!
-
-251
-00:07:09,182 --> 00:07:10,182
+117
+00:04:10,115 --> 00:04:11,115
 Kapitel: Spielregeln
 
-252
-00:07:10,252 --> 00:07:12,683
-Und jetzt noch ein
-paar Spielregeln, ganz
+118
+00:04:11,185 --> 00:04:13,259
+Noch ein paar Spielregeln.
 
-253
-00:07:12,733 --> 00:07:13,215
-einfach.
+119
+00:04:13,309 --> 00:04:15,131
+Erstens: Nichts
+Gemeines über andere.
 
-254
-00:07:13,265 --> 00:07:16,397
-Erstens: Nichts Gemeines
-über andere, auch
+120
+00:04:15,181 --> 00:04:17,669
+Zweitens: Nichts
+Privates verraten.
 
-255
-00:07:16,447 --> 00:07:17,655
-nicht im Scherz.
+121
+00:04:17,719 --> 00:04:20,674
+Drittens: Keine
+Fotos ohne klares Ja.
 
-256
-00:07:17,705 --> 00:07:19,503
-Zweitens: Keine
-Geheimnisse und nichts
+122
+00:04:20,724 --> 00:04:22,010
+Wer sich daran
+hält, hat Spaß.
 
-257
-00:07:19,553 --> 00:07:20,971
-Privates von
-anderen verraten.
-
-258
-00:07:21,021 --> 00:07:24,212
-Drittens: Keine Fotos
-ohne ein klares Ja.
-
-259
-00:07:24,232 --> 00:07:26,461
-Wer sich daran hält,
-hat Spaß, und alle
-
-260
-00:07:26,511 --> 00:07:27,486
-fühlen sich wohl.
-
-261
-00:07:27,536 --> 00:07:29,447
+123
+00:04:22,060 --> 00:04:24,173
 Lehrkräfte und
-Eltern können die
+Eltern finden die
 
-262
-00:07:29,497 --> 00:07:32,002
-ausführlichen Spielregeln
+124
+00:04:24,223 --> 00:04:26,663
+ausführlichen Regeln
 in einem eigenen
 
-263
-00:07:32,052 --> 00:07:32,893
-Video ansehen.
+125
+00:04:26,713 --> 00:04:28,760
+Video ganz unten
+auf der Seite.
 
-264
-00:07:32,943 --> 00:07:34,986
-Das steht ganz unten
-auf der Seite: Zum
-
-265
-00:07:35,036 --> 00:07:36,923
-Schluss etwas für
-die Lehrer und die
-
-266
-00:07:36,973 --> 00:07:38,231
-IT-Abteilung der Schule.
-
-267
-00:07:38,282 --> 00:07:39,282
+126
+00:04:28,805 --> 00:04:29,805
 Kapitel: Zum Schluss
 
-268
-00:07:39,352 --> 00:07:41,631
+127
+00:04:29,875 --> 00:04:31,883
 Die Fragen beantwortet
-ihr gleich unten
+ihr gleich unten.
 
-269
-00:07:41,681 --> 00:07:42,562
-auf dieser Seite.
-
-270
-00:07:42,582 --> 00:07:44,615
+128
+00:04:31,933 --> 00:04:34,107
 Ich freue mich auf
-euch und auf eure
+euch und wünsche euch
 
-271
-00:07:44,665 --> 00:07:45,009
-Party.
-
-272
-00:07:45,059 --> 00:07:47,184
-Ich wünsche euch
+129
+00:04:34,157 --> 00:04:36,277
 alles Gute, und dass
+eure Party richtig
 
-273
-00:07:47,234 --> 00:07:48,729
-alles richtig gut gelingt.
+130
+00:04:36,327 --> 00:04:36,982
+gut gelingt.
 
-274
-00:07:48,779 --> 00:07:49,591
+131
+00:04:37,032 --> 00:04:37,801
 Bis bald!
 

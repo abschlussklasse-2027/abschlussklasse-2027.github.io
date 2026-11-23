@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0a1f">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>Konzept · Unsere Abschlussparty 2027</title>
+<link rel="stylesheet" href="recht.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Direkt zum Inhalt</a>
+<header class="kopf"><div class="kopf-innen">
+  <a class="zurueck" href="../index.html">← zurück zur Seite</a>
+  <h1>Das Konzept in Kürze</h1>
+</div></header>
+<main id="inhalt">
+<p class="stand">Stand 23.11.2026, Entwurf: Die Seite erfasst heute keine personenbezogenen Daten; die Angaben zu Anschrift und Datenerfassung werden vor dem Start ergänzt und von Schule und Beratung geprüft.</p>
+<section class="block kurz"><p>Das ganze Konzept mit Technik, Zeitplan und Risiken liegt beim Betreiber und kann bei abschluss.klasse.2027@gmx.de angefragt werden.</p>
+<h2>Kurzfassung</h2>
+<ul>
+<li>Wir bauen eine eigene Seite für unsere Abschlussparty 2027. Sie gehört der Klasse.</li>
+<li><strong>Heute gibt es:</strong> die Seite, ein Erklärvideo und die Ankreuzfragen A bis J. Deine Kreuze bleiben nur auf deinem Gerät.</li>
+<li><strong>Geplant ist:</strong> Anmeldung per Link, Steckbriefe «Kind beschreibt Kind», Foto-Upload, ein gemeinsamer Sammelpunkt für die Kreuze, Bauen per Finger und per Sprache.</li>
+<li>Nichts erscheint ohne Freigabe. Beim Steckbrief hat das beschriebene Kind immer das letzte Wort. Unter 16 sagen auch die Eltern Ja.</li>
+<li>KI ist ein Angebot, keine Pflicht. Von Hand bauen ist genauso gut.</li>
+<li>Für die Klasse kostet es nichts. Die KI-Helfer werden von einem Elternteil unentgeltlich bereitgestellt und haben ein festes Limit.</li>
+</ul></section>
+<section class="block"><h2>Wer macht was</h2>
+<div class="tabwrap"><table>
+<thead>
+<tr>
+<th>Wer</th>
+<th>Was</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kinder der Klasse</td>
+<td>ankreuzen, Wünsche sagen, Texte schreiben, Fotos einreichen</td>
+</tr>
+<tr>
+<td>Das beschriebene Kind</td>
+<td>liest den Steckbrief zuerst allein, verbessert, sagt Ja oder Nein</td>
+</tr>
+<tr>
+<td>Gremium (3 bis 5 Kinder oder die ganze Klasse)</td>
+<td>lässt Personen zu, gibt Änderungen und Fotos frei, sperrt bei Verstössen</td>
+</tr>
+<tr>
+<td>Lehrkräfte</td>
+<td>sehen mit, können jederzeit sperren</td>
+</tr>
+<tr>
+<td>Eltern</td>
+<td>stimmen für Kinder unter 16 zu, können jederzeit widerrufen</td>
+</tr>
+<tr>
+<td>Betreiber (ein Elternteil)</td>
+<td>stellt die KI-Helfer bereit, betreut die Technik, hat einen Notausschalter, entscheidet nicht über Inhalte</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Wie es technisch gedacht ist</h2>
+<pre><code>  iPad / Handy
+       |
+       v
+  Seite bei GitHub Pages  (öffentlich, für Suchmaschinen gesperrt)
+       |
+       v
+  Kleines Programm bei Cloudflare (geplant)  (prüft, speichert, gibt nur Freigegebenes heraus)
+       |            |              |
+       v            v              v
+  Datenbank    Fotospeicher    Moderation (geplant)  -&gt;  ok/blockiert
+</code></pre>
+<p>Zugangsschlüssel liegen nur im Programm, nie in der Seite. Kein eigener Server, keine Cookies, kein Tracking.</p>
+<h2>Steckbrief «Kind beschreibt Kind»</h2>
+<ol>
+<li>Ein Kind schreibt über ein anderes Kind, mit festen Feldern nur für Positives oder als kurzes Porträt (höchstens 120 Wörter).</li>
+<li>Gemeines wird sofort gestoppt und nicht gespeichert.</li>
+<li>Das beschriebene Kind liest zuerst allein und darf verbessern.</li>
+<li>Es sagt Ja oder Nein. Unter 16 sagen auch die Eltern Ja.</li>
+<li>Ohne Ja: unsichtbar, nach 30 Tagen gelöscht. Ja zurückziehen geht jederzeit, dann wird sofort gelöscht.</li>
+</ol>
+<h2>Prüfung in fünf Stufen</h2>
+<ol>
+<li>Wortlisten, auch für verfremdete Schreibweisen.</li>
+<li>KI-Prüfung für Ton und Angriffe, auch ohne Schimpfwort.</li>
+<li>Felder, die zu Positivem lenken.</li>
+<li>Veto des beschriebenen Kindes.</li>
+<li>Gremium und Lehrkraft können melden und sperren.</li>
+</ol>
+<p>Keine Prüfung fängt alles. Deshalb erscheint nichts ohne Freigabe.</p>
+<h2>Fotos (Plan)</h2>
+<p>QR-Code der Klasse scannen, Anmeldelink per Mail, Foto hochladen. Jedes Foto wird zuerst geprüft. Gesperrt sind Alkohol, Drogen, Tabak, Gewalt, Waffen und Sexuelles. Im Zweifel wird gesperrt. Dann gibt das Gremium frei. Wer erkennbar auf dem Foto ist, muss zustimmen, unter 16 auch die Eltern.</p>
+<h2>Zeitplan bis Juli 2027</h2>
+<div class="tabwrap"><table>
+<thead>
+<tr>
+<th>Wann (Plan)</th>
+<th>Was</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>November 2026</td>
+<td>Seite, Video, Ankreuzfragen (fertig)</td>
+</tr>
+<tr>
+<td>Dezember 2026</td>
+<td>Steckbrief im Test, ohne echte Daten</td>
+</tr>
+<tr>
+<td>Januar 2027</td>
+<td>Anmeldung, Sammelpunkt für Kreuze, Steckbriefe</td>
+</tr>
+<tr>
+<td>Februar bis März 2027</td>
+<td>Foto-Upload</td>
+</tr>
+<tr>
+<td>April bis Mai 2027</td>
+<td>Bauen per Finger und Sprache</td>
+</tr>
+<tr>
+<td>Juni bis Juli 2027</td>
+<td>Programm, Galerie, Party</td>
+</tr>
+<tr>
+<td>danach</td>
+<td>löschen (spätestens Ende Schuljahr 2026/27) oder mit Zustimmung aller übergeben</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Was noch offen ist</h2>
+<ul>
+<li>Eure Antworten auf die Fragen A bis J.</li>
+<li>Die Form der Zustimmung der Eltern.</li>
+<li>Technik für Anmeldung und Prüfung (Konto, Mail-Versand über Resend, Moderationsdienst); verbindlich erst beim Start.</li>
+</ul></section>
+</main>
+<footer class="rechtsleiste" aria-label="Rechtliches">
+  <ul>
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="datenschutz.html">Datenschutz</a></li>
+    <li><a href="urheberrecht-erstveroeffentlichung.html">Urheberrecht &amp; Erstveröffentlichung</a></li>
+    <li><a href="bedingungen.html">Bedingungen</a></li>
+    <li><a href="konzept.html" aria-current="page">Konzept</a></li>
+  </ul>
+  <p><a href="../index.html">← zurück zur Seite</a></p>
+  <p class="klein">Abschlussparty 2027 · Von der Klasse, für die Klasse</p>
+</footer>
+</body>
+</html>

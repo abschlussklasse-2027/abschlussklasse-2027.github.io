@@ -187,6 +187,13 @@ h3{letter-spacing:-.02em}
 .danke .ico{display:inline-block}
 .fuss{text-align:center;color:var(--leise);padding:0 16px 48px;overflow:hidden}
 .fuss p{margin:.4em 0 0}
+.rechtsleiste{max-width:1040px;margin:0 auto 12px}
+.rechtsleiste ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.rechtsleiste li{margin:0}
+.rechtsleiste a{display:inline-flex;align-items:center;min-height:48px;padding:8px 16px;border:1px solid var(--cyan);border-radius:999px;color:var(--cyan);font-weight:700;text-decoration:none}
+.rechtsleiste a:hover{background:rgba(34,211,238,.14)}
+.rechtsleiste .konzept-zeile{margin:0 0 .6em}
+.rechtsleiste .konzept-zeile a{border:0;padding:0 4px;text-decoration:underline}
 .fuss-wellen{margin:0 auto 12px;max-width:1040px;height:40px;opacity:.7}
 [hidden]{display:none!important}
 
