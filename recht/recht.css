@@ -42,3 +42,20 @@ hr{border:0;border-top:1px solid rgba(255,255,255,.14);margin:1.6em 0}
 a.adr{cursor:pointer;color:inherit;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:12px 0;line-height:1.3}
 .adr .rev{unicode-bidi:bidi-override;direction:rtl}
 .adr .at::before{content:"@"}
+
+/* Tabellen als Mischform: breit = Tabelle mit ruhigen Spalten, schmal = je Zeile eine Karte */
+table.datenkarten{min-width:0;table-layout:auto}
+table.datenkarten th,table.datenkarten td{overflow-wrap:normal;word-break:normal;hyphens:manual}
+table.datenkarten .kurz{white-space:nowrap}
+table.datenkarten td.erste{font-weight:700}
+@media (max-width:760px){
+  .tabwrap{overflow:visible}
+  table.datenkarten,table.datenkarten tbody,table.datenkarten tr,table.datenkarten td{display:block;width:100%}
+  table.datenkarten thead{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+  table.datenkarten tr{margin:0 0 14px;padding:12px 14px;border:1px solid rgba(255,255,255,.22);border-radius:14px;background:rgba(255,255,255,.04)}
+  table.datenkarten td{border:0;padding:3px 0;display:grid;grid-template-columns:7.2em 1fr;column-gap:10px;white-space:normal}
+  table.datenkarten td.kurz{white-space:normal}
+  table.datenkarten td::before{content:attr(data-label);color:var(--leise);font-size:.9rem}
+  table.datenkarten td.erste{display:block;font-size:1.05rem;padding-bottom:6px}
+  table.datenkarten td.erste::before{content:none}
+}
