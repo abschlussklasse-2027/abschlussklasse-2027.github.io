@@ -1,7 +1,7 @@
 (function () {
   var F = window.FRAGEN, liste = window.stimmenLesen(), n = liste.length;
   document.getElementById("anzahl").textContent = n + (n === 1 ? " Abgabe" : " Abgaben") + " in diesem Browser";
-  if (!window.sammelpunktDa()) document.getElementById("sammel").hidden = false;
+  document.getElementById("sammel").hidden = false;
   var out = document.getElementById("ergebnis");
   if (!n) { document.getElementById("leer").hidden = false; return; }
   F.forEach(function (f) {

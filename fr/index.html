@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0a0a1f">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self' https://klasse.keys4it.com; base-uri 'none'; form-action 'none'">
 <title data-i18n="meta.title">Notre fête de fin d'année 2027</title>
 <meta name="description" content="Notre fête de fin d&#x27;année 2027 : le site de la classe, fait par la classe pour la classe. Avec des assistants IA, une vidéo explicative et des questions à cocher."meta.description"">
 <meta property="og:type" content="website">
@@ -305,7 +305,7 @@
 
 <section id="fragen-bereich" class="block fragen-block">
   <h2 data-i18n="fragen-bereich.1">Vos décisions à cocher</h2>
-  <p class="klein" data-i18n="fragen-bereich.2">Pour l'instant, vos réponses ne sont enregistrées que sur cet appareil. Il n'existe pas encore de point de collecte commun. Les règles de la maison figurent dans le <a href="../flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">flyer (PDF)</a>.</p>
+  <p class="klein" data-i18n="fragen-bereich.2">Vos réponses sont enregistrées en commun, de façon anonyme et sans noms : toute la classe décide ensemble. Les règles de la maison figurent dans le <a href="../flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">flyer (PDF)</a>.</p>
   <div id="formular">
     <div class="fortschritt" role="progressbar" aria-label="Progression" aria-valuemin="0" aria-valuenow="0" data-i18n-a="aria-label:fragen-bereich.3.aria">
       <div id="fortschritt-balken"></div>
@@ -318,7 +318,8 @@
   <div id="danke" class="danke" tabindex="-1" hidden>
     <svg class="ico gross-ico" aria-hidden="true"><use href="#i-star"/></svg>
     <h3 data-i18n="fragen-bereich.7">Merci, tes réponses sont enregistrées !</h3>
-    <p data-i18n="fragen-bereich.8">Pour l'instant, elles restent uniquement sur cet appareil. Un point de collecte commun est encore en cours de mise en place.</p>
+    <p id="danke-gemeinsam" data-i18n="fragen-bereich.8">Enregistrées en commun : la classe décide ensemble, aucun nom n'est conservé.</p>
+    <p id="danke-lokal" data-i18n="fragen-bereich.9" hidden>L'envoi à tous n'a pas fonctionné à l'instant. Pour l'instant, tes réponses restent uniquement dans ce navigateur.</p>
   </div>
 </section>
 

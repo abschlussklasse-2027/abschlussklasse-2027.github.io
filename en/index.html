@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0a0a1f">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self' https://klasse.keys4it.com; base-uri 'none'; form-action 'none'">
 <title data-i18n="meta.title">Our Graduation Party 2027</title>
 <meta name="description" content="Our graduation party 2027: the class site, by the class for the class. With AI helpers, an explainer video and questions to tick."meta.description"">
 <meta property="og:type" content="website">
@@ -305,7 +305,7 @@
 
 <section id="fragen-bereich" class="block fragen-block">
   <h2 data-i18n="fragen-bereich.1">Your decisions to tick</h2>
-  <p class="klein" data-i18n="fragen-bereich.2">For now, your ticks are only saved on this device. There is no shared collection point yet. The house rules are in the <a href="../flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">flyer (PDF, German)</a>.</p>
+  <p class="klein" data-i18n="fragen-bereich.2">Your ticks are saved together, anonymously and without names, so the whole class has a say. The house rules are in the <a href="../flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">flyer (PDF, German)</a>.</p>
   <div id="formular">
     <div class="fortschritt" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuenow="0" data-i18n-a="aria-label:fragen-bereich.3.aria">
       <div id="fortschritt-balken"></div>
@@ -318,7 +318,8 @@
   <div id="danke" class="danke" tabindex="-1" hidden>
     <svg class="ico gross-ico" aria-hidden="true"><use href="#i-star"/></svg>
     <h3 data-i18n="fragen-bereich.7">Thanks, your answers are saved!</h3>
-    <p data-i18n="fragen-bereich.8">For now they stay only on this device. A shared collection point is still being set up.</p>
+    <p id="danke-gemeinsam" data-i18n="fragen-bereich.8">Saved to the shared pool: the class decides together, no names are stored.</p>
+    <p id="danke-lokal" data-i18n="fragen-bereich.9" hidden>Sending to everyone did not work just now. For now your answers stay only in this browser.</p>
   </div>
 </section>
 

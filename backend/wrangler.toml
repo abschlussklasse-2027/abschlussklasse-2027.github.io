@@ -5,7 +5,7 @@ compatibility_date = "2024-11-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "abschlussklasse-2027"
-database_id = "00000000-0000-0000-0000-000000000000"  # Platzhalter, Phase B: echte ID eintragen
+database_id = "f25468a3-cb40-4ecd-83d9-777b9ba5f0b1"
 migrations_dir = "migrations"
 
 [triggers]

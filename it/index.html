@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0a0a1f">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self' https://klasse.keys4it.com; base-uri 'none'; form-action 'none'">
 <title data-i18n="meta.title">La nostra festa di fine anno 2027</title>
 <meta name="description" content="La nostra festa di fine anno 2027: il sito della classe, fatto dalla classe per la classe. Con assistenti IA, video esplicativo e domande da spuntare."meta.description"">
 <meta property="og:type" content="website">
@@ -305,7 +305,7 @@
 
 <section id="fragen-bereich" class="block fragen-block">
   <h2 data-i18n="fragen-bereich.1">Le vostre decisioni da spuntare</h2>
-  <p class="klein" data-i18n="fragen-bereich.2">Per ora le vostre crocette restano salvate solo su questo dispositivo. Un punto di raccolta comune non c'è ancora. Le regole della casa sono nel <a href="../flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">volantino (PDF)</a>.</p>
+  <p class="klein" data-i18n="fragen-bereich.2">Le vostre crocette vengono salvate insieme, in forma anonima e senza nomi: decide tutta la classe. Le regole della casa sono nel <a href="../flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">volantino (PDF)</a>.</p>
   <div id="formular">
     <div class="fortschritt" role="progressbar" aria-label="Avanzamento" aria-valuemin="0" aria-valuenow="0" data-i18n-a="aria-label:fragen-bereich.3.aria">
       <div id="fortschritt-balken"></div>
@@ -318,7 +318,8 @@
   <div id="danke" class="danke" tabindex="-1" hidden>
     <svg class="ico gross-ico" aria-hidden="true"><use href="#i-star"/></svg>
     <h3 data-i18n="fragen-bereich.7">Grazie, le tue risposte sono salvate!</h3>
-    <p data-i18n="fragen-bereich.8">Per ora restano solo su questo dispositivo. Un punto di raccolta comune è ancora in allestimento.</p>
+    <p id="danke-gemeinsam" data-i18n="fragen-bereich.8">Salvate insieme: decide tutta la classe, nessun nome viene memorizzato.</p>
+    <p id="danke-lokal" data-i18n="fragen-bereich.9" hidden>L'invio a tutti non è riuscito. Per ora le tue risposte restano solo in questo browser.</p>
   </div>
 </section>
 

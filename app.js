@@ -78,6 +78,8 @@
     knopf.disabled = true;
     window.senden(a).then(function (r) {
       document.getElementById("formular").hidden = true;
+      document.getElementById("danke-gemeinsam").hidden = !r.gemeinsam;
+      document.getElementById("danke-lokal").hidden = !!r.gemeinsam;
       var d = document.getElementById("danke");
       d.hidden = false;
       d.focus();
