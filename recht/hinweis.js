@@ -1,7 +1,7 @@
 /* erzeugt von i18n/bauen.py. Zeigt über den Rechtsseiten einen Satz in der Sprache, aus der man kommt (?lang=xx).
    Die Rechtstexte selbst bleiben unverändert Deutsch und verbindlich. */
 (function () {
-  var T = {"en": {"h": "Note: The legal pages are only available in German. The German version is the legally binding one.", "z": "← back to the page"}};
+  var T = {"en": {"h": "Note: The legal pages are only available in German. The German version is the legally binding one.", "z": "← back to the page"}, "fr": {"h": "Remarque : les pages juridiques n'existent qu'en allemand. La version allemande fait foi.", "z": "← retour à la page"}, "it": {"h": "Nota: le pagine legali esistono solo in tedesco. Fa fede la versione tedesca.", "z": "← torna alla pagina"}, "es": {"h": "Aviso: las páginas legales solo existen en alemán. Es vinculante la versión en alemán.", "z": "← volver a la página"}, "tr": {"h": "Not: Hukuki sayfalar yalnızca Almanca olarak mevcuttur. Bağlayıcı olan Almanca sürümdür.", "z": "← sayfaya geri dön"}, "pl": {"h": "Wskazówka: strony prawne są tylko po niemiecku. Wiążąca jest wersja niemiecka.", "z": "← z powrotem do strony"}, "uk": {"h": "Примітка: правові сторінки існують лише німецькою. Обов'язковою є німецька версія.", "z": "← назад на сторінку"}};
   var m = /[?&]lang=([a-z]{2})(?:&|$)/.exec(location.search), l = m && T[m[1]] ? m[1] : null;
   if (!l) return;
   var haupt = document.getElementById('inhalt'); if (!haupt) return;

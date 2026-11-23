@@ -318,7 +318,7 @@ h3{letter-spacing:-.02em}
 .sw-suche{width:100%;min-height:44px;padding:8px 14px;font:inherit;font-size:1rem;color:var(--text);background:var(--bg);border:2px solid var(--rand);border-radius:12px}
 .sw-suche:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,.35)}
 .sw-suche::placeholder{color:var(--leise)}
-.sw-liste{list-style:none;margin:8px 0 0;padding:0;max-height:min(55vh,340px);overflow-y:auto}
+.sw-liste{list-style:none;margin:8px 0 0;padding:0;max-height:min(70vh,440px);overflow-y:auto}
 .sw-liste li[hidden]{display:none}
 .sw-liste a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;padding:8px 12px;color:var(--text);text-decoration:none;font-weight:700;border-radius:10px}
 .sw-liste a span{font:700 .78rem var(--mono);color:var(--leise);letter-spacing:.1em}
