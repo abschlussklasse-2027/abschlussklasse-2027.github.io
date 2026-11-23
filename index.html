@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-root="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,20 +7,24 @@
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0a0a1f">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
-<title>Unsere Abschlussparty 2027</title>
-<meta name="description" content="Unsere Abschlussparty 2027: Die Klassenseite, von der Klasse für die Klasse. Mit KI-Helfern, Erklärvideo und Fragen zum Ankreuzen.">
+<title data-i18n="meta.title">Unsere Abschlussparty 2027</title>
+<meta name="description" content="Unsere Abschlussparty 2027: Die Klassenseite, von der Klasse für die Klasse. Mit KI-Helfern, Erklärvideo und Fragen zum Ankreuzen. data-i18n-meta="meta.description"">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Unsere Abschlussparty 2027">
-<meta property="og:description" content="Die Klassenseite, von der Klasse für die Klasse: Erklärvideo, drei KI-Helfer und Fragen zum Ankreuzen.">
+<meta property="og:title" content="Unsere Abschlussparty 2027 data-i18n-meta="meta.ogtitle"">
+<meta property="og:description" content="Die Klassenseite, von der Klasse für die Klasse: Erklärvideo, drei KI-Helfer und Fragen zum Ankreuzen. data-i18n-meta="meta.ogdesc"">
 <meta property="og:url" content="https://abschlussklasse-2027.github.io/">
 <meta property="og:image" content="https://abschlussklasse-2027.github.io/bilder/vorschau-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Unsere Abschlussparty 2027 mit Disco-Kugel und Wellenform">
+<meta property="og:image:alt" content="Unsere Abschlussparty 2027 mit Disco-Kugel und Wellenform data-i18n-meta="meta.ogimagealt"">
 <meta name="twitter:card" content="summary_large_image">
 
+<link rel="alternate" hreflang="de" href="https://abschlussklasse-2027.github.io/">
+<link rel="alternate" hreflang="en" href="https://abschlussklasse-2027.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://abschlussklasse-2027.github.io/">
 <link rel="stylesheet" href="stil.css">
+<script src="sprache-vor.js"></script>
 </head>
 <body>
 <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
@@ -32,12 +36,24 @@
     <symbol id="i-kal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="currentColor"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-welt" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 12l-6.6 2.4L12 22l-2.4-7.6L3 12l6.6-3.4z" fill="currentColor"/></symbol>
   </defs>
 </svg>
-<a class="skip" href="#fragen-bereich">Direkt zu den Fragen</a>
+<a class="skip" href="#fragen-bereich" data-i18n="seite.1">Direkt zu den Fragen</a>
 <header class="kopf">
+<div class="sprachwahl" id="sprachwahl">
+  <button type="button" class="sw-knopf" id="sw-knopf" aria-haspopup="true" aria-expanded="false" aria-controls="sw-panel" aria-label="Sprache wählen" data-i18n-a="aria-label:sw.aria"><svg class="ico" aria-hidden="true"><use href="#i-welt"/></svg><span class="sw-code" id="sw-code">DE</span><svg class="sw-pfeil" aria-hidden="true" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="sw-panel" id="sw-panel" hidden>
+    <input type="search" class="sw-suche" id="sw-suche" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Sprache suchen …" aria-label="Sprache suchen" data-i18n-a="placeholder:sw.suche;aria-label:sw.suche">
+    <ul class="sw-liste" id="sw-liste">
+      <li><a href="?lang=de" lang="de" hreflang="de" data-code="de" data-suche="deutsch german allemand">Deutsch<span>DE</span></a></li>
+      <li><a href="en/" lang="en" hreflang="en" data-code="en" data-suche="english englisch anglais">English<span>EN</span></a></li>
+    </ul>
+    <p class="sw-leer" id="sw-leer" hidden data-i18n="sw.leer">Keine Sprache gefunden</p>
+  </div>
+</div>
   <svg class="konfetti" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
     <path d="M-20 60C140 10 260 130 420 70S700 -10 860 60" fill="none" stroke="url(#gStr1)" stroke-width="9" stroke-linecap="round" opacity=".75"/>
     <path d="M-20 100C150 60 270 170 430 110S690 30 840 100" fill="none" stroke="#22d3ee" stroke-width="5" stroke-linecap="round" opacity=".6"/>
@@ -91,10 +107,10 @@
   </svg>
   <div class="kopf-innen">
     <div class="kopf-text">
-      <p class="tag"><span class="punkt"></span>Abschlussklasse 2027</p>
-      <h1><span class="z1">Unsere</span> <span class="z2">Abschlussparty</span> <span class="neon">2027</span></h1>
-      <p class="unter">Wir bauen unsere eigene Seite, mit KI und ganz ohne Kosten</p>
-      <p class="wann"><span class="band"><svg class="ico" aria-hidden="true"><use href="#i-kal"/></svg>Datum: kommt noch</span><span class="band b2"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Ort: kommt noch</span></p>
+      <p class="tag"><span class="punkt"></span><span data-i18n="kopf.1">Abschlussklasse 2027</span></p>
+      <h1><span class="z1" data-i18n="kopf.2">Unsere</span> <span class="z2" data-i18n="kopf.3">Abschlussparty</span> <span class="neon">2027</span></h1>
+      <p class="unter" data-i18n="kopf.4">Wir bauen unsere eigene Seite, mit KI und ganz ohne Kosten</p>
+      <p class="wann"><span class="band"><svg class="ico" aria-hidden="true"><use href="#i-kal"/></svg><span data-i18n="kopf.5">Datum: kommt noch</span></span><span class="band b2"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="kopf.6">Ort: kommt noch</span></span></p>
     </div>
     <svg class="disco" viewBox="0 0 200 220" aria-hidden="true" focusable="false">
       <path d="M100 0V50" stroke="#b9b9dc" stroke-width="2"/>
@@ -131,246 +147,253 @@
       <path d="M22 168l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#22d3ee"/>
     </svg>
   </div>
-  <div class="countdown" aria-label="Countdown bis Juli 2027">
-    <p class="cd-text"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Der Countdown läuft: Juli 2027 im Blick</p>
+  <div class="countdown" aria-label="Countdown bis Juli 2027" data-i18n-a="aria-label:kopf.7.aria">
+    <p class="cd-text"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="kopf.8">Der Countdown läuft: Juli 2027 im Blick</span></p>
     <div class="cd-leiste" aria-hidden="true"></div>
   </div>
   <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <svg class="wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
 </header>
 <main>
+<section class="vorlesen" id="vorlesen" aria-label="Vorlesen" data-i18n-a="aria-label:vl.aria" hidden>
+  <button type="button" class="vl-play" id="vl-play"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path id="vl-ico" d="M8 5l11 7-11 7z" fill="currentColor"/></svg><span id="vl-text" data-i18n="vl.start">Seite vorlesen</span></button>
+  <button type="button" class="vl-stop" id="vl-stop" hidden data-i18n="vl.stopp">Stopp</button>
+  <p class="vl-info" id="vl-info" aria-live="polite"></p>
+</section>
 <section class="block idee">
-  <h2>Die Idee in drei Sätzen</h2>
+  <h2 data-i18n="idee.1">Die Idee in drei Sätzen</h2>
   <ol class="drei">
-    <li>Die Seite liegt bei GitHub und kostet nichts.</li>
-    <li>Hinter der Seite arbeiten drei KI-Helfer: Ihr sagt oder schreibt einen Wunsch, sie bauen die Seite dazu.</li>
-    <li>Fotos ladet ihr direkt vom Handy hoch.</li>
+    <li data-i18n="idee.2">Die Seite liegt bei GitHub und kostet nichts.</li>
+    <li data-i18n="idee.3">Hinter der Seite arbeiten drei KI-Helfer: Ihr sagt oder schreibt einen Wunsch, sie bauen die Seite dazu.</li>
+    <li data-i18n="idee.4">Fotos ladet ihr direkt vom Handy hoch.</li>
   </ol>
 </section>
 
 <section class="block video-block" aria-labelledby="vt">
-  <h2 id="vt">Unser Video</h2>
+  <h2 id="vt" data-i18n="video-block.1">Unser Video</h2>
   <div class="videolayout">
     <div class="videorahmen hoch">
-      <video id="video" controls playsinline preload="metadata" hidden aria-label="Unser Video" poster="video/abschlussparty-poster.jpg?v=r4">
+      <video id="video" controls playsinline preload="metadata" hidden aria-label="Unser Video" poster="video/abschlussparty-poster.jpg?v=r4" data-i18n-a="aria-label:video-block.2.aria">
         <source src="video/abschlussparty.mp4?v=r4" type="video/mp4">
         <track kind="captions" srclang="de" label="Deutsch" src="video/abschlussparty.vtt?v=r4" default>
       </video>
-      <div id="video-platzhalter" class="platzhalter"><svg class="ico gross-ico" aria-hidden="true"><use href="#i-play"/></svg><strong>Das Video kommt gleich</strong></div>
+      <div id="video-platzhalter" class="platzhalter"><svg class="ico gross-ico" aria-hidden="true"><use href="#i-play"/></svg><strong data-i18n="video-block.3">Das Video kommt gleich</strong></div>
     </div>
     <div class="videoseite">
-      <p class="videohinweis"><strong>Erst Video ansehen, dann die Fragen unten ankreuzen.</strong></p>
-      <p class="klein">Tipp: Tippe auf ein Kapitel, dann springt das Video dorthin. Untertitel kannst du im Video ein- und ausschalten.</p>
-      <ul class="kapitel" id="kapitel" aria-label="Kapitel des Videos">
-        <li><button type="button" data-t="0.0">Start</button></li>
-        <li><button type="button" data-t="12.7">Anmeldung</button></li>
-        <li><button type="button" data-t="31.2">Editor</button></li>
-        <li><button type="button" data-t="56.0">Sprache</button></li>
-        <li><button type="button" data-t="67.1">Die Helfer</button></li>
-        <li><button type="button" data-t="88.3">Steckbrief und Porträt</button></li>
-        <li><button type="button" data-t="135.7">KI oder von Hand</button></li>
-        <li><button type="button" data-t="143.9">Alle Klassen</button></li>
-        <li><button type="button" data-t="152.5">Die Fragen</button></li>
-        <li><button type="button" data-t="209.0">Spielregeln</button></li>
-        <li><button type="button" data-t="226.4">Zum Schluss</button></li>
+      <p class="video-hinweis plan" id="video-hinweis" hidden data-i18n="video.bald">Das englische Video kommt bald. Bis dahin läuft hier die deutsche Fassung.</p>
+      <p class="videohinweis" data-i18n="video-block.4"><strong>Erst Video ansehen, dann die Fragen unten ankreuzen.</strong></p>
+      <p class="klein" data-i18n="video-block.5">Tipp: Tippe auf ein Kapitel, dann springt das Video dorthin. Untertitel kannst du im Video ein- und ausschalten.</p>
+      <ul class="kapitel" id="kapitel" aria-label="Kapitel des Videos" data-i18n-a="aria-label:video-block.6.aria">
+        <li><button type="button" data-t="0.0" data-i18n="video-block.7">Start</button></li>
+        <li><button type="button" data-t="12.7" data-i18n="video-block.8">Anmeldung</button></li>
+        <li><button type="button" data-t="31.2" data-i18n="video-block.9">Editor</button></li>
+        <li><button type="button" data-t="56.0" data-i18n="video-block.10">Sprache</button></li>
+        <li><button type="button" data-t="67.1" data-i18n="video-block.11">Die Helfer</button></li>
+        <li><button type="button" data-t="88.3" data-i18n="video-block.12">Steckbrief und Porträt</button></li>
+        <li><button type="button" data-t="135.7" data-i18n="video-block.13">KI oder von Hand</button></li>
+        <li><button type="button" data-t="143.9" data-i18n="video-block.14">Alle Klassen</button></li>
+        <li><button type="button" data-t="152.5" data-i18n="video-block.15">Die Fragen</button></li>
+        <li><button type="button" data-t="209.0" data-i18n="video-block.16">Spielregeln</button></li>
+        <li><button type="button" data-t="226.4" data-i18n="video-block.17">Zum Schluss</button></li>
       </ul>
-      <p class="klein">Anmeldung, Editor, Spracheingabe, Steckbrief-Funktion und Foto-Upload gibt es noch nicht. Im Video zeigen wir, wie es einmal werden soll (Plan).</p>
+      <p class="klein" data-i18n="video-block.18">Anmeldung, Editor, Spracheingabe, Steckbrief-Funktion und Foto-Upload gibt es noch nicht. Im Video zeigen wir, wie es einmal werden soll (Plan).</p>
     </div>
   </div>
 </section>
 
 <section class="block ticket">
-  <h2>So funktioniert es</h2>
+  <h2 data-i18n="ticket.1">So funktioniert es</h2>
   <ul class="punkte">
-    <li><b>1. Die Seite.</b> Die Seite gehört der Klasse und läuft auf einem eigenen Konto, das später übergeben werden kann.</li>
-    <li><b>2. Die KI-Helfer.</b> Ihr sagt per Sprache oder schiebt mit dem Finger Bausteine herum, die KI-Helfer bauen den Vorschlag, online geht er erst nach Freigabe des Gremiums.</li>
-    <li><b>3. Fotos.</b> Fotos kommen direkt vom Handy auf die Seite oder per Mail.</li>
+    <li data-i18n="ticket.2"><b>1. Die Seite.</b> Die Seite gehört der Klasse und läuft auf einem eigenen Konto, das später übergeben werden kann.</li>
+    <li data-i18n="ticket.3"><b>2. Die KI-Helfer.</b> Ihr sagt per Sprache oder schiebt mit dem Finger Bausteine herum, die KI-Helfer bauen den Vorschlag, online geht er erst nach Freigabe des Gremiums.</li>
+    <li data-i18n="ticket.4"><b>3. Fotos.</b> Fotos kommen direkt vom Handy auf die Seite oder per Mail.</li>
   </ul>
 </section>
 
 <section class="block kosten">
-  <h2>Was es kostet</h2>
+  <h2 data-i18n="kosten.1">Was es kostet</h2>
   <ul class="punkte">
-    <li><span class="stat" aria-hidden="true">0</span><span>Seite und Adresse abschlussklasse-2027.github.io kosten nichts. Die Gratis-Adresse von GitHub ist entschieden.</span></li>
-    <li><span class="stat st2" aria-hidden="true">Limit</span><span>Die KI-Helfer sind «gesponsert von Louisas Papa» und haben ein festes Limit.</span></li>
+    <li><span class="stat" aria-hidden="true">0</span><span data-i18n="kosten.2">Seite und Adresse abschlussklasse-2027.github.io kosten nichts. Die Gratis-Adresse von GitHub ist entschieden.</span></li>
+    <li><span class="stat st2" aria-hidden="true" data-i18n="kosten.3">Limit</span><span data-i18n="kosten.4">Die KI-Helfer sind «gesponsert von Louisas Papa» und haben ein festes Limit.</span></li>
   </ul>
 </section>
 
 <section class="block helfer" id="helfer" aria-labelledby="ht">
-  <h2 id="ht">Unsere drei KI-Helfer</h2>
-  <p class="helfer-satz">Hinter der Seite arbeiten drei KI-Helfer: Ihr sagt oder schreibt einen Wunsch, sie bauen die Seite dazu.</p>
+  <h2 id="ht" data-i18n="helfer.1">Unsere drei KI-Helfer</h2>
+  <p class="helfer-satz" data-i18n="helfer.2">Hinter der Seite arbeiten drei KI-Helfer: Ihr sagt oder schreibt einen Wunsch, sie bauen die Seite dazu.</p>
   <div class="karten3">
     <article class="hk salt">
-      <img src="bilder/bot-salt-farbe-300.jpg" width="300" height="300" alt="Salt, runder blauer Roboter mit großen Augen, Kopfhörern und einem Lächeln">
+      <img src="bilder/bot-salt-farbe-300.jpg" width="300" height="300" alt="Salt, runder blauer Roboter mit großen Augen, Kopfhörern und einem Lächeln" data-i18n-a="alt:helfer.3.alt">
       <h3 class="name">Salt</h3>
-      <p class="satz"><b>Hoi, ich bin Salt.</b> Ich bin gründlich und bringe jede Sache zu Ende.</p>
-      <div class="steck"><dl><div><dt>Typ</dt><dd>Quality-Bot V 3.5</dd></div><div><dt>Takt</dt><dd>alle 10 Min.</dd></div></dl><p class="skillzahl">Skills: 79</p><p class="skills">Satzrhythmus prüfen, KI-Muster prüfen, Umfluss prüfen, Lesernutzen prüfen, LinkedIn-Bild prüfen</p></div>
-        <p class="nachweis">Bild: <a href="https://pixabay.com/illustrations/ai-generated-robot-cartoon-8638575/" target="_blank" rel="noopener noreferrer">tanrıca</a> / Pixabay, mit KI farbig bearbeitet</p>
+      <p class="satz" data-i18n="helfer.4"><b>Hoi, ich bin Salt.</b> Ich bin gründlich und bringe jede Sache zu Ende.</p>
+      <div class="steck"><dl><div><dt data-i18n="helfer.5">Typ</dt><dd>Quality-Bot V 3.5</dd></div><div><dt data-i18n="helfer.6">Takt</dt><dd data-i18n="helfer.7">alle 10 Min.</dd></div></dl><p class="skillzahl" data-i18n="helfer.8">Skills: 79</p><p class="skills" data-i18n="helfer.9">Satzrhythmus prüfen, KI-Muster prüfen, Umfluss prüfen, Lesernutzen prüfen, LinkedIn-Bild prüfen</p></div>
+        <p class="nachweis" data-i18n="helfer.10">Bild: <a href="https://pixabay.com/illustrations/ai-generated-robot-cartoon-8638575/" target="_blank" rel="noopener noreferrer">tanrıca</a> / Pixabay, mit KI farbig bearbeitet</p>
     </article>
     <article class="hk pepper">
-      <img src="bilder/bot-pepper-farbe-300.jpg" width="300" height="300" alt="Pepper, weißer Roboter mit großen wachen Augen, roten Kopfhörern und roten Knöpfen">
+      <img src="bilder/bot-pepper-farbe-300.jpg" width="300" height="300" alt="Pepper, weißer Roboter mit großen wachen Augen, roten Kopfhörern und roten Knöpfen" data-i18n-a="alt:helfer.11.alt">
       <h3 class="name">Pepper</h3>
-      <p class="satz"><b>Hoi, ich bin Pepper.</b> Ich bin flink und bringe dir Antworten sofort.</p>
-      <div class="steck"><dl><div><dt>Typ</dt><dd>Response-Bot V 3.2</dd></div><div><dt>Takt</dt><dd>alle 10 Min.</dd></div></dl><p class="skillzahl">Skills: 54</p><p class="skills">Leselinks erneuern, Postfach lesen, Cc-Aufträge annehmen, Launchpad-Ideen melden, Antworten</p></div>
-        <p class="nachweis">Bild: <a href="https://pixabay.com/illustrations/ai-generated-robot-android-9440737/" target="_blank" rel="noopener noreferrer">olenchic</a> / Pixabay, mit KI farbig bearbeitet</p>
+      <p class="satz" data-i18n="helfer.12"><b>Hoi, ich bin Pepper.</b> Ich bin flink und bringe dir Antworten sofort.</p>
+      <div class="steck"><dl><div><dt data-i18n="helfer.13">Typ</dt><dd>Response-Bot V 3.2</dd></div><div><dt data-i18n="helfer.14">Takt</dt><dd data-i18n="helfer.15">alle 10 Min.</dd></div></dl><p class="skillzahl" data-i18n="helfer.16">Skills: 54</p><p class="skills" data-i18n="helfer.17">Leselinks erneuern, Postfach lesen, Cc-Aufträge annehmen, Launchpad-Ideen melden, Antworten</p></div>
+        <p class="nachweis" data-i18n="helfer.18">Bild: <a href="https://pixabay.com/illustrations/ai-generated-robot-android-9440737/" target="_blank" rel="noopener noreferrer">olenchic</a> / Pixabay, mit KI farbig bearbeitet</p>
     </article>
     <article class="hk chili">
-      <img src="bilder/bot-chili-farbe-300.jpg" width="300" height="300" alt="Chili, kleiner Roboter in Orange und Creme mit einem großen runden Auge und Antenne">
+      <img src="bilder/bot-chili-farbe-300.jpg" width="300" height="300" alt="Chili, kleiner Roboter in Orange und Creme mit einem großen runden Auge und Antenne" data-i18n-a="alt:helfer.19.alt">
       <h3 class="name">Chili</h3>
-      <p class="satz"><b>Hoi, ich bin Chili</b> und tue, was ein Security- und Litigation-Bot so tut. Ich schlafe nie.</p>
-      <div class="steck"><dl><div><dt>Typ</dt><dd>Security- und Litigation-Bot für Urheber- und Designrecht V 2.0</dd></div><div><dt>Takt</dt><dd>rund um die Uhr</dd></div></dl><p class="skillzahl">Skills: 133</p><p class="skills">Plagiatssuche, Codesuche, Bildvergleich, Zeitstempel, Wayback-Archiv</p></div>
-        <p class="nachweis">Bild: <a href="https://pixabay.com/illustrations/eyeball-robot-sci-fi-cartoon-robot-9824278/" target="_blank" rel="noopener noreferrer">PixelLabs</a> / Pixabay, mit KI farbig bearbeitet</p>
+      <p class="satz" data-i18n="helfer.20"><b>Hoi, ich bin Chili</b> und tue, was ein Security- und Litigation-Bot so tut. Ich schlafe nie.</p>
+      <div class="steck"><dl><div><dt data-i18n="helfer.21">Typ</dt><dd data-i18n="helfer.22">Security- und Litigation-Bot für Urheber- und Designrecht V 2.0</dd></div><div><dt data-i18n="helfer.23">Takt</dt><dd data-i18n="helfer.24">rund um die Uhr</dd></div></dl><p class="skillzahl" data-i18n="helfer.25">Skills: 133</p><p class="skills" data-i18n="helfer.26">Plagiatssuche, Codesuche, Bildvergleich, Zeitstempel, Wayback-Archiv</p></div>
+        <p class="nachweis" data-i18n="helfer.27">Bild: <a href="https://pixabay.com/illustrations/eyeball-robot-sci-fi-cartoon-robot-9824278/" target="_blank" rel="noopener noreferrer">PixelLabs</a> / Pixabay, mit KI farbig bearbeitet</p>
     </article>
   </div>
-  <p class="klein">Alles geht erst nach Freigabe durch das Gremium online.</p>
+  <p class="klein" data-i18n="helfer.28">Alles geht erst nach Freigabe durch das Gremium online.</p>
 </section>
 
 <section class="block kioder" id="ki-oder-hand" aria-labelledby="kh">
-  <h2 id="kh">KI oder von Hand? Ihr entscheidet.</h2>
-  <p>Ihr könnt die Seite ganz normal von Hand bauen, so wie man es schon immer macht, oder mit Hilfe der KI-Helfer. Beides ist gleich gut. Die Klasse entscheidet, und niemand muss KI benutzen.</p>
-  <p>KI wird heute auch dort eingesetzt, wo Menschen eingeschränkt sind. Wer die Hände nicht für eine Tastatur nutzen kann, steuert den Computer mit der Stimme. In Pflegeheimen wird KI heute schon ausprobiert und genutzt: zum Sprechen statt Tippen bei der Dokumentation, in Sensoren, die einen Sturz melden, und mit Roboter-Robben, die Menschen mit Demenz beruhigen sollen. Die Ergebnisse sind gemischt, und Fachleute sagen: KI ersetzt keine Pflege, sie kann nur helfen.</p>
-  <p>Wer mag, probiert die KI als Werkzeug aus. Wer nicht mag, baut von Hand. Ihr bleibt die Autorinnen und Autoren: Die KI macht nur Vorschläge, und das Gremium gibt frei.</p>
+  <h2 id="kh" data-i18n="ki-oder-hand.1">KI oder von Hand? Ihr entscheidet.</h2>
+  <p data-i18n="ki-oder-hand.2">Ihr könnt die Seite ganz normal von Hand bauen, so wie man es schon immer macht, oder mit Hilfe der KI-Helfer. Beides ist gleich gut. Die Klasse entscheidet, und niemand muss KI benutzen.</p>
+  <p data-i18n="ki-oder-hand.3">KI wird heute auch dort eingesetzt, wo Menschen eingeschränkt sind. Wer die Hände nicht für eine Tastatur nutzen kann, steuert den Computer mit der Stimme. In Pflegeheimen wird KI heute schon ausprobiert und genutzt: zum Sprechen statt Tippen bei der Dokumentation, in Sensoren, die einen Sturz melden, und mit Roboter-Robben, die Menschen mit Demenz beruhigen sollen. Die Ergebnisse sind gemischt, und Fachleute sagen: KI ersetzt keine Pflege, sie kann nur helfen.</p>
+  <p data-i18n="ki-oder-hand.4">Wer mag, probiert die KI als Werkzeug aus. Wer nicht mag, baut von Hand. Ihr bleibt die Autorinnen und Autoren: Die KI macht nur Vorschläge, und das Gremium gibt frei.</p>
 </section>
 
 <section class="block steckblock" id="steckbrief" aria-labelledby="sbt">
-  <h2 id="sbt">Euer Steckbrief oder Porträt</h2>
-  <p class="plan"><b>Plan: so soll es werden.</b> Diese Funktion gibt es noch nicht, so soll sie einmal aussehen.</p>
-  <p>Jede Person kann von einer anderen beschrieben werden. Es gibt zwei Formen: den <b>Steckbrief</b> mit festen Feldern, in dem nur Positives steht, und das <b>Porträt</b>, einen kurzen, freundlichen Text mit höchstens 120 Wörtern.</p>
+  <h2 id="sbt" data-i18n="steckbrief.1">Euer Steckbrief oder Porträt</h2>
+  <p class="plan" data-i18n="steckbrief.2"><b>Plan: so soll es werden.</b> Diese Funktion gibt es noch nicht, so soll sie einmal aussehen.</p>
+  <p data-i18n="steckbrief.3">Jede Person kann von einer anderen beschrieben werden. Es gibt zwei Formen: den <b>Steckbrief</b> mit festen Feldern, in dem nur Positives steht, und das <b>Porträt</b>, einen kurzen, freundlichen Text mit höchstens 120 Wörtern.</p>
   <ol class="schritte4">
-    <li><b>Schreiben.</b> Du schreibst über jemanden aus der Klasse und kannst ein Foto dazu hochladen.</li>
-    <li><b>Prüfen.</b> Gemeines wird sofort gestoppt und nicht gespeichert.</li>
-    <li><b>Die Person sieht es.</b> Die beschriebene Person liest zuerst ganz allein und darf verbessern.</li>
-    <li><b>Freigabe.</b> Die beschriebene Person entscheidet. Bei unter 16 stimmen auch die Eltern zu.</li>
+    <li data-i18n="steckbrief.4"><b>Schreiben.</b> Du schreibst über jemanden aus der Klasse und kannst ein Foto dazu hochladen.</li>
+    <li data-i18n="steckbrief.5"><b>Prüfen.</b> Gemeines wird sofort gestoppt und nicht gespeichert.</li>
+    <li data-i18n="steckbrief.6"><b>Die Person sieht es.</b> Die beschriebene Person liest zuerst ganz allein und darf verbessern.</li>
+    <li data-i18n="steckbrief.7"><b>Freigabe.</b> Die beschriebene Person entscheidet. Bei unter 16 stimmen auch die Eltern zu.</li>
   </ol>
-  <p><b>Die beschriebene Person hat immer das letzte Wort.</b> Ohne ihr Ja erscheint nichts: Der Text bleibt unsichtbar und wird nach 30 Tagen gelöscht. Und sie kann ihr Ja später jederzeit zurückziehen.</p>
+  <p data-i18n="steckbrief.8"><b>Die beschriebene Person hat immer das letzte Wort.</b> Ohne ihr Ja erscheint nichts: Der Text bleibt unsichtbar und wird nach 30 Tagen gelöscht. Und sie kann ihr Ja später jederzeit zurückziehen.</p>
   <div class="beispiele">
-  <div class="beispiel" aria-label="Beispiel, 15 Jahre">
-    <p class="bkopf">Beispiel, 15 Jahre</p>
-    <figure class="foto"><img src="bilder/beispiel-junge-17-400.jpg" width="400" height="400" alt="Gezeichneter Junge mit Kapuzenpulli, Kopfhörern und Skateboard vor einer Graffiti-Wand"><figcaption>Beispielbild, KI-gezeichnet. Bei euch ist es ein echtes Foto, nur mit Ja der Person (und der Eltern unter 16).</figcaption></figure>
-    <h3>Louis, 15</h3>
-    <dl class="felder"><div><dt>Vorname</dt><dd>Louis</dd></div><div><dt>Lieblingsessen</dt><dd>Döner, extra scharf</dd></div><div><dt>Lieblingsfach</dt><dd>Sport und Informatik</dd></div><div><dt>Hobby</dt><dd>Skaten, Musik mischen</dd></div><div><dt>Was ich an ihm mag</dt><dd>Er hilft, wenn man nicht weiter weiß.</dd></div><div><dt>Das kann er besonders gut</dt><dd>Playlists, die jede Party retten</dd></div><div><dt>Ein Satz zur Party</dt><dd>Ich kümmere mich um die Musik!</dd></div></dl>
+  <div class="beispiel" aria-label="Beispiel, 15 Jahre" data-i18n-a="aria-label:steckbrief.9.aria">
+    <p class="bkopf" data-i18n="steckbrief.10">Beispiel, 15 Jahre</p>
+    <figure class="foto"><img src="bilder/beispiel-junge-17-400.jpg" width="400" height="400" alt="Gezeichneter Junge mit Kapuzenpulli, Kopfhörern und Skateboard vor einer Graffiti-Wand" data-i18n-a="alt:steckbrief.11.alt"><figcaption data-i18n="steckbrief.12">Beispielbild, KI-gezeichnet. Bei euch ist es ein echtes Foto, nur mit Ja der Person (und der Eltern unter 16).</figcaption></figure>
+    <h3 data-i18n="steckbrief.13">Louis, 15</h3>
+    <dl class="felder"><div><dt data-i18n="steckbrief.14">Vorname</dt><dd>Louis</dd></div><div><dt data-i18n="steckbrief.15">Lieblingsessen</dt><dd data-i18n="steckbrief.16">Döner, extra scharf</dd></div><div><dt data-i18n="steckbrief.17">Lieblingsfach</dt><dd data-i18n="steckbrief.18">Sport und Informatik</dd></div><div><dt data-i18n="steckbrief.19">Hobby</dt><dd data-i18n="steckbrief.20">Skaten, Musik mischen</dd></div><div><dt data-i18n="steckbrief.21">Was ich an ihm mag</dt><dd data-i18n="steckbrief.22">Er hilft, wenn man nicht weiter weiß.</dd></div><div><dt data-i18n="steckbrief.23">Das kann er besonders gut</dt><dd data-i18n="steckbrief.24">Playlists, die jede Party retten</dd></div><div><dt data-i18n="steckbrief.25">Ein Satz zur Party</dt><dd data-i18n="steckbrief.26">Ich kümmere mich um die Musik!</dd></div></dl>
   </div>
-  <div class="beispiel b2" aria-label="Beispiel, 16 Jahre">
-    <p class="bkopf">Beispiel, 16 Jahre</p>
-    <figure class="foto"><img src="bilder/beispiel-maedchen-16-400.jpg" width="400" height="400" alt="Gezeichnetes Mädchen mit Jeansjacke und Kamera vor einer Wand mit Lichterketten"><figcaption>Beispielbild, KI-gezeichnet. Bei euch ist es ein echtes Foto, nur mit Ja der Person (und der Eltern unter 16).</figcaption></figure>
-    <h3>Lollo, 16</h3>
-    <dl class="felder"><div><dt>Vorname</dt><dd>Lollo</dd></div><div><dt>Lieblingsessen</dt><dd>Pasta mit Pesto</dd></div><div><dt>Lieblingsfach</dt><dd>Kunst und Englisch</dd></div><div><dt>Hobby</dt><dd>Fotografieren, Reisen planen</dd></div><div><dt>Was ich an ihr mag</dt><dd>Sie hört zu und bringt alle zum Lachen.</dd></div><div><dt>Das kann sie besonders gut</dt><dd>Fotos, auf denen alle gut aussehen</dd></div><div><dt>Ein Satz zur Party</dt><dd>Ich mache die Fotos, ihr macht den Spaß!</dd></div></dl>
+  <div class="beispiel b2" aria-label="Beispiel, 16 Jahre" data-i18n-a="aria-label:steckbrief.27.aria">
+    <p class="bkopf" data-i18n="steckbrief.28">Beispiel, 16 Jahre</p>
+    <figure class="foto"><img src="bilder/beispiel-maedchen-16-400.jpg" width="400" height="400" alt="Gezeichnetes Mädchen mit Jeansjacke und Kamera vor einer Wand mit Lichterketten" data-i18n-a="alt:steckbrief.29.alt"><figcaption data-i18n="steckbrief.30">Beispielbild, KI-gezeichnet. Bei euch ist es ein echtes Foto, nur mit Ja der Person (und der Eltern unter 16).</figcaption></figure>
+    <h3 data-i18n="steckbrief.31">Lollo, 16</h3>
+    <dl class="felder"><div><dt data-i18n="steckbrief.32">Vorname</dt><dd>Lollo</dd></div><div><dt data-i18n="steckbrief.33">Lieblingsessen</dt><dd data-i18n="steckbrief.34">Pasta mit Pesto</dd></div><div><dt data-i18n="steckbrief.35">Lieblingsfach</dt><dd data-i18n="steckbrief.36">Kunst und Englisch</dd></div><div><dt data-i18n="steckbrief.37">Hobby</dt><dd data-i18n="steckbrief.38">Fotografieren, Reisen planen</dd></div><div><dt data-i18n="steckbrief.39">Was ich an ihr mag</dt><dd data-i18n="steckbrief.40">Sie hört zu und bringt alle zum Lachen.</dd></div><div><dt data-i18n="steckbrief.41">Das kann sie besonders gut</dt><dd data-i18n="steckbrief.42">Fotos, auf denen alle gut aussehen</dd></div><div><dt data-i18n="steckbrief.43">Ein Satz zur Party</dt><dd data-i18n="steckbrief.44">Ich mache die Fotos, ihr macht den Spaß!</dd></div></dl>
   </div>
   </div>
-  <p>Mut zur Lücke ist erlaubt, Mut zum Spaß erwünscht: <b>Reicht witzige, lustige und interessante Seiten ein!</b> Je kreativer, desto besser, und alles bleibt freundlich.</p>
+  <p data-i18n="steckbrief.45">Mut zur Lücke ist erlaubt, Mut zum Spaß erwünscht: <b>Reicht witzige, lustige und interessante Seiten ein!</b> Je kreativer, desto besser, und alles bleibt freundlich.</p>
 </section>
 
 <section class="block datenschutz" aria-labelledby="dt">
-  <h2 id="dt"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Wichtig: Fotos und Einverständnis</h2>
-  <p>Fotos und Namen kommen nur auf die Seite, wenn die Person selbst ausdrücklich zugestimmt hat. Wer unter 16 ist, braucht zusätzlich das Ja der Eltern. Wer nicht möchte, bleibt draußen, und jedes Foto kann jederzeit gelöscht werden.</p>
-  <p>Im Gratis-Tarif von GitHub ist alles öffentlich: Jede Person im Internet kann die Seite und alle Bilder sehen. Deshalb braucht jedes Foto, auf dem jemand zu erkennen ist, das Einverständnis der Person und der Eltern.</p>
-  <p>Hier unten gibst du <b>keinen Namen</b> und keine E-Mail-Adresse an. Deine Kreuze sind anonym.</p>
-  <p class="klein">Das ist keine Rechtsberatung. Bei unter 16-Jährigen soll nach der Datenschutz-Grundverordnung die Zustimmung der Eltern vorliegen.</p>
+  <h2 id="dt"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="datenschutz.1">Wichtig: Fotos und Einverständnis</span></h2>
+  <p data-i18n="datenschutz.2">Fotos und Namen kommen nur auf die Seite, wenn die Person selbst ausdrücklich zugestimmt hat. Wer unter 16 ist, braucht zusätzlich das Ja der Eltern. Wer nicht möchte, bleibt draußen, und jedes Foto kann jederzeit gelöscht werden.</p>
+  <p data-i18n="datenschutz.3">Im Gratis-Tarif von GitHub ist alles öffentlich: Jede Person im Internet kann die Seite und alle Bilder sehen. Deshalb braucht jedes Foto, auf dem jemand zu erkennen ist, das Einverständnis der Person und der Eltern.</p>
+  <p data-i18n="datenschutz.4">Hier unten gibst du <b>keinen Namen</b> und keine E-Mail-Adresse an. Deine Kreuze sind anonym.</p>
+  <p class="klein" data-i18n="datenschutz.5">Das ist keine Rechtsberatung. Bei unter 16-Jährigen soll nach der Datenschutz-Grundverordnung die Zustimmung der Eltern vorliegen.</p>
 </section>
 
 <section id="fragen-bereich" class="block fragen-block">
-  <h2>Eure Entscheidungen zum Ankreuzen</h2>
-  <p class="klein">Eure Kreuze bleiben vorerst nur auf diesem Gerät gespeichert. Einen gemeinsamen Sammelpunkt gibt es noch nicht. Die Hausregeln stehen im <a href="flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">Flyer (PDF)</a>.</p>
+  <h2 data-i18n="fragen-bereich.1">Eure Entscheidungen zum Ankreuzen</h2>
+  <p class="klein" data-i18n="fragen-bereich.2">Eure Kreuze bleiben vorerst nur auf diesem Gerät gespeichert. Einen gemeinsamen Sammelpunkt gibt es noch nicht. Die Hausregeln stehen im <a href="flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">Flyer (PDF)</a>.</p>
   <div id="formular">
-    <div class="fortschritt" role="progressbar" aria-label="Fortschritt" aria-valuemin="0" aria-valuenow="0">
+    <div class="fortschritt" role="progressbar" aria-label="Fortschritt" aria-valuemin="0" aria-valuenow="0" data-i18n-a="aria-label:fragen-bereich.3.aria">
       <div id="fortschritt-balken"></div>
     </div>
-    <p id="fortschritt-text" class="fortschritt-text" aria-live="polite">0 Fragen beantwortet</p>
+    <p id="fortschritt-text" class="fortschritt-text" aria-live="polite" data-i18n="fragen-bereich.4">0 Fragen beantwortet</p>
     <div id="fragen"></div>
-    <p id="hinweis-leer" class="warn" tabindex="-1" hidden>Kreuze bitte mindestens eine Antwort an.</p>
-    <button id="abschicken" class="gross" type="button">Abschicken</button>
+    <p id="hinweis-leer" class="warn" tabindex="-1" hidden data-i18n="fragen-bereich.5">Kreuze bitte mindestens eine Antwort an.</p>
+    <button id="abschicken" class="gross" type="button" data-i18n="fragen-bereich.6">Abschicken</button>
   </div>
   <div id="danke" class="danke" tabindex="-1" hidden>
     <svg class="ico gross-ico" aria-hidden="true"><use href="#i-star"/></svg>
-    <h3>Danke, deine Antworten sind gespeichert!</h3>
-    <p>Sie bleiben vorerst nur auf diesem Gerät. Ein gemeinsamer Sammelpunkt wird noch eingerichtet.</p>
+    <h3 data-i18n="fragen-bereich.7">Danke, deine Antworten sind gespeichert!</h3>
+    <p data-i18n="fragen-bereich.8">Sie bleiben vorerst nur auf diesem Gerät. Ein gemeinsamer Sammelpunkt wird noch eingerichtet.</p>
   </div>
 </section>
 
 <section id="lehrer" class="block lehrer">
   <details id="lehrer-details" open>
-    <summary><span class="lt">Zum Schluss: etwas für die Lehrer und die IT-Abteilung der Schule</span></summary>
+    <summary><span class="lt" data-i18n="lehrer-details.1">Zum Schluss: etwas für die Lehrer und die IT-Abteilung der Schule</span></summary>
     <div class="lehrer-inhalt">
-      <p>Dieser Bereich richtet sich an Lehrkräfte, Eltern und die IT der Schule. Er zeigt, wie das Projekt gedacht ist.</p>
-      <h3>Das Wichtigste in 3 Minuten</h3>
-      <p>Luca erklärt Lehrkräften, Eltern und der IT der Schule, wie die Seite gedacht ist: die Spielregeln, die Prüfung vor der Veröffentlichung und den Datenschutz. Rechts liest du mit, was er gerade sagt.</p>
+      <p data-i18n="lehrer-details.2">Dieser Bereich richtet sich an Lehrkräfte, Eltern und die IT der Schule. Er zeigt, wie das Projekt gedacht ist.</p>
+      <h3 data-i18n="lehrer-details.3">Das Wichtigste in 3 Minuten</h3>
+      <p data-i18n="lehrer-details.4">Luca erklärt Lehrkräften, Eltern und der IT der Schule, wie die Seite gedacht ist: die Spielregeln, die Prüfung vor der Veröffentlichung und den Datenschutz. Rechts liest du mit, was er gerade sagt.</p>
       <ul class="punkte">
-        <li>Ohne Ja der beschriebenen Person erscheint nichts.</li>
-        <li>Unzulässiges wird beim Schreiben gestoppt und nicht gespeichert.</li>
-        <li>Nach 30 Tagen ohne Freigabe wird gelöscht, Widerruf löscht sofort.</li>
+        <li data-i18n="lehrer-details.5">Ohne Ja der beschriebenen Person erscheint nichts.</li>
+        <li data-i18n="lehrer-details.6">Unzulässiges wird beim Schreiben gestoppt und nicht gespeichert.</li>
+        <li data-i18n="lehrer-details.7">Nach 30 Tagen ohne Freigabe wird gelöscht, Widerruf löscht sofort.</li>
       </ul>
 
       <div class="lehrer-sync" id="lehrer-sync">
         <div class="ls-video">
           <div id="lehrer-video-box" class="videorahmen hoch">
-            <video id="lehrer-video" controls playsinline preload="none" aria-label="Luca von der IT erklärt Spielregeln und Datenschutz" poster="video/spielregeln-poster.jpg?v=r4">
+            <video id="lehrer-video" controls playsinline preload="none" aria-label="Luca von der IT erklärt Spielregeln und Datenschutz" poster="video/spielregeln-poster.jpg?v=r4" data-i18n-a="aria-label:lehrer-details.8.aria">
               <source src="video/spielregeln-lehrkraefte.mp4?v=r4" type="video/mp4">
               <track kind="captions" srclang="de" label="Deutsch" src="video/spielregeln-lehrkraefte.vtt?v=r4" default>
             </video>
           </div>
-          <p class="luca-etikett">Luca von der IT · KI-generierter Avatar</p>
-          <p class="klein">Das Video startet erst, wenn du auf Play tippst. Untertitel kannst du im Player einschalten.</p>
+          <p class="video-hinweis plan" id="lehrer-video-hinweis" hidden data-i18n="video.bald">Das englische Video kommt bald. Bis dahin läuft hier die deutsche Fassung.</p>
+      <p class="luca-etikett" data-i18n="lehrer-details.9">Luca von der IT · KI-generierter Avatar</p>
+          <p class="klein" data-i18n="lehrer-details.10">Das Video startet erst, wenn du auf Play tippst. Untertitel kannst du im Player einschalten.</p>
         </div>
         <div class="ls-panel" id="ls-panel">
           <div class="ls-liste" id="ls-liste">
             <section class="ls-abschnitt" data-t="0" data-kurz="Plan">
-              <h4>Plan, nicht Stand</h4>
-              <p class="plan"><b>Plan, nicht Stand:</b> Das Anmeldeportal, die Steckbrief-Funktion und der Foto-Upload sind geplant und noch nicht gebaut.</p>
+              <h4 data-i18n="ls-abschnitt.1">Plan, nicht Stand</h4>
+              <p class="plan" data-i18n="ls-abschnitt.2"><b>Plan, nicht Stand:</b> Das Anmeldeportal, die Steckbrief-Funktion und der Foto-Upload sind geplant und noch nicht gebaut.</p>
             </section>
             <section class="ls-abschnitt" data-t="16.5" data-kurz="Kinder">
-              <h4>Kinder schreiben über Kinder</h4>
-              <p>Als Steckbrief mit festen Feldern (Vorname, Lieblingsessen, Lieblingsfach, Hobby, «Was ich an ihm/ihr mag», «Das kann er/sie besonders gut», ein Satz zur Party; keine Felder für Schwächen) oder als Porträt mit höchstens 120 Wörtern.</p>
+              <h4 data-i18n="ls-abschnitt.3">Kinder schreiben über Kinder</h4>
+              <p data-i18n="ls-abschnitt.4">Als Steckbrief mit festen Feldern (Vorname, Lieblingsessen, Lieblingsfach, Hobby, «Was ich an ihm/ihr mag», «Das kann er/sie besonders gut», ein Satz zur Party; keine Felder für Schwächen) oder als Porträt mit höchstens 120 Wörtern.</p>
             </section>
             <section class="ls-abschnitt" data-t="31.1" data-kurz="Ablauf">
-              <h4>Ablauf</h4>
+              <h4 data-i18n="ls-abschnitt.5">Ablauf</h4>
               <ul>
-                <li>Das schreibende Kind wählt, wen es beschreibt.</li>
-                <li>Beim Schreiben läuft die Prüfung, Unzulässiges wird sofort blockiert und nicht gespeichert.</li>
-                <li>Der Text geht als Entwurf an das beschriebene Kind, das ihn zuerst allein sieht und verbessern, ablehnen oder freigeben kann.</li>
-                <li>Bei unter 16 braucht es zusätzlich die Zustimmung der Eltern. Erst nach beiden Freigaben ist der Text sichtbar.</li>
-                <li>Ohne Freigabe bleibt er unsichtbar und wird nach 30 Tagen gelöscht. Widerruf löscht sofort.</li>
-                <li>Rückmeldungen laufen immer über das beschriebene Kind, nie über Dritte.</li>
+                <li data-i18n="ls-abschnitt.6">Das schreibende Kind wählt, wen es beschreibt.</li>
+                <li data-i18n="ls-abschnitt.7">Beim Schreiben läuft die Prüfung, Unzulässiges wird sofort blockiert und nicht gespeichert.</li>
+                <li data-i18n="ls-abschnitt.8">Der Text geht als Entwurf an das beschriebene Kind, das ihn zuerst allein sieht und verbessern, ablehnen oder freigeben kann.</li>
+                <li data-i18n="ls-abschnitt.9">Bei unter 16 braucht es zusätzlich die Zustimmung der Eltern. Erst nach beiden Freigaben ist der Text sichtbar.</li>
+                <li data-i18n="ls-abschnitt.10">Ohne Freigabe bleibt er unsichtbar und wird nach 30 Tagen gelöscht. Widerruf löscht sofort.</li>
+                <li data-i18n="ls-abschnitt.11">Rückmeldungen laufen immer über das beschriebene Kind, nie über Dritte.</li>
               </ul>
             </section>
             <section class="ls-abschnitt" data-t="78.9" data-kurz="Blockiert">
-              <h4>Was blockiert wird</h4>
-              <p>Schimpfwörter und Beleidigungen in allen Schreibweisen, Angriffe, Spott, Abwertung, Mobbing, Drohungen, Bloßstellung, Gerüchte, sexuelle Inhalte, Gewalt, Drogen, Alkohol, Nikotin und alles, was für unter 18 nicht freigegeben ist, Hinweise auf Gesundheit, Herkunft, Religion, Familie und Aussehen sowie freundlich verpackte Bosheit.</p>
+              <h4 data-i18n="ls-abschnitt.12">Was blockiert wird</h4>
+              <p data-i18n="ls-abschnitt.13">Schimpfwörter und Beleidigungen in allen Schreibweisen, Angriffe, Spott, Abwertung, Mobbing, Drohungen, Bloßstellung, Gerüchte, sexuelle Inhalte, Gewalt, Drogen, Alkohol, Nikotin und alles, was für unter 18 nicht freigegeben ist, Hinweise auf Gesundheit, Herkunft, Religion, Familie und Aussehen sowie freundlich verpackte Bosheit.</p>
             </section>
             <section class="ls-abschnitt" data-t="98.7" data-kurz="Prüfung">
-              <h4>Wie geprüft wird</h4>
+              <h4 data-i18n="ls-abschnitt.14">Wie geprüft wird</h4>
               <ol>
-                <li>Wortlisten und Muster (Deutsch, Schweizer Deutsch, Jugendsprache, Schreibvarianten).</li>
-                <li>Eine KI-Moderation für Inhalt, Ton und Angriffe.</li>
-                <li>Felder, die zu Positivem lenken.</li>
-                <li>Das Veto des beschriebenen Kindes.</li>
-                <li>Die Meldung an das Gremium oder die Lehrkraft, die jederzeit sperren können.</li>
+                <li data-i18n="ls-abschnitt.15">Wortlisten und Muster (Deutsch, Schweizer Deutsch, Jugendsprache, Schreibvarianten).</li>
+                <li data-i18n="ls-abschnitt.16">Eine KI-Moderation für Inhalt, Ton und Angriffe.</li>
+                <li data-i18n="ls-abschnitt.17">Felder, die zu Positivem lenken.</li>
+                <li data-i18n="ls-abschnitt.18">Das Veto des beschriebenen Kindes.</li>
+                <li data-i18n="ls-abschnitt.19">Die Meldung an das Gremium oder die Lehrkraft, die jederzeit sperren können.</li>
               </ol>
-              <p>Keine Prüfung fängt alles, deshalb gilt: Nichts erscheint ohne Freigabe des beschriebenen Kindes.</p>
+              <p data-i18n="ls-abschnitt.20">Keine Prüfung fängt alles, deshalb gilt: Nichts erscheint ohne Freigabe des beschriebenen Kindes.</p>
             </section>
             <section class="ls-abschnitt" data-t="127.2" data-kurz="Datenschutz">
-              <h4>Datenschutz und Fotos</h4>
-              <p>Nur Vornamen oder Kürzel, keine Nachnamen, keine Fotos ohne eigene Freigabe, keine Angaben zu Gesundheit, Herkunft, Religion oder Familie. Die Seite ist öffentlich, deshalb gilt: nur mit Einwilligung von Kind und Eltern. Löschung nach der Abschlussparty, spätestens nach dem Schuljahr, bei Widerruf sofort.</p>
+              <h4 data-i18n="ls-abschnitt.21">Datenschutz und Fotos</h4>
+              <p data-i18n="ls-abschnitt.22">Nur Vornamen oder Kürzel, keine Nachnamen, keine Fotos ohne eigene Freigabe, keine Angaben zu Gesundheit, Herkunft, Religion oder Familie. Die Seite ist öffentlich, deshalb gilt: nur mit Einwilligung von Kind und Eltern. Löschung nach der Abschlussparty, spätestens nach dem Schuljahr, bei Widerruf sofort.</p>
             </section>
             <section class="ls-abschnitt" data-t="144.3" data-kurz="KI-Rolle">
-              <h4>Warum wir das Projekt mit KI-Unterstützung anbieten</h4>
-              <p>Eine solche Seite zu bauen und zu pflegen ist mühsam, und die Arbeit verteilt sich über viele Monate. Große Projekte dieser Art scheitern oft nicht an der Idee, sondern daran, dass niemand die Arbeit mehr gern macht. Die KI nimmt dem Team Fleißarbeit ab, damit die Freude am Projekt bleibt.</p>
-              <p><b>Die KI entscheidet nichts.</b> Sie schlägt Formulierungen vor, über Freigabe und Veröffentlichung entscheiden das beschriebene Kind und das Gremium. Die Kinder bleiben die Autorinnen und Autoren, Fotos und Namen kommen nur mit Zustimmung des Kindes und der Eltern auf die Seite. Von Hand zu bauen ist gleichwertig, und niemand muss KI benutzen.</p>
+              <h4 data-i18n="ls-abschnitt.23">Warum wir das Projekt mit KI-Unterstützung anbieten</h4>
+              <p data-i18n="ls-abschnitt.24">Eine solche Seite zu bauen und zu pflegen ist mühsam, und die Arbeit verteilt sich über viele Monate. Große Projekte dieser Art scheitern oft nicht an der Idee, sondern daran, dass niemand die Arbeit mehr gern macht. Die KI nimmt dem Team Fleißarbeit ab, damit die Freude am Projekt bleibt.</p>
+              <p data-i18n="ls-abschnitt.25"><b>Die KI entscheidet nichts.</b> Sie schlägt Formulierungen vor, über Freigabe und Veröffentlichung entscheiden das beschriebene Kind und das Gremium. Die Kinder bleiben die Autorinnen und Autoren, Fotos und Namen kommen nur mit Zustimmung des Kindes und der Eltern auf die Seite. Von Hand zu bauen ist gleichwertig, und niemand muss KI benutzen.</p>
               <div class="tabwrap"><table class="stunden">
-                <caption>Aufwand bis Juli 2027 in Stunden, grobe Schätzung</caption>
-                <thead><tr><th scope="col">Bereich</th><th scope="col">von Hand</th><th scope="col">mit KI</th></tr></thead>
+                <caption data-i18n="ls-abschnitt.26">Aufwand bis Juli 2027 in Stunden, grobe Schätzung</caption>
+                <thead><tr><th scope="col" data-i18n="ls-abschnitt.27">Bereich</th><th scope="col" data-i18n="ls-abschnitt.28">von Hand</th><th scope="col" data-i18n="ls-abschnitt.29">mit KI</th></tr></thead>
                 <tbody>
-                  <tr><th scope="row">Gesamt bis Juli 2027</th><td>100 bis 170</td><td>20 bis 30</td></tr>
-                  <tr><th scope="row">Seite aufbauen</th><td>25 bis 40</td><td>3 bis 5</td></tr>
-                  <tr><th scope="row">Video</th><td>15 bis 30</td><td>2 bis 3</td></tr>
-                  <tr><th scope="row">Fotos</th><td>20 bis 30</td><td>5 bis 8</td></tr>
-                  <tr><th scope="row">Pflege bis Juli</th><td>40 bis 70</td><td>10 bis 15</td></tr>
+                  <tr><th scope="row" data-i18n="ls-abschnitt.30">Gesamt bis Juli 2027</th><td data-i18n="ls-abschnitt.31">100 bis 170</td><td data-i18n="ls-abschnitt.32">20 bis 30</td></tr>
+                  <tr><th scope="row" data-i18n="ls-abschnitt.33">Seite aufbauen</th><td data-i18n="ls-abschnitt.34">25 bis 40</td><td data-i18n="ls-abschnitt.35">3 bis 5</td></tr>
+                  <tr><th scope="row" data-i18n="ls-abschnitt.36">Video</th><td data-i18n="ls-abschnitt.37">15 bis 30</td><td data-i18n="ls-abschnitt.38">2 bis 3</td></tr>
+                  <tr><th scope="row" data-i18n="ls-abschnitt.39">Fotos</th><td data-i18n="ls-abschnitt.40">20 bis 30</td><td data-i18n="ls-abschnitt.41">5 bis 8</td></tr>
+                  <tr><th scope="row" data-i18n="ls-abschnitt.42">Pflege bis Juli</th><td data-i18n="ls-abschnitt.43">40 bis 70</td><td data-i18n="ls-abschnitt.44">10 bis 15</td></tr>
                 </tbody></table></div>
-              <p class="klein">Grobe Schätzung, keine Zusage.</p>
+              <p class="klein" data-i18n="ls-abschnitt.45">Grobe Schätzung, keine Zusage.</p>
             </section>
             <section class="ls-abschnitt" data-t="189.2" data-kurz="Zum Schluss">
-              <h4>Zum Schluss: Flyer zum Mitnehmen</h4>
-              <p class="plan"><b>Plan, nicht Stand:</b> Anmeldeportal, Steckbrief-Funktion und Foto-Upload sind noch nicht gebaut. Das ist keine Rechtsberatung.</p>
-              <p><a class="flyerlink" href="flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">Flyer «Hausregeln und Kinderschutz» (PDF, eine A4-Seite)</a></p>
+              <h4 data-i18n="ls-abschnitt.46">Zum Schluss: Flyer zum Mitnehmen</h4>
+              <p class="plan" data-i18n="ls-abschnitt.47"><b>Plan, nicht Stand:</b> Anmeldeportal, Steckbrief-Funktion und Foto-Upload sind noch nicht gebaut. Das ist keine Rechtsberatung.</p>
+              <p data-i18n="ls-abschnitt.48"><a class="flyerlink" href="flyer-kinderschutz-eltern.pdf" target="_blank" rel="noopener noreferrer">Flyer «Hausregeln und Kinderschutz» (PDF, eine A4-Seite)</a></p>
             </section>
           </div>
         </div>
@@ -380,12 +403,17 @@
 </section>
 
 </main>
-<footer class="fuss"><svg class="wellen fuss-wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg><nav class="rechtsleiste" aria-label="Rechtliches"><ul><li><a href="recht/impressum.html">Impressum</a></li><li><a href="recht/datenschutz.html">Datenschutz</a></li><li><a href="recht/urheberrecht-erstveroeffentlichung.html">Urheberrecht &amp; Erstveröffentlichung</a></li><li><a href="recht/bedingungen.html">Bedingungen</a></li><li><a href="recht/konzept.html">Konzept</a></li></ul></nav><p>Abschlussparty 2027 · Von der Klasse, für die Klasse</p></footer>
+<footer class="fuss"><svg class="wellen fuss-wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg><nav class="rechtsleiste" aria-label="Rechtliches" data-i18n-a="aria-label:rechtsleiste.1.aria"><ul><li data-i18n="rechtsleiste.2"><a href="recht/impressum.html">Impressum</a></li><li data-i18n="rechtsleiste.3"><a href="recht/datenschutz.html">Datenschutz</a></li><li data-i18n="rechtsleiste.4"><a href="recht/urheberrecht-erstveroeffentlichung.html">Urheberrecht &amp; Erstveröffentlichung</a></li><li data-i18n="rechtsleiste.5"><a href="recht/bedingungen.html">Bedingungen</a></li><li data-i18n="rechtsleiste.6"><a href="recht/konzept.html">Konzept</a></li></ul></nav><p data-i18n="fuss.1">Abschlussparty 2027 · Von der Klasse, für die Klasse</p></footer>
+<script src="i18n/de.js"></script>
+<script src="i18n.js"></script>
 <script src="fragen.js"></script>
 <script src="senden.js"></script>
+<script src="videokonfig.js"></script>
+<script src="videosprache.js"></script>
 <script src="app.js"></script>
 <script src="video.js"></script>
 <script src="lehrer.js"></script>
 <script src="lehrer-sync.js"></script>
+<script src="sprache.js"></script>
 </body>
 </html>

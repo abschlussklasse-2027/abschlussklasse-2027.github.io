@@ -1,4 +1,5 @@
 (function () {
+  var T = window.T || function (k, fb, v) { return fb; };
   var F = window.FRAGEN, wahl = {}, anderes = "";
   var wrap = document.getElementById("fragen");
   var balken = document.getElementById("fortschritt-balken");
@@ -11,18 +12,20 @@
     fs.className = "frage";
     var lg = document.createElement("legend");
     lg.innerHTML = '<span class="buchstabe">' + f.id + '</span><span class="titel"></span>';
-    lg.querySelector(".titel").textContent = f.titel;
+    lg.querySelector(".titel").textContent = T("f." + f.id + ".t", f.titel);
     fs.appendChild(lg);
     var hint = document.createElement("p");
     hint.className = "hinweis";
-    hint.textContent = (f.hinweis ? f.hinweis + " " : "") + (f.art === "mehr" && !f.hinweis ? "Du darfst mehrere ankreuzen." : "");
-    if (f.id === "D") hint.textContent = "Du darfst mehrere ankreuzen.";
-    if (f.id === "H") hint.textContent = "Du darfst mehrere ankreuzen.";
-    if (f.id === "J") hint.textContent = f.hinweis;
+    var mehr = T("js.mehrere", "Du darfst mehrere ankreuzen.");
+    hint.textContent = (f.hinweis ? T("f." + f.id + ".h", f.hinweis) + " " : "") + (f.art === "mehr" && !f.hinweis ? mehr : "");
+    if (f.id === "D") hint.textContent = mehr;
+    if (f.id === "H") hint.textContent = mehr;
+    if (f.id === "J") hint.textContent = T("f.J.h", f.hinweis);
     if (hint.textContent.trim()) fs.appendChild(hint);
     var opts = f.optionen.slice();
     if (f.anderes) opts.push("Etwas anderes");
     opts.forEach(function (o, i) {
+      var anzeige = (f.anderes && i === opts.length - 1) ? T("js.anderes", o) : T("f." + f.id + ".o" + i, o);
       var lab = document.createElement("label");
       lab.className = "karte";
       var inp = document.createElement("input");
@@ -31,7 +34,7 @@
       inp.value = o;
       var sp = document.createElement("span");
       sp.className = "kt";
-      sp.textContent = o;
+      sp.textContent = anzeige;
       lab.appendChild(inp); lab.appendChild(sp);
       fs.appendChild(lab);
       inp.addEventListener("change", function () {
@@ -47,8 +50,8 @@
     if (f.anderes) {
       var ta = document.createElement("input");
       ta.type = "text"; ta.className = "anderes"; ta.hidden = true; ta.maxLength = 100;
-      ta.setAttribute("aria-label", "Was möchtest du noch?");
-      ta.placeholder = "Was möchtest du noch? (ohne Namen)";
+      ta.setAttribute("aria-label", T("js.anderes_aria", "Was möchtest du noch?"));
+      ta.placeholder = T("js.anderes_ph", "Was möchtest du noch? (ohne Namen)");
       ta.addEventListener("input", function () { anderes = ta.value; });
       fs.appendChild(ta);
     }
@@ -61,7 +64,7 @@
     balken.style.width = p + "%";
     balken.parentNode.setAttribute("aria-valuenow", n);
     balken.parentNode.setAttribute("aria-valuemax", F.length);
-    text.textContent = n + " von " + F.length + " Fragen beantwortet";
+    text.textContent = T("js.fortschritt", "{n} von {m} Fragen beantwortet", { n: n, m: F.length });
     if (n > 0) document.getElementById("hinweis-leer").hidden = true;
   }
   update();
@@ -85,7 +88,8 @@
   /* Video: nur zeigen, wenn die Datei da ist */
   var v = document.getElementById("video"), ph = document.getElementById("video-platzhalter");
   if (v && window.fetch) {
-    fetch("video/abschlussparty.mp4", { method: "HEAD" }).then(function (r) {
+    var qu = v.querySelector("source"), vurl = qu ? qu.getAttribute("src") : "video/abschlussparty.mp4";
+    fetch(vurl, { method: "HEAD" }).then(function (r) {
       if (r.ok) { v.hidden = false; ph.hidden = true; v.load(); }
     }).catch(function () {});
     v.addEventListener("error", function () { v.hidden = true; ph.hidden = false; }, true);

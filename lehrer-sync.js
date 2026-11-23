@@ -53,7 +53,7 @@
     var z = document.createElement("span"); z.className = "ls-zeit"; z.textContent = fmt(zeiten[i]);
     var p = document.createElement("span"); p.className = "ls-pfeil"; p.setAttribute("aria-hidden", "true");
     b.appendChild(n); b.appendChild(t); b.appendChild(z); b.appendChild(p);
-    b.setAttribute("aria-label", (i + 1) + ". " + titel + ", ab " + fmt(zeiten[i]));
+    b.setAttribute("aria-label", (i + 1) + ". " + titel + ", " + (window.T ? window.T("js.ab", "ab") : "ab") + " " + fmt(zeiten[i]));
     h.textContent = ""; h.appendChild(b);
     b.addEventListener("click", function () { umschalten(i); });
     knoepfe.push(b); texte.push(box);
