@@ -186,15 +186,13 @@ h3{letter-spacing:-.02em}
 .danke:focus{outline:none}.danke h3{font-size:clamp(1.6rem,5vw,2.2rem);margin:.3em 0;font-weight:900}
 .danke .ico{display:inline-block}
 .fuss{text-align:center;color:var(--leise);padding:0 16px 48px;overflow:hidden}
-.fuss p{margin:.4em 0 0}
-.rechtsleiste{max-width:1040px;margin:0 auto 12px}
-.rechtsleiste ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.rechtsleiste li{margin:0}
-.rechtsleiste a{display:inline-flex;align-items:center;min-height:48px;padding:8px 16px;border:1px solid var(--cyan);border-radius:999px;color:var(--cyan);font-weight:700;text-decoration:none}
-.rechtsleiste a:hover{background:rgba(34,211,238,.14)}
-.rechtsleiste .konzept-zeile{margin:0 0 .6em}
-.rechtsleiste .konzept-zeile a{border:0;padding:0 4px;text-decoration:underline}
-.fuss-wellen{margin:0 auto 12px;max-width:1040px;height:40px;opacity:.7}
+.fuss p{margin:.4em 0 0;font-size:.82rem}
+.rechtsleiste{max-width:1040px;margin:0 auto 4px;font-size:.82rem}
+.rechtsleiste ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:0 2px}
+.rechtsleiste li{margin:0;display:flex;align-items:center}
+.rechtsleiste a{display:inline-flex;align-items:center;min-height:36px;padding:0 10px;color:var(--leise);text-decoration:none;font-weight:400}
+.rechtsleiste a:hover,.rechtsleiste a:focus-visible{color:var(--cyan);text-decoration:underline}
+.fuss-wellen{margin:0 auto 4px;max-width:1040px;height:28px;opacity:.45}
 [hidden]{display:none!important}
 
 /* Lehrer / IT */
@@ -265,3 +263,47 @@ h3{letter-spacing:-.02em}
 .luca-etikett{margin:0 0 6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#ffe14d}
 .luca-text h3{margin:0 0 8px}
 @media (max-width:700px){.luca-karte{grid-template-columns:1fr;gap:16px;padding:14px}.luca-karte .videorahmen.hoch{height:min(70vh,70dvh,520px)}}
+
+/* Lehrer-Bereich: Video links, mitlaufendes Panel rechts (lehrer-sync.js) */
+.lehrer-sync{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;margin:20px 0 10px;align-items:start}
+.lehrer-sync .videorahmen.hoch{margin:0 auto;height:min(64vh,64dvh,640px)}
+.ls-video{display:flex;flex-direction:column;align-items:center;gap:6px}
+.ls-video .luca-etikett{margin:8px 0 0}.ls-video .klein{margin:0;max-width:30ch;text-align:center}
+.ls-panel{min-width:0}
+.ls-abschnitt{margin:0 0 14px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.14)}
+.ls-abschnitt h4{margin:0 0 .4em;font-size:1.15rem;line-height:1.3;color:var(--vio-t)}
+.ls-abschnitt p{margin:.5em 0}
+.ls-abschnitt ul,.ls-abschnitt ol{margin:.4em 0;padding-left:1.3em}.ls-abschnitt li{margin:.35em 0}
+.ls-abschnitt .plan{transform:none}
+.ls-sprung{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;cursor:pointer;font:inherit;font-weight:800;color:var(--vio-t);line-height:1.3}
+.ls-sprung:focus-visible{outline:3px solid var(--gelb);outline-offset:2px;border-radius:8px}
+.ls-zeit{flex:none;font:700 .8rem/1 var(--mono);color:var(--dunkel);background:var(--cyan);border-radius:999px;padding:6px 10px}
+.ls-kopf{padding:0 0 10px}
+.ls-jetzt{margin:0 0 8px;font-weight:800;color:var(--gelb);min-height:1.4em}
+.ls-kap{display:flex;flex-wrap:wrap;gap:6px}
+.ls-kap button{all:unset;box-sizing:border-box;min-height:48px;min-width:48px;padding:0 12px;display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:2px solid rgba(255,255,255,.25);color:var(--leise);font:700 .85rem/1 var(--schrift);cursor:pointer;position:relative;overflow:hidden}
+.ls-kap button:focus-visible{outline:3px solid var(--gelb);outline-offset:2px}
+.ls-kap button[aria-current="true"]{border-color:var(--cyan);color:#fff;background:rgba(34,211,238,.18)}
+.ls-kap button.gesehen::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--vio-t);flex:none}
+.ls-kap button[aria-current="true"]::before{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+
+@media (min-width:820px) and (max-width:1000px){.lehrer-sync{gap:16px}.lehrer-sync .videorahmen.hoch{height:min(58vh,58dvh,560px)}.ls-video .klein{max-width:24ch}}
+/* mit JavaScript: Dimmen, Neon-Rand, eigene Scrollfläche */
+.sync-aktiv .ls-kopf{display:block}
+.sync-aktiv .ls-abschnitt{opacity:.72;cursor:pointer;transition:opacity .25s,border-color .25s,box-shadow .25s,transform .25s}
+.sync-aktiv .ls-abschnitt.aktiv{opacity:1;border-color:var(--cyan);background:rgba(34,211,238,.10);box-shadow:0 0 0 1px var(--cyan),0 0 26px rgba(34,211,238,.45);cursor:default}
+.sync-aktiv .ls-abschnitt.aktiv .ls-zeit{background:var(--gelb)}
+.sync-aktiv .ls-abschnitt.aktiv h4,.sync-aktiv .ls-abschnitt.aktiv .ls-sprung{font-size:1.25rem}
+.sync-aktiv .ls-abschnitt a{cursor:pointer}
+@media (min-width:820px){
+  .sync-aktiv .ls-panel{position:relative;align-self:stretch}
+  .sync-aktiv .ls-panel-in{position:absolute;inset:0;display:flex;flex-direction:column}
+  .sync-aktiv .ls-liste{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:6px}
+}
+@media (max-width:819px){
+  .lehrer-sync{grid-template-columns:1fr;gap:14px}
+  .ls-video{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg2);padding:8px 0;margin:0 -4px;border-radius:0 0 18px 18px}
+  .lehrer-sync .videorahmen.hoch{height:min(40vh,40dvh,340px)}
+  .ls-video .klein{display:none}
+  .sync-aktiv .ls-liste{max-height:55vh;max-height:55dvh;overflow-y:auto;overscroll-behavior:contain;padding-right:4px}
+}
