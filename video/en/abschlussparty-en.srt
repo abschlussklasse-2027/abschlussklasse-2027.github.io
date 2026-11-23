@@ -1,0 +1,498 @@
+1
+00:00:00,060 --> 00:00:02,264
+Hey, I'm Clement,
+an AI avatar.
+
+2
+00:00:02,314 --> 00:00:04,565
+We're building your
+Graduation party 2027
+
+3
+00:00:04,615 --> 00:00:06,757
+website with AI, and
+you help shape it.
+
+4
+00:00:06,830 --> 00:00:09,239
+And I'm Casey,
+also an AI avatar.
+
+5
+00:00:09,289 --> 00:00:11,098
+A few questions are
+coming up where you
+
+6
+00:00:11,148 --> 00:00:11,795
+get to decide.
+
+7
+00:00:11,870 --> 00:00:13,015
+Let's start with signing in.
+
+8
+00:00:13,065 --> 00:00:15,693
+The plan: your email
+address, no password.
+
+9
+00:00:15,790 --> 00:00:17,393
+You type your email
+address into the
+
+10
+00:00:17,443 --> 00:00:17,751
+portal.
+
+11
+00:00:17,801 --> 00:00:20,103
+You get an email
+with a link.
+
+12
+00:00:20,153 --> 00:00:23,466
+Tap it, and the portal
+knows the address
+
+13
+00:00:23,516 --> 00:00:24,286
+is yours.
+
+14
+00:00:24,336 --> 00:00:24,697
+Email, link, done.
+
+15
+00:00:24,790 --> 00:00:26,657
+Next, the editor, your tool.
+
+16
+00:00:26,707 --> 00:00:28,159
+No coding needed.
+
+17
+00:00:28,209 --> 00:00:30,837
+One finger is enough,
+ideally on an iPad.
+
+18
+00:00:30,910 --> 00:00:33,140
+On the left are
+building blocks, like a
+
+19
+00:00:33,190 --> 00:00:35,363
+heading, text, a
+photo or a countdown.
+
+20
+00:00:35,413 --> 00:00:37,516
+Tap one and drag it
+where you want it.
+
+21
+00:00:37,566 --> 00:00:38,340
+Don't like it?
+
+22
+00:00:38,389 --> 00:00:39,305
+Drag it away again.
+
+23
+00:00:39,390 --> 00:00:41,366
+Important: whatever
+you build is only a
+
+24
+00:00:41,416 --> 00:00:42,328
+proposal at first.
+
+25
+00:00:42,378 --> 00:00:44,183
+It goes online only
+when the deciding
+
+26
+00:00:44,233 --> 00:00:45,648
+group, the
+committee, agrees.
+
+27
+00:00:45,720 --> 00:00:46,709
+Don't feel like typing?
+
+28
+00:00:46,759 --> 00:00:48,914
+Tell the AI helper
+what to build, for
+
+29
+00:00:48,964 --> 00:00:50,654
+example: make
+the page green.
+
+30
+00:00:50,704 --> 00:00:52,271
+You see the
+proposal right away.
+
+31
+00:00:52,321 --> 00:00:53,987
+It goes online only
+when the committee
+
+32
+00:00:54,037 --> 00:00:54,559
+approves it.
+
+33
+00:00:54,640 --> 00:00:56,504
+Three AI helpers
+build with us.
+
+34
+00:00:56,554 --> 00:00:58,936
+Salt, the Quality
+Bot, checks quality
+
+35
+00:00:58,986 --> 00:01:01,303
+every ten minutes
+and has 79 skills.
+
+36
+00:01:01,370 --> 00:01:03,625
+Pepper, the Response
+Bot, looks into the
+
+37
+00:01:03,675 --> 00:01:06,042
+inbox every ten minutes
+and has 54 skills.
+
+38
+00:01:06,130 --> 00:01:08,516
+And Chili, the
+Security and Litigation
+
+39
+00:01:08,566 --> 00:01:11,014
+Bot, watches over
+privacy and copyright
+
+40
+00:01:11,064 --> 00:01:13,200
+around the clock,
+with 133 skills.
+
+41
+00:01:13,290 --> 00:01:15,490
+Now something to join
+in: the profile card
+
+42
+00:01:15,540 --> 00:01:16,170
+or portrait.
+
+43
+00:01:16,220 --> 00:01:18,151
+One kid can be
+described by another,
+
+44
+00:01:18,201 --> 00:01:20,186
+kindly and with only
+positive things.
+
+45
+00:01:20,290 --> 00:01:21,177
+Here's how it works.
+
+46
+00:01:21,227 --> 00:01:23,385
+One: a kid writes
+about another.
+
+47
+00:01:23,435 --> 00:01:26,263
+Two: anything mean is
+stopped right away.
+
+48
+00:01:26,313 --> 00:01:28,382
+Three: the person
+described sees the text
+
+49
+00:01:28,432 --> 00:01:30,098
+first, alone, and
+can improve it.
+
+50
+00:01:30,148 --> 00:01:33,232
+Four: they decide
+whether it appears, and
+
+51
+00:01:33,282 --> 00:01:35,769
+under 16 their
+parents agree too.
+
+52
+00:01:35,819 --> 00:01:37,093
+They get the final say.
+
+53
+00:01:37,143 --> 00:01:39,238
+Without their yes,
+everything is deleted
+
+54
+00:01:39,288 --> 00:01:40,022
+after 30 days.
+
+55
+00:01:40,090 --> 00:01:43,430
+Two examples: Louis,
+15, likes extra spicy
+
+56
+00:01:43,480 --> 00:01:45,874
+kebab, skates
+and mixes music.
+
+57
+00:01:45,924 --> 00:01:49,129
+Lollo, 16, takes photos
+and makes everyone
+
+58
+00:01:49,179 --> 00:01:50,038
+look great.
+
+59
+00:01:50,088 --> 00:01:52,096
+Be brave and send
+in creative pages!
+
+60
+00:01:52,170 --> 00:01:53,438
+AI or by hand?
+
+61
+00:01:53,488 --> 00:01:55,448
+You decide, both
+are equally good.
+
+62
+00:01:55,498 --> 00:01:57,633
+You stay the authors,
+the AI only makes
+
+63
+00:01:57,683 --> 00:01:58,342
+suggestions.
+
+64
+00:01:58,410 --> 00:01:59,967
+And this isn't just
+for this class.
+
+65
+00:02:00,017 --> 00:02:01,862
+Every class at the
+school can use the
+
+66
+00:02:01,912 --> 00:02:03,208
+website for its own party.
+
+67
+00:02:03,258 --> 00:02:05,358
+You're the first, and
+what you learn helps
+
+68
+00:02:05,408 --> 00:02:05,858
+everyone.
+
+69
+00:02:05,930 --> 00:02:08,107
+Question A: Who
+approves changes before
+
+70
+00:02:08,157 --> 00:02:08,998
+they go online?
+
+71
+00:02:09,450 --> 00:02:11,415
+Question B, really
+important: photos.
+
+72
+00:02:11,465 --> 00:02:13,767
+Photos only go up
+with the yes of the
+
+73
+00:02:13,817 --> 00:02:16,243
+person in them, and
+if you're under 16,
+
+74
+00:02:16,293 --> 00:02:18,348
+your parents have
+to say yes too.
+
+75
+00:02:18,810 --> 00:02:20,788
+Question C: Who checks
+submitted photos
+
+76
+00:02:20,838 --> 00:02:21,801
+before they appear?
+
+77
+00:02:22,250 --> 00:02:24,580
+Question D: Which
+pages do we want?
+
+78
+00:02:24,630 --> 00:02:25,714
+You can tick several.
+
+79
+00:02:26,170 --> 00:02:28,442
+Question F: Who can
+send requests to the
+
+80
+00:02:28,492 --> 00:02:29,064
+AI helper?
+
+81
+00:02:29,530 --> 00:02:32,097
+Question G: What
+happens after the party?
+
+82
+00:02:32,147 --> 00:02:33,800
+Does the site stay
+up, or does it get
+
+83
+00:02:33,850 --> 00:02:34,203
+deleted?
+
+84
+00:02:34,650 --> 00:02:36,680
+Question H: Who gets
+onto the site, and
+
+85
+00:02:36,730 --> 00:02:37,981
+who is in the committee?
+
+86
+00:02:38,031 --> 00:02:39,084
+You can tick several.
+
+87
+00:02:39,530 --> 00:02:41,826
+Question I: How do
+we want to build?
+
+88
+00:02:41,876 --> 00:02:44,098
+With voice, with
+a finger, or both?
+
+89
+00:02:44,570 --> 00:02:46,511
+Question J: How do
+we get your parents'
+
+90
+00:02:46,561 --> 00:02:47,058
+agreement?
+
+91
+00:02:47,108 --> 00:02:48,487
+Without it, no photos.
+
+92
+00:02:48,930 --> 00:02:49,778
+Everything ticked?
+
+93
+00:02:49,828 --> 00:02:51,422
+Then tap Submit.
+
+94
+00:02:51,472 --> 00:02:53,431
+Your answers are
+anonymous, and for now
+
+95
+00:02:53,481 --> 00:02:55,038
+they stay only
+in your browser.
+
+96
+00:02:55,730 --> 00:02:56,732
+A few house rules.
+
+97
+00:02:56,782 --> 00:02:58,698
+One: nothing mean
+about others.
+
+98
+00:02:58,748 --> 00:03:00,081
+Two: nothing private.
+
+99
+00:03:00,131 --> 00:03:01,754
+Three: no photos
+without a clear yes.
+
+100
+00:03:01,804 --> 00:03:03,533
+Stick to that, and
+everyone has fun.
+
+101
+00:03:03,583 --> 00:03:05,891
+Teachers and parents
+find the full rules
+
+102
+00:03:05,941 --> 00:03:08,249
+in a separate video
+at the bottom of the
+
+103
+00:03:08,299 --> 00:03:08,594
+page.
+
+104
+00:03:08,660 --> 00:03:10,466
+You'll answer the
+questions right below.
+
+105
+00:03:10,516 --> 00:03:12,902
+I wish you all the
+best and a really great
+
+106
+00:03:12,952 --> 00:03:13,298
+party.
+
+107
+00:03:13,348 --> 00:03:14,070
+See you soon!
+
