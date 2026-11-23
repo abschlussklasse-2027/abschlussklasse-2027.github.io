@@ -77,6 +77,7 @@
     if (anderes.trim() && wahl.D.indexOf("Etwas anderes") > -1) a.D_anderes = anderes.trim().slice(0, 100);
     knopf.disabled = true;
     window.senden(a).then(function (r) {
+      if ((r.gespeichert || r.gemeinsam) && window.messen) window.messen("fragen_abgesendet", window.SPRACHE || "de");   /* nur der Zähler, kein Inhalt */
       document.getElementById("formular").hidden = true;
       document.getElementById("danke-gemeinsam").hidden = !r.gemeinsam;
       document.getElementById("danke-lokal").hidden = !!r.gemeinsam;

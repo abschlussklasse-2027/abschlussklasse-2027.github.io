@@ -33,3 +33,10 @@ export const tag = (d = new Date()) => d.toISOString().slice(0, 10);
 export function ereignisAusZeile(r) {
   return { id: r.id, zeit: r.zeit, typ: r.typ, klasse: r.klasse, schema_version: r.schema_version, nutzlast: JSON.parse(r.nutzlast), hash: r.hash };
 }
+
+/** Zaehlt (tag, schluessel) um schritt hoch, solange der neue Stand <= max bleibt. Gibt false zurueck, wenn das Limit erreicht ist (dann keine Schreibzeile). */
+export async function zaehlerErhoehen(env, t, schluessel, max, schritt = 1) {
+  const z = await env.DB.prepare("INSERT INTO ratenzaehler (tag, ip_hash, n) SELECT ?1, ?2, ?4 WHERE ?4 <= ?3 ON CONFLICT(tag, ip_hash) DO UPDATE SET n = n + ?4 WHERE n + ?4 <= ?3 RETURNING n")
+    .bind(t, schluessel, max, schritt).first();
+  return !!z;
+}

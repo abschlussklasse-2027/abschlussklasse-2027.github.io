@@ -11,6 +11,16 @@
   }
   window.stimmenLesen = lesen;
   window.sammelpunktDa = function () { return !!SAMMELPUNKT; };
+  window.sammelpunktUrl = function () { return SAMMELPUNKT; };
+
+  /* Rückmeldung der Schule (Formular im Lehrer-Bereich): nur an den Sammelpunkt, nichts im Browser gespeichert.
+     Antwort: { ok, status, fehler } */
+  window.sendeFreigabe = function (daten) {
+    if (!SAMMELPUNKT || !window.fetch) return Promise.resolve({ ok: false, fehler: "offline" });
+    return fetch(SAMMELPUNKT + "/api/freigabe", { method: "POST", body: JSON.stringify(daten) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.ok === true, status: r.status, fehler: j.fehler }; }, function () { return { ok: false, status: r.status }; }); })
+      .catch(function () { return { ok: false, fehler: "netz" }; });
+  };
 
   /* antworten: { A: ["Text"], D: ["..","..."], D_anderes: "..." } , keine Namen */
   window.senden = function (antworten) {

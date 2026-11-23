@@ -417,12 +417,52 @@
           </div>
         </div>
       </div>
+
+      <div class="freigabe" id="schulfreigabe" role="region" aria-labelledby="fg-titel">
+        <h3 id="fg-titel" data-i18n="freigabe.1">Rückmeldung der Schule</h3>
+        <p data-i18n="freigabe.2">Die Klasse macht ein kleines Forschungsprojekt zur Haltung gegenüber KI in der Schule. Dazu gibt es Abstimmungen (Fragen zum Ankreuzen) und eine anonyme Nutzungsmessung dieser Seite. Mitmachen ist freiwillig. Namen von Kindern kommen in der Auswertung nicht vor, veröffentlicht werden nur zusammengefasste Ergebnisse, und alle Daten werden im Juni 2027 gelöscht.</p>
+        <p data-i18n="freigabe.3">Mehr dazu: <a href="recht/konzept.html">Konzept</a> und <a href="recht/datenschutz.html">Datenschutz</a>.</p>
+        <p class="fg-ehrlich" data-i18n="freigabe.4"><b>Das ist eine Rückmeldung für das Projekt.</b> Formale Genehmigungen von Schulaufsicht oder Schulträger richten sich nach deren eigenem Verfahren.</p>
+        <form id="freigabe-form" class="fg-form" novalidate>
+          <div class="fg-feld"><label for="fg-funktion" data-i18n="freigabe.5">Ihre Funktion</label>
+            <select id="fg-funktion" required>
+              <option value="" data-i18n="freigabe.6">Bitte wählen</option>
+              <option value="schulleitung" data-i18n="freigabe.f1">Schulleitung</option>
+              <option value="lehrkraft" data-i18n="freigabe.f2">Lehrkraft / Klassenleitung</option>
+              <option value="it" data-i18n="freigabe.f3">IT der Schule</option>
+              <option value="schulaufsicht" data-i18n="freigabe.f4">Schulaufsicht</option>
+              <option value="schultraeger" data-i18n="freigabe.f5">Schulträger</option>
+              <option value="datenschutz" data-i18n="freigabe.f6">Datenschutzbeauftragte/r</option>
+              <option value="eltern" data-i18n="freigabe.f7">Eltern</option>
+            </select></div>
+          <div class="fg-feld"><label for="fg-name" data-i18n="freigabe.7">Name</label><input type="text" id="fg-name" maxlength="100" autocomplete="name" required></div>
+          <div class="fg-feld"><label for="fg-stelle" data-i18n="freigabe.8">Schule / Stelle</label><input type="text" id="fg-stelle" maxlength="150" autocomplete="organization" required></div>
+          <fieldset class="fg-feld fg-antwort"><legend data-i18n="freigabe.9">Ihre Antwort</legend>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="ja"><span data-i18n="freigabe.a1">Einverstanden</span></label>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="ja_bedingt"><span data-i18n="freigabe.a2">Einverstanden mit Bedingungen</span></label>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="nein"><span data-i18n="freigabe.a3">Nicht einverstanden</span></label>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="rueckfragen"><span data-i18n="freigabe.a4">Ich habe Rückfragen</span></label>
+          </fieldset>
+          <div class="fg-feld"><label for="fg-text" data-i18n="freigabe.10">Bedingungen oder Fragen</label><textarea id="fg-text" rows="4" maxlength="1000"></textarea>
+            <small class="klein" data-i18n="freigabe.11">Pflicht bei «Einverstanden mit Bedingungen» und «Ich habe Rückfragen».</small></div>
+          <div class="fg-feld"><label for="fg-kontakt" data-i18n="freigabe.12">Kontakt (freiwillig)</label><input type="text" id="fg-kontakt" maxlength="150" autocomplete="off">
+            <small class="klein" data-i18n="freigabe.13">E-Mail oder Telefon, nur wenn Sie eine Antwort wünschen. Das Feld ist freiwillig.</small></div>
+          <label class="fg-opt fg-befugt"><input type="checkbox" id="fg-befugt"><span data-i18n="freigabe.14">Ich bin befugt, für meine Stelle zu antworten.</span></label>
+          <div class="fg-fall" aria-hidden="true"><label for="fg-website">Website</label><input type="text" id="fg-website" tabindex="-1" autocomplete="off"></div>
+          <p class="warn fg-fehler" id="fg-fehler" role="alert" tabindex="-1" hidden></p>
+          <button type="submit" class="gross zweit fg-senden" id="fg-senden" data-i18n="freigabe.15">Rückmeldung senden</button>
+        </form>
+        <div class="danke fg-danke" id="fg-danke" tabindex="-1" hidden>
+          <h3 data-i18n="freigabe.16">Danke für Ihre Rückmeldung</h3>
+          <p data-i18n="freigabe.17">Sie ist beim Projekt angekommen. Wir melden uns nur, wenn Sie Kontaktdaten angegeben haben.</p>
+        </div>
+      </div>
     </div>
   </details>
 </section>
 
 </main>
-<footer class="fuss"><svg class="wellen fuss-wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg><nav class="rechtsleiste" aria-label="Rechtliches" data-i18n-a="aria-label:rechtsleiste.1.aria"><ul><li data-i18n="rechtsleiste.2"><a href="recht/impressum.html">Impressum</a></li><li data-i18n="rechtsleiste.3"><a href="recht/datenschutz.html">Datenschutz</a></li><li data-i18n="rechtsleiste.4"><a href="recht/urheberrecht-erstveroeffentlichung.html">Urheberrecht &amp; Erstveröffentlichung</a></li><li data-i18n="rechtsleiste.5"><a href="recht/bedingungen.html">Bedingungen</a></li><li data-i18n="rechtsleiste.6"><a href="recht/konzept.html">Konzept</a></li></ul></nav><p data-i18n="fuss.1">Abschlussparty 2027 · Von der Klasse, für die Klasse</p></footer>
+<footer class="fuss"><svg class="wellen fuss-wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg><nav class="rechtsleiste" aria-label="Rechtliches" data-i18n-a="aria-label:rechtsleiste.1.aria"><ul><li data-i18n="rechtsleiste.2"><a href="recht/impressum.html">Impressum</a></li><li data-i18n="rechtsleiste.3"><a href="recht/datenschutz.html">Datenschutz</a></li><li data-i18n="rechtsleiste.4"><a href="recht/urheberrecht-erstveroeffentlichung.html">Urheberrecht &amp; Erstveröffentlichung</a></li><li data-i18n="rechtsleiste.5"><a href="recht/bedingungen.html">Bedingungen</a></li><li data-i18n="rechtsleiste.6"><a href="recht/konzept.html">Konzept</a></li></ul></nav><p data-i18n="fuss.1">Abschlussparty 2027 · Von der Klasse, für die Klasse</p><p class="messhinweis" data-i18n="fuss.2">Wir zählen anonym, wie die Seite genutzt wird (ohne Cookies, ohne Namen). <a href="recht/datenschutz.html">Datenschutz</a></p></footer>
 <script src="i18n/de.js"></script>
 <script src="i18n.js"></script>
 <script src="fragen.js"></script>
@@ -434,5 +474,7 @@
 <script src="lehrer.js"></script>
 <script src="lehrer-sync.js"></script>
 <script src="sprache.js"></script>
+<script src="freigabe.js"></script>
+<script src="messung.js"></script>
 </body>
 </html>

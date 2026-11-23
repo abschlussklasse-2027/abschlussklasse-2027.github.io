@@ -49,3 +49,9 @@ curl -H "$T" "$URL/api/export?offen_fuer=auswertung_1" > neu.ndjson
 curl -H "$T" -X POST $URL/api/verarbeitung -d '{"schritt":"auswertung_1","ereignis_ids":["e_..."],"ergebnis":"ok","entscheidung_id":"d_..."}'
 ```
 Neue Ereignistypen (z. B. `steckbrief`) mit eigener `schema_version` anhängen; ältere Zeilen bleiben unverändert lesbar.
+
+## Nutzungsmessung und Rueckmeldung der Schule (23.11.2026)
+
+- `POST /m` (oeffentlich, CORS nur Klassenseite): `{"e":[["seite","de|mobil"], ...]}`. Nur Ereignisse aus der Erlaubnisliste in `src/messung.js`; gezaehlt wird in Tabelle `messung` (Tag, Ereignis, Merkmal, n), keine Besucherzeilen, keine Zeit unter Tagesgenauigkeit, keine Cookies. Grenzen: `MESSUNG_IP_MAX` (600 Ereignisse/Tag und Absender-Hash), `MESSUNG_TAGESMAX` (20000/Tag).
+- `GET /admin/messung?von=&bis=` (Bearer): Zaehler je Tag und Summen. Lesbare Uebersicht: `scripts/auswertung_messung.py` (schreibt nach `~/entwuerfe/abschlussklasse-export/messung-<Tag>.md`). Die Messung steht auch in `/admin/export`.
+- `POST /api/freigabe` (oeffentlich): Rueckmeldung der Schule als Ereignis `schulfreigabe` (append-only). Grenzen: `FREIGABE_RATE_MAX` (5/Tag und Absender-Hash), `FREIGABE_TAGESMAX` (200/Tag). Lesen: `GET /admin/freigaben` (Bearer); die Sammelmeldung hebt neue Rueckmeldungen hervor. Eine Rueckmeldung ist keine rechtsverbindliche Genehmigung.

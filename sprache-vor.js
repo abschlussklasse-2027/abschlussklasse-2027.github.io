@@ -11,6 +11,7 @@
   var ziel = p || (root === "" && cur === "de" ? gem : null);
   try { if (p || root !== "") localStorage.setItem(KEY, p || cur); } catch (e) {}
   if (ziel && ziel !== cur) {
+    window.SPRACHE_UMLEITUNG = true;   /* die Messung zählt diese Seite dann nicht */
     location.replace(root + (ziel === "de" ? "" : ziel + "/") + location.hash);
   }
 })();

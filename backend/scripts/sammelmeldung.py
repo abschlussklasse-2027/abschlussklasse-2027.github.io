@@ -4,6 +4,7 @@
 Holt GET <WORKER_URL>/admin/export (Bearer ADMIN_TOKEN), legt den kompletten Export lokal ab
 (~/entwuerfe/abschlussklasse-export/export-<Tag>.json, 0600) und schickt neue Ereignisse und
 Entscheidungen seit der letzten Meldung als Mail (JSON-Anhaenge) an abschluss.klasse.2027@gmx.de.
+Rueckmeldungen der Schule (Typ schulfreigabe) stehen hervorgehoben oben in der Mail und im Betreff.
 Empfaenger steht im Feld An (keine Blindkopie). Zustand: status.json im Ablageordner; er wird erst
 nach erfolgreichem Senden fortgeschrieben (Fehler: naechster Lauf sendet erneut, Mail kommt mindestens einmal).
 
@@ -64,6 +65,26 @@ def zaehlung(neue):
     return [f"{f}: " + "; ".join(f"{n}x {t[:40]}" for t, n in sorted(o.items(), key=lambda x: -x[1])) for f, o in sorted(z.items())]
 
 
+FUNKTION = {"schulleitung": "Schulleitung", "lehrkraft": "Lehrkraft/Klassenleitung", "it": "IT der Schule", "schulaufsicht": "Schulaufsicht",
+            "schultraeger": "Schultraeger", "datenschutz": "Datenschutzbeauftragte/r", "eltern": "Eltern"}
+ANTWORT = {"ja": "EINVERSTANDEN", "ja_bedingt": "EINVERSTANDEN MIT BEDINGUNGEN", "nein": "NICHT EINVERSTANDEN", "rueckfragen": "RUECKFRAGEN"}
+
+
+def freigaben_text(fr):
+    """Hervorgehobener Block fuer Rueckmeldungen der Schule (eine Rueckmeldung ans Projekt, keine rechtsverbindliche Genehmigung)."""
+    if not fr:
+        return ""
+    z = ["=" * 60, f"RUECKMELDUNG DER SCHULE: {len(fr)} neu (Rueckmeldung ans Projekt, keine rechtsverbindliche Genehmigung)", "=" * 60]
+    for x in fr:
+        n = x["nutzlast"]
+        z.append(f"* {ANTWORT.get(n.get('antwort'), n.get('antwort'))} | {FUNKTION.get(n.get('funktion'), n.get('funktion'))} | {n.get('stelle', '')} | {n.get('name', '')} | {x['zeit'][:16]} UTC")
+        if n.get("text"):
+            z.append("    Bedingungen/Fragen: " + n["text"][:400])
+        z.append("    Kontakt: " + ("angegeben (siehe Anhang)" if n.get("kontakt") else "nicht angegeben"))
+    z.append("=" * 60)
+    return "\n".join(z) + "\n\n"
+
+
 def senden(msg, smtp):
     host, port = smtp["SMTP_HOST"], int(smtp.get("SMTP_PORT") or 587)
     if port == 465:
@@ -114,13 +135,15 @@ def main():
         return 1
 
     stimmen = sum(1 for x in neue if x["typ"] == "stimme")
+    freigaben = [x for x in neue if x["typ"] == "schulfreigabe"]
     zeilen = zaehlung(neue)
     msg = EmailMessage()
     msg["From"] = smtp.get("SMTP_FROM") or smtp.get("SMTP_USER", "")
     msg["To"] = AN  # sichtbar im Feld An, keine Blindkopie
-    msg["Subject"] = f"Klassen-Umfrage: {stimmen} neue Stimmen, {len(neue_ent)} neue Entscheidungen"
+    msg["Subject"] = (f"WICHTIG: {len(freigaben)} Rueckmeldung(en) der Schule - " if freigaben else "") + f"Klassen-Umfrage: {stimmen} neue Stimmen, {len(neue_ent)} neue Entscheidungen"
     msg.set_content(
-        f"{len(neue)} neue Ereignisse ({stimmen} Stimmen) und {len(neue_ent)} neue Entscheidungszeilen seit der letzten Meldung.\n\n"
+        freigaben_text(freigaben)
+        + f"{len(neue)} neue Ereignisse ({stimmen} Stimmen) und {len(neue_ent)} neue Entscheidungszeilen seit der letzten Meldung.\n\n"
         + "\n".join(zeilen) + "\n\nFreitexte stehen nur in den JSON-Anhaengen. Der komplette Export liegt lokal in "
         + "~/entwuerfe/abschlussklasse-export/ auf x1pro; diese Mail ist eine zweite Sicherung.\n")
     for i in range(0, max(len(neue), 1), TEIL):

@@ -380,3 +380,27 @@ h3{letter-spacing:-.02em}
 .video-hinweis[hidden]{display:none}
 @media (max-width:899px){.kopf{padding-top:6px}}
 @media (max-width:520px){.tag{font-size:.7rem}}
+
+/* Rückmeldung der Schule (Lehrer-Bereich) */
+.freigabe{margin:28px 0 8px;padding:clamp(16px,3vw,28px);border-radius:22px;background:linear-gradient(160deg,#1b1646,var(--bg2));border:2px solid var(--cyan);box-shadow:0 0 22px rgba(34,211,238,.28)}
+.freigabe h3{margin:0 0 .5em;font-size:1.5rem;color:#fff}
+.freigabe p{margin:.7em 0}
+.fg-ehrlich{padding:12px 16px;border-radius:12px;background:rgba(255,225,77,.14);border:1px solid rgba(255,225,77,.55)}
+.fg-ehrlich b{color:var(--gelb)}
+.fg-form{margin-top:18px;display:grid;gap:16px}
+.fg-feld{margin:0;padding:0;border:0;min-width:0;display:grid;gap:6px}
+.fg-feld>label,.fg-feld>legend{font-weight:800;padding:0}
+.fg-feld input[type=text],.fg-feld select,.fg-feld textarea{width:100%;min-height:52px;font:inherit;color:var(--text);background:var(--bg);padding:10px 14px;border:2px solid var(--rand);border-radius:14px}
+.fg-feld textarea{resize:vertical;min-height:110px}
+.fg-feld input:focus,.fg-feld select:focus,.fg-feld textarea:focus{outline:3px solid var(--gelb);outline-offset:2px;border-color:var(--cyan)}
+.fg-feld small{display:block}
+.fg-antwort{gap:8px}
+.fg-opt{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 14px;border:2px solid var(--rand);border-radius:14px;background:var(--bg);cursor:pointer;font-weight:600}
+.fg-opt input{flex:none;width:24px;height:24px;margin:0;accent-color:var(--pink)}
+.fg-opt:has(input:checked){border-color:var(--pink);background:linear-gradient(90deg,rgba(255,79,163,.22),rgba(139,92,246,.18))}
+.fg-opt:has(input:focus-visible){outline:3px solid var(--gelb);outline-offset:2px}
+.fg-fall{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.fg-fehler{margin:0}
+.fg-danke{margin-top:16px;padding:24px 16px}
+.messhinweis{max-width:60ch;margin:.6em auto 0}
+.messhinweis a{color:var(--leise)}

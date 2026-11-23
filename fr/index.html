@@ -417,12 +417,52 @@
           </div>
         </div>
       </div>
+
+      <div class="freigabe" id="schulfreigabe" lang="en" role="region" aria-labelledby="fg-titel">
+        <h3 id="fg-titel" data-i18n="freigabe.1">Feedback from the school</h3>
+        <p data-i18n="freigabe.2">The class is running a small research project on attitudes towards AI at school. It includes votes (tick-box questions) and an anonymous usage count for this page. Taking part is voluntary. Children's names do not appear in the evaluation, only summarised results are published, and all data is deleted in June 2027.</p>
+        <p data-i18n="freigabe.3">More: <a href="../recht/konzept.html?lang=fr">Concept</a> and <a href="../recht/datenschutz.html?lang=fr">Privacy</a>.</p>
+        <p class="fg-ehrlich" data-i18n="freigabe.4"><b>This is feedback for the project.</b> Formal approvals from the school authority or the school's governing body follow their own procedures.</p>
+        <form id="freigabe-form" class="fg-form" novalidate>
+          <div class="fg-feld"><label for="fg-funktion" data-i18n="freigabe.5">Your role</label>
+            <select id="fg-funktion" required>
+              <option value="" data-i18n="freigabe.6">Please choose</option>
+              <option value="schulleitung" data-i18n="freigabe.f1">Head teacher / principal</option>
+              <option value="lehrkraft" data-i18n="freigabe.f2">Teacher / class teacher</option>
+              <option value="it" data-i18n="freigabe.f3">School IT</option>
+              <option value="schulaufsicht" data-i18n="freigabe.f4">School supervisory authority</option>
+              <option value="schultraeger" data-i18n="freigabe.f5">School governing body / maintainer</option>
+              <option value="datenschutz" data-i18n="freigabe.f6">Data protection officer</option>
+              <option value="eltern" data-i18n="freigabe.f7">Parent</option>
+            </select></div>
+          <div class="fg-feld"><label for="fg-name" data-i18n="freigabe.7">Name</label><input type="text" id="fg-name" maxlength="100" autocomplete="name" required></div>
+          <div class="fg-feld"><label for="fg-stelle" data-i18n="freigabe.8">School / office</label><input type="text" id="fg-stelle" maxlength="150" autocomplete="organization" required></div>
+          <fieldset class="fg-feld fg-antwort"><legend data-i18n="freigabe.9">Your answer</legend>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="ja"><span data-i18n="freigabe.a1">Agreed</span></label>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="ja_bedingt"><span data-i18n="freigabe.a2">Agreed, with conditions</span></label>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="nein"><span data-i18n="freigabe.a3">Not agreed</span></label>
+            <label class="fg-opt"><input type="radio" name="fg-antwort" value="rueckfragen"><span data-i18n="freigabe.a4">I have questions</span></label>
+          </fieldset>
+          <div class="fg-feld"><label for="fg-text" data-i18n="freigabe.10">Conditions or questions</label><textarea id="fg-text" rows="4" maxlength="1000"></textarea>
+            <small class="klein" data-i18n="freigabe.11">Required for «Agreed, with conditions» and «I have questions».</small></div>
+          <div class="fg-feld"><label for="fg-kontakt" data-i18n="freigabe.12">Contact (optional)</label><input type="text" id="fg-kontakt" maxlength="150" autocomplete="off">
+            <small class="klein" data-i18n="freigabe.13">Email or phone, only if you would like a reply. This field is optional.</small></div>
+          <label class="fg-opt fg-befugt"><input type="checkbox" id="fg-befugt"><span data-i18n="freigabe.14">I am authorised to reply on behalf of my office.</span></label>
+          <div class="fg-fall" aria-hidden="true"><label for="fg-website">Website</label><input type="text" id="fg-website" tabindex="-1" autocomplete="off"></div>
+          <p class="warn fg-fehler" id="fg-fehler" role="alert" tabindex="-1" hidden></p>
+          <button type="submit" class="gross zweit fg-senden" id="fg-senden" data-i18n="freigabe.15">Send feedback</button>
+        </form>
+        <div class="danke fg-danke" id="fg-danke" tabindex="-1" hidden>
+          <h3 data-i18n="freigabe.16">Thank you for your feedback</h3>
+          <p data-i18n="freigabe.17">It has reached the project. We will only get in touch if you gave contact details.</p>
+        </div>
+      </div>
     </div>
   </details>
 </section>
 
 </main>
-<footer class="fuss"><svg class="wellen fuss-wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg><nav class="rechtsleiste" aria-label="Mentions légales" data-i18n-a="aria-label:rechtsleiste.1.aria"><ul><li data-i18n="rechtsleiste.2"><a href="../recht/impressum.html?lang=fr">Mentions légales (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.3"><a href="../recht/datenschutz.html?lang=fr">Protection des données (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.4"><a href="../recht/urheberrecht-erstveroeffentlichung.html?lang=fr">Droit d'auteur &amp; première publication (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.5"><a href="../recht/bedingungen.html?lang=fr">Conditions (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.6"><a href="../recht/konzept.html?lang=fr">Concept (en allemand uniquement)</a></li></ul></nav><p data-i18n="fuss.1">Fête de fin d'année 2027 · Par la classe, pour la classe</p></footer>
+<footer class="fuss"><svg class="wellen fuss-wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg><nav class="rechtsleiste" aria-label="Mentions légales" data-i18n-a="aria-label:rechtsleiste.1.aria"><ul><li data-i18n="rechtsleiste.2"><a href="../recht/impressum.html?lang=fr">Mentions légales (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.3"><a href="../recht/datenschutz.html?lang=fr">Protection des données (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.4"><a href="../recht/urheberrecht-erstveroeffentlichung.html?lang=fr">Droit d'auteur &amp; première publication (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.5"><a href="../recht/bedingungen.html?lang=fr">Conditions (en allemand uniquement)</a></li><li data-i18n="rechtsleiste.6"><a href="../recht/konzept.html?lang=fr">Concept (en allemand uniquement)</a></li></ul></nav><p data-i18n="fuss.1">Fête de fin d'année 2027 · Par la classe, pour la classe</p><p class="messhinweis" data-i18n="fuss.2">Nous comptons de façon anonyme comment le site est utilisé (sans cookies, sans noms). <a href="../recht/datenschutz.html?lang=fr">Confidentialité</a></p></footer>
 <script src="../i18n/fr.js"></script>
 <script src="../i18n.js"></script>
 <script src="../fragen.js"></script>
@@ -434,5 +474,7 @@
 <script src="../lehrer.js"></script>
 <script src="../lehrer-sync.js"></script>
 <script src="../sprache.js"></script>
+<script src="../freigabe.js"></script>
+<script src="../messung.js"></script>
 </body>
 </html>

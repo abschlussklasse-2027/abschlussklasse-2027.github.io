@@ -67,6 +67,9 @@ def uebersetzen(master, t, code, tief):
     s = s.replace('<html lang="de" data-root="">', '<html lang="%s" data-root="%s">' % (code, tief))
     s = s.replace('content="de_DE"', 'content="%s"' % loc)
     s = s.replace('property="og:url" content="%s"' % BASIS, 'property="og:url" content="%s%s/"' % (BASIS, code))
+    # 3b. Rückmeldung der Schule gibt es nur auf Deutsch und Englisch; die anderen Sprachseiten zeigen Englisch (Sprache am Block kennzeichnen)
+    if code not in ("de", "en"):
+        s = s.replace('<div class="freigabe" id="schulfreigabe"', '<div class="freigabe" id="schulfreigabe" lang="en"', 1)
     # 4. Rechtsseiten: mit ?lang=xx, damit dort der Hinweis erscheint
     s = re.sub(r'href="(recht/[^"?#]+)"', lambda m: 'href="%s?lang=%s"' % (m.group(1), code), s)
     # 5. Pfade eine Ebene tiefer
