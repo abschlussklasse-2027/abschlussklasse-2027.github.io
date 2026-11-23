@@ -1,4 +1,4 @@
-/* Übersetzungen für die Teile, die per Skript entstehen (Fragen, Meldungen, Vorlesen).
+/* Übersetzungen für die Teile, die per Skript entstehen (Fragen, Meldungen).
    Die festen Texte stehen schon fertig übersetzt im HTML jeder Sprachseite (siehe i18n/bauen.py).
    Fehlt ein Schlüssel, gilt der mitgegebene deutsche Text. */
 (function () {

@@ -3,7 +3,7 @@
 
 Quelle der Wahrheit:  index.html (Deutsch) und i18n/<sprache>.json (Schlüssel -> Text, de.json ist die Vorlage).
 Erzeugt:              <sprache>/index.html   statische Sprachseite (EN unter /en/ usw.), fertig übersetzt, ohne Skript lesbar
-                      i18n/<sprache>.js      dieselben Texte für die Teile, die per Skript entstehen (Fragen, Meldungen, Vorlesen)
+                      i18n/<sprache>.js      dieselben Texte für die Teile, die per Skript entstehen (Fragen, Meldungen)
                       recht/hinweis.js       Satz über den Rechtsseiten (nur Deutsch) je Sprache
 Außerdem passt es die Sprachliste im Schalter und die hreflang-Zeilen der Startseite an die vorhandenen Sprachen an.
 Aufruf:               python3 i18n/bauen.py        (im Repo-Hauptordner; danach committen)
