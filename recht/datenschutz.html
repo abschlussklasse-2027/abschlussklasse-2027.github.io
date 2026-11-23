@@ -16,22 +16,23 @@
   <h1>Datenschutzerklärung</h1>
 </div></header>
 <main id="inhalt">
-<p class="stand">Stand 23.11.2026, Entwurf: Die Seite erfasst heute keine personenbezogenen Daten; die Texte werden vor dem Start der Datenerfassung und vor jeder Befragung von Schule und Beratung geprüft.</p>
+<p class="stand">Stand 23.11.2026, Entwurf: Abstimmungen und anonyme Zählung laufen. Befragungen darüber hinaus beginnen erst nach der Rückmeldung der Schule; die Texte werden mit der Schule und einer Datenschutz-Beratung abgestimmt.</p>
 <section class="block kurz"><h2>Kurzfassung</h2>
 <ul>
-<li><strong>Heute</strong> speichert diese Seite nichts über dich oder Sie auf einem Server der Klasse. Die Kreuze bei den Fragen bleiben nur im Browser auf dem eigenen Gerät. Es gibt keine Cookies, keine Konten, keine Tracker und keine Werbung.</li>
+<li><strong>Es läuft:</strong> Wenn du bei den Fragen abschickst, wird deine Antwort <strong>ohne Namen</strong> gemeinsam mit den anderen gespeichert. Außerdem zählen wir <strong>anonym</strong>, wie die Seite genutzt wird (Abschnitt 3). Es gibt keine Cookies, keine Konten, keine fremden Tracker und keine Werbung.</li>
 <li>GitHub, wo die Seite liegt, speichert beim Aufruf die IP-Adresse zu Sicherheitszwecken.</li>
 <li><strong>Geplant</strong> sind Anmeldung, Steckbriefe und Fotos. Dafür würden wir nur das Nötigste speichern. Diese Funktionen sind noch nicht gebaut; vorher wird diese Erklärung ergänzt.</li>
-<li><strong>Forschung (geplant):</strong> Die Seite ist auch ein Forschungsprojekt zur Haltung gegenüber KI. Dafür sollen später Ankreuzergebnisse und freiwillige Kurzfragebögen anonym ausgewertet werden. Es gibt noch keine Datenerfassung; ohne Zustimmung der Schule starten wir keine Befragung.</li>
+<li><strong>Forschung (läuft):</strong> Die Seite ist auch ein Forschungsprojekt zur Haltung gegenüber KI. Die Abstimmungen A bis J und die anonyme Zählung laufen. Befragungen darüber hinaus (Kurzfragebögen, Lehrkräfte) beginnen erst nach der Rückmeldung der Schule.</li>
+<li><strong>Schule und Lehrkräfte</strong> können hier auf der Seite antworten (Abschnitt 4).</li>
 <li>Kinder unter 16 brauchen für Namen, Steckbriefe und Fotos zusätzlich das Ja der Eltern.</li>
 <li>Jede Einwilligung kann jederzeit widerrufen werden. Dann wird sofort gelöscht.</li>
 </ul></section>
 <section class="block"><h2>1. Verantwortlicher</h2>
-<p>Andreas Brauckmann, als Privatperson und Elternteil, handelnd für die Klasse 2027 (kein Unternehmen). Er verantwortet auch das Forschungsprojekt; es tritt unter dem Namen Keys4IT auf. Anschrift: Klasse 2027, Marga-Spiegel-Sekundarschule, Bahnhofstraße 1, 59368 Werne, Deutschland (siehe Impressum). Die Seite ist kein Angebot der Schule.</p>
+<p>Andreas Brauckmann, als Privatperson und Elternteil, handelnd für die Klasse 2027 (kein Unternehmen). Er verantwortet auch das Forschungsprojekt; es tritt unter dem Namen Keys4IT auf. Keys4IT ist keine Firma, sondern der Name des Projekts. Anschrift: Klasse 2027, Marga-Spiegel-Sekundarschule, Bahnhofstraße 1, 59368 Werne, Deutschland (siehe Impressum). Die Seite ist kein Angebot der Schule.</p>
 <p><strong>Kontakt und Datenschutzkontakt:</strong> <a class="adr" href="#kontakt-per-klick" role="link" data-l="7202.essalk.ssulhcsba" data-d="ed.xmg" title="Zum Schreiben antippen"><span class="rev"><span>ed.xmg</span><span class="at"></span><span>7202.essalk.ssulhcsba</span></span></a></p>
 <p><strong>Anwendbares Recht:</strong> Es gilt deutsches und europäisches Recht, vor allem die DSGVO.</p>
 <h2>2. Heute: was die Seite tut</h2>
-<p>Die Seite ist <strong>statisch</strong>. Sie besteht aus Dateien, die bei GitHub Pages liegen. Es gibt keinen eigenen Server und keine Datenbank.</p>
+<p>Die Seite besteht aus Dateien, die bei GitHub Pages liegen. Dazu kommt ein kleines Programm bei Cloudflare (der «Sammelpunkt»), das die abgeschickten Antworten und die anonymen Zähler entgegennimmt. Wir betreiben keinen eigenen Server.</p>
 <h3>2.1 Aufruf der Seite</h3>
 <p>Beim Aufruf speichert GitHub die IP-Adresse der Besucherinnen und Besucher zu Sicherheitszwecken, auch ohne Anmeldung bei GitHub. Wir selbst sehen diese Daten nicht.</p>
 <ul>
@@ -40,28 +41,59 @@
 <li><strong>Speicherdauer:</strong> nach den Regeln von GitHub.</li>
 </ul>
 <h3>2.2 Ankreuzfragen im Browser</h3>
-<p>Deine Kreuze werden im lokalen Speicher deines Browsers abgelegt (localStorage). Sie verlassen dein Gerät nicht. Es gibt noch keinen gemeinsamen Sammelpunkt. Du gibst keinen Namen und keine E-Mail-Adresse an. Du löschst die Kreuze, indem du die Websitedaten im Browser löschst.</p>
+<p>Deine Kreuze werden im lokalen Speicher deines Browsers abgelegt (localStorage). Wenn du <strong>abschickst</strong>, geht die Antwort zusätzlich an den Sammelpunkt bei Cloudflare und wird dort gemeinsam mit den Antworten der anderen gespeichert. Du gibst keinen Namen und keine E-Mail-Adresse an.</p>
+<ul>
+<li><strong>Missbrauchsschutz:</strong> Damit niemand die Umfrage mit Massen von Antworten überschwemmt, wird pro Tag kurz ein Prüfwert aus der Verbindung gebildet (ein täglich wechselnder Hash). Die IP-Adresse selbst wird nicht gespeichert. Der Prüfwert wird nach wenigen Tagen automatisch gelöscht.</li>
+<li><strong>Rechtsgrundlage:</strong> vorgesehen ist deine freiwillige Einwilligung durch das Abschicken (Art. 6 Abs. 1 lit. a DSGVO). Ob die Antworten ohne Namen überhaupt Personenbezug haben und wie die Einwilligung bei unter 16 gestaltet wird, klären wir mit einer Datenschutz-Beratung.</li>
+<li><strong>Speicherdauer:</strong> bis zum Projektende im Juni 2027, dann Löschung.</li>
+<li>Du löschst die Kreuze auf deinem Gerät, indem du die Websitedaten im Browser löschst. Gesendete Antworten sind ohne Namen gespeichert und können deshalb nicht einer Person zugeordnet werden; auf Wunsch der Klasse oder der Schule löschen wir alle.</li>
+</ul>
 <h3>2.3 Video</h3>
 <p>Das Erklärvideo liegt als Datei auf derselben Seite. Es wird nicht von YouTube oder einem anderen Videodienst geladen.</p>
 <h3>2.4 Keine Cookies, keine Tracker</h3>
-<p>Wir setzen keine Cookies, keine Analysewerkzeuge, keine Werbung und keine Schriften oder Skripte von fremden Servern ein. Es gibt keine Konten.</p>
-<h2>3. Forschung und Datenerfassung (geplant)</h2>
-<p><strong>Warum:</strong> Ich, Andreas Brauckmann, stehe hinter diesem Projekt. Viele lehnen KI ab, weil sie sie nicht kennen, ähnlich wie früher bei Computer und Internet. Bei KI ist die Gruppe der Skeptiker viel grösser. Wir wollen verstehen, wie Schüler, Lehrkräfte und Schulen reagieren und ob sich die Haltung ändert, wenn man KI selbst ausprobiert.</p>
-<p><strong>Heute</strong> wird dafür nichts erfasst. <strong>Geplant</strong> ist:</p>
+<p>Wir setzen keine Cookies, keine fremden Analysewerkzeuge, keine Werbung und keine Schriften oder Skripte von fremden Servern ein. Es gibt keine Konten. Die eigene, anonyme Zählung steht in Abschnitt 3.</p>
+<h2>3. Anonyme Nutzungsmessung</h2>
+<p><strong>Was wir tun:</strong> Wir zählen anonym, wie die Seite genutzt wird: wie oft sie aufgerufen wird, wie lange jemand bleibt, ob und wie lange Videos angesehen werden und welches Kapitel eines Videos zuletzt gesehen wurde.</p>
+<p><strong>Wozu:</strong> Wir wollen verstehen, ob Menschen sofort wegklicken, wenn sie einen KI-Avatar sehen.</p>
+<p><strong>Was dabei nicht passiert:</strong></p>
 <ul>
-<li><strong>Daten:</strong> die Ergebnisse der Ankreuzfragen A bis J (als Zahlen), zwei freiwillige Kurzfragebögen (vorher und nachher), Rückmeldungen von Lehrkräften. Keine Namen in der Auswertung.</li>
-<li><strong>Keine Daten</strong> für die Forschung: keine Fotos, keine Steckbriefe und keine Texte der Kinder, kein Tracking, keine Cookies.</li>
+<li>keine Cookies und keine Speicherung auf deinem Gerät,</li>
+<li>keine Namen,</li>
+<li>keine IP-Adresse wird gespeichert,</li>
+<li>keine Personen- und keine Gerätekennung,</li>
+<li>gespeichert werden nur <strong>Tageszähler</strong> (zum Beispiel: «an diesem Tag wurde das Video 14-mal gestartet»). Einzelne Besuche lassen sich daraus nicht herauslesen.</li>
+<li>Wenn dein Browser <strong>Do Not Track</strong> oder <strong>Global Privacy Control</strong> sendet, wird gar nicht gezählt.</li>
+<li>Die Zähler werden nur zusammengefasst ausgewertet.</li>
+</ul>
+<p><strong>Aufbewahrung:</strong> bis zum Projektende im Juni 2027, dann Löschung.</p>
+<p><strong>Rechtsgrundlage:</strong> Da keine Daten mit Personenbezug gespeichert werden sollen, geht es um anonyme Zähler. Ob und welche Rechtsgrundlage trotzdem nötig ist, klären wir mit einer Datenschutz-Beratung; wir behaupten dazu nichts Gesichertes.</p>
+<h2>4. Rückmeldung der Schule (Lehrkräfte und IT)</h2>
+<p>Im Bereich für Lehrkräfte und IT, unter dem Luca-Video, gibt es ein Formular «Rückmeldung der Schule». Dort können Schulleitung, Lehrkräfte oder Schul-IT antworten, zum Beispiel ob und unter welchen Bedingungen die Schule mit einer Befragung einverstanden ist. Das Formular ist freiwillig.</p>
+<ul>
+<li><strong>Was gespeichert wird:</strong> Funktion (zum Beispiel Lehrkraft, Schulleitung, IT), Name, Schule oder Stelle, die Antwort und, wenn du magst, ein Kontakt (E-Mail oder Telefon). Der Kontakt ist freiwillig.</li>
+<li><strong>Zweck:</strong> Wir dokumentieren, was die Schule uns zurückmeldet, und richten uns danach.</li>
+<li><strong>Wo:</strong> im Sammelpunkt bei Cloudflare, zugänglich nur für den Verantwortlichen.</li>
+<li><strong>Rechtsgrundlage:</strong> vorgesehen ist die Einwilligung durch das Absenden (Art. 6 Abs. 1 lit. a DSGVO); Einzelheiten klären wir mit einer Datenschutz-Beratung.</li>
+<li><strong>Löschung:</strong> zum Projektende im Juni 2027; auf Wunsch früher.</li>
+<li><strong>Keine Veröffentlichung:</strong> Die Antworten der Schule werden nicht veröffentlicht.</li>
+</ul>
+<h2>5. Forschung und Datenerfassung (läuft teilweise)</h2>
+<p><strong>Warum:</strong> Ich, Andreas Brauckmann, stehe hinter diesem Projekt. Viele lehnen KI ab, weil sie sie nicht kennen, ähnlich wie früher bei Computer und Internet. Bei KI ist die Gruppe der Skeptiker viel grösser. Wir wollen verstehen, wie Schüler, Lehrkräfte und Schulen reagieren und ob sich die Haltung ändert, wenn man KI selbst ausprobiert.</p>
+<p><strong>Es läuft:</strong> die Abstimmungen A bis J (Abschnitt 2.2) und die anonyme Zählung (Abschnitt 3). <strong>Noch nicht gestartet:</strong> zwei freiwillige Kurzfragebögen und die Befragung von Lehrkräften. Sie beginnen erst nach der Rückmeldung der Schule (Abschnitt 4). Das ist der Plan:</p>
+<ul>
+<li><strong>Daten:</strong> die Ergebnisse der Ankreuzfragen A bis J (als Zahlen), anonyme Tageszähler, später zwei freiwillige Kurzfragebögen (vorher und nachher) und Rückmeldungen von Lehrkräften. Keine Namen in der Auswertung.</li>
+<li><strong>Keine Daten</strong> für die Forschung: keine Fotos, keine Steckbriefe und keine Texte der Kinder, keine Verfolgung einzelner Personen, keine Cookies.</li>
 <li><strong>Kleine Gruppen:</strong> Gruppen mit sehr wenigen Personen werden nie einzeln ausgewertet, damit niemand erkennbar wird.</li>
 <li><strong>Freiwillig:</strong> Niemand muss mitmachen. Wer nicht mitmacht, hat keinen Nachteil. Du kannst jederzeit aufhören und deine Antworten löschen lassen.</li>
-<li><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), bei Kindern unter 16 zusätzlich die Einwilligung der Eltern. Die Einzelheiten klären wir vor dem Start mit der Schule und einer Datenschutz-Beratung.</li>
-<li><strong>Speicherort:</strong> eine Datenbank bei Cloudflare im Konto von Keys4IT; Auswertungen liegen als Export lokal beim Verantwortlichen.</li>
+<li><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), bei Kindern unter 16 zusätzlich die Einwilligung der Eltern. Die Einzelheiten klären wir mit der Schule und einer Datenschutz-Beratung; für die Kurzfragebögen vor dem Start.</li>
+<li><strong>Speicherort:</strong> eine Datenbank bei Cloudflare im Konto des Projekts (Name Keys4IT); Auswertungen liegen als Export lokal beim Verantwortlichen.</li>
 <li><strong>Löschung:</strong> Die Daten werden im Juni 2027 gelöscht, spätestens zum Ende des Schuljahres 2026/27. Bei Widerruf sofort.</li>
 <li><strong>Veröffentlichung:</strong> nur als Gesamtzahlen, nie mit Namen oder einzelnen Antworten.</li>
-<li><strong>Schule und Eltern:</strong> Wir informieren Schule und Eltern, bevor eine Befragung beginnt. Ohne Zustimmung der Schule beginnt sie nicht.</li>
+<li><strong>Schule und Eltern:</strong> Wir holen die Rückmeldung der Schule ein und informieren Eltern, bevor eine Befragung über die Abstimmungen hinaus beginnt. Die Schule kann hier auf der Seite antworten: im Bereich für Lehrkräfte und IT, unter dem Luca-Video, bei «Rückmeldung der Schule». Ohne die Rückmeldung der Schule beginnt sie nicht.</li>
 </ul>
-<h2>4. Geplant: was später passieren soll</h2>
+<h2>6. Geplant: was später passieren soll</h2>
 <p>Dieser Teil gilt erst, wenn die Funktionen gebaut und freigeschaltet sind. Steckbrief, Anmeldung und Foto-Upload sind <strong>Plan, nicht gebaut</strong>. Vorher wird diese Erklärung aktualisiert.</p>
-<h3>4.1 Anmeldung per Anmeldelink</h3>
+<h3>6.1 Anmeldung per Anmeldelink</h3>
 <ul>
 <li><strong>Daten:</strong> E-Mail-Adresse (verschlüsselt oder als Prüfwert gespeichert), Vorname oder Kürzel, Klasse, Rolle (Kind, Gremium, Lehrkraft), Zeitpunkt der Anmeldung.</li>
 <li><strong>Zweck:</strong> Nur Kinder der Klasse sollen etwas einreichen können.</li>
@@ -70,7 +102,7 @@
 <li>Die E-Mail-Adresse der Eltern fragen wir bewusst nicht ab.</li>
 <li>Der Versand der Anmeldelinks ist über Resend geplant; der Anbieter wird erst beim Start verbindlich festgelegt. Eine tägliche Sammelmeldung für das Gremium geht an die Klassenadresse.</li>
 </ul>
-<h3>4.2 Steckbriefe und Porträts</h3>
+<h3>6.2 Steckbriefe und Porträts</h3>
 <ul>
 <li><strong>Daten:</strong> Vorname oder Kürzel, Inhalte der Felder (Lieblingsessen, Hobby usw.) oder Porträttext, Freigaben mit Zeitpunkt.</li>
 <li><strong>Keine Angaben</strong> zu Gesundheit, Herkunft, Religion, Familie oder Aussehen. Solche Texte sollen schon beim Schreiben blockiert werden.</li>
@@ -79,7 +111,7 @@
 <li><strong>Speicherdauer:</strong> Entwurf ohne Freigabe 30 Tage. Freigegebene Texte bis nach der Abschlussparty, spätestens bis zum Ende des Schuljahres 2026/27. Bei Widerruf sofort.</li>
 <li><strong>Blockierte Texte</strong> werden nicht gespeichert. Das Protokoll soll nur festhalten, dass etwas blockiert wurde, nicht was.</li>
 </ul>
-<h3>4.3 Fotos</h3>
+<h3>6.3 Fotos</h3>
 <ul>
 <li><strong>Daten:</strong> Foto, Zeitpunkt, Klasse, wer hochgeladen hat (intern).</li>
 <li><strong>Zweck:</strong> Galerie und Slideshow der Klasse.</li>
@@ -87,14 +119,14 @@
 <li><strong>Prüfung (geplant):</strong> Jedes Foto soll vor der Anzeige automatisch auf ungeeignete Inhalte geprüft und danach vom Gremium freigegeben werden. Blockierte Fotos werden gelöscht.</li>
 <li><strong>Speicherdauer:</strong> wie Steckbriefe. Bei Widerruf sofort.</li>
 </ul>
-<h3>4.4 Automatische Prüfung und KI-Helfer (geplant)</h3>
+<h3>6.4 Automatische Prüfung und KI-Helfer (geplant)</h3>
 <p>Vorgesehen ist ein kostenloser Moderationsdienst (OpenAI Moderation) plus eine Zusatzprüfung durch ein KI-Modell (Anthropic Claude Haiku, vorgesehen). Beide sind <strong>geplant</strong> und noch nicht in Betrieb. Bau-Wünsche an die KI-Helfer würden ebenfalls an einen KI-Dienst geschickt. Die KI entscheidet nicht über Veröffentlichungen; das tun das beschriebene Kind und das Gremium.</p>
 <ul>
 <li><strong>Rechtsgrundlage:</strong> Einwilligung (wie oben) und berechtigtes Interesse am Schutz der Kinder, Art. 6 Abs. 1 lit. a und f DSGVO.</li>
 <li>Es wird keine automatisierte Entscheidung mit rechtlicher Wirkung im Sinne von Art. 22 DSGVO getroffen. Eine Blockade lässt sich durch einen neuen, freundlichen Text oder ein anderes Bild umgehen.</li>
 <li>Vor dem Start prüfen wir, dass die gewählten Anbieter Daten nicht zum Training verwenden.</li>
 </ul>
-<h2>5. Empfänger und Datenverarbeiter</h2>
+<h2>7. Empfänger und Datenverarbeiter</h2>
 <div class="tabwrap"><table class="datenkarten">
 <thead>
 <tr>
@@ -113,9 +145,9 @@
 </tr>
 <tr>
 <td class="erste" data-label="Dienst">Cloudflare, Inc.</td>
-<td data-label="Wofür">Worker (Programm), D1 (Datenbank, auch für die Forschungsdaten), R2 (Fotospeicher), EU-Region wo möglich</td>
+<td data-label="Wofür">Worker (Programm) und D1 (Datenbank) für Abstimmungen, Zähler und Rückmeldungen der Schule; geplant zusätzlich R2 (Fotospeicher), EU-Region wo möglich</td>
 <td class="kurz" data-label="Sitz">USA</td>
-<td data-label="Stand">geplant</td>
+<td data-label="Stand">läuft (Fotospeicher geplant)</td>
 </tr>
 <tr>
 <td class="erste" data-label="Dienst">Resend</td>
@@ -137,11 +169,11 @@
 </tr>
 </tbody>
 </table></div>
-<p>Bei den Diensten, die erst geplant sind, werden heute keine Daten übermittelt. Mit jedem Datenverarbeiter schliessen wir vor dem Start eine Vereinbarung zur Auftragsverarbeitung ab oder prüfen die bestehenden Bedingungen.</p>
+<p>Bei den Diensten, die erst geplant sind, werden heute keine Daten übermittelt. Für Cloudflare, das heute schon läuft, prüfen wir mit einer Datenschutz-Beratung die Auftragsverarbeitung; mit den geplanten Diensten schliessen wir vor dem Start eine Vereinbarung ab oder prüfen die bestehenden Bedingungen.</p>
 <p>Andere Empfänger gibt es nicht. Wir verkaufen keine Daten und geben sie nicht für Werbung weiter.</p>
-<h2>6. Übermittlung in Drittländer</h2>
+<h2>8. Übermittlung in Drittländer</h2>
 <p>GitHub, Cloudflare, Resend und die geplanten Prüfdienste haben ihren Sitz in den USA. Eine Übermittlung dorthin erfolgt nur auf einer zulässigen Grundlage, zum Beispiel dem EU-US-Datenschutzrahmen oder Standardvertragsklauseln (Art. 44 ff. DSGVO). Wo möglich, wird die Datenhaltung auf eine EU-Region beschränkt.</p>
-<h2>7. Deine und Ihre Rechte</h2>
+<h2>9. Deine und Ihre Rechte</h2>
 <p>Du hast, bzw. Sie haben das Recht auf:</p>
 <ul>
 <li><strong>Auskunft</strong> (Art. 15 DSGVO),</li>
@@ -154,7 +186,7 @@
 <li><strong>Beschwerde</strong> bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO).</li>
 </ul>
 <p>Für Kinder können die Eltern diese Rechte ausüben. Schreiben Sie an: <a class="adr" href="#kontakt-per-klick" role="link" data-l="7202.essalk.ssulhcsba" data-d="ed.xmg" title="Zum Schreiben antippen"><span class="rev"><span>ed.xmg</span><span class="at"></span><span>7202.essalk.ssulhcsba</span></span></a>. Zuständige Aufsichtsbehörde: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), Kavalleriestraße 2-4, 40213 Düsseldorf.</p>
-<h2>8. Kinderschutz</h2>
+<h2>10. Kinderschutz</h2>
 <ul>
 <li>Die Zielgruppe sind Kinder von etwa 16 und 17 Jahren, manche sind 15. Unter 16 braucht es zusätzlich das Ja der Eltern für Namen, Steckbriefe und Fotos.</li>
 <li>Wir verwenden nur Vornamen oder Kürzel, nie Nachnamen.</li>
@@ -162,9 +194,9 @@
 <li>Texte und Fotos sollen mehrstufig geprüft werden. Keine Prüfung fängt alles. Deshalb können Gremium und Lehrkräfte jederzeit sperren, und jede Person kann Inhalte melden.</li>
 <li>Wer nicht mitmachen möchte, bleibt draussen. Daraus entsteht kein Nachteil.</li>
 </ul>
-<h2>9. Sicherheit</h2>
+<h2>11. Sicherheit</h2>
 <p>Verbindungen sind verschlüsselt (HTTPS). Zugangsschlüssel sollen nur im geschützten Programm (Worker) liegen, nie in der Seite. Entwürfe und gesperrte Inhalte sind von aussen nicht abrufbar.</p>
-<h2>10. Änderungen</h2>
+<h2>12. Änderungen</h2>
 <p>Wir passen diese Erklärung an, bevor neue Funktionen freigeschaltet werden. Es gilt die jeweils aktuelle Fassung auf dieser Seite.</p>
 <p>Stand: 23.11.2026</p></section>
 </main>
