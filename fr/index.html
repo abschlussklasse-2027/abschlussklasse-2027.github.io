@@ -49,8 +49,9 @@
 </svg>
 <a class="skip" href="#fragen-bereich" data-i18n="seite.1">Direct aux questions</a>
 <header class="kopf">
+<div class="kopf-steuer" id="kopf-steuer">
 <div class="sprachwahl" id="sprachwahl">
-  <button type="button" class="sw-knopf" id="sw-knopf" aria-haspopup="true" aria-expanded="false" aria-controls="sw-panel" aria-label="Choisir la langue" data-i18n-a="aria-label:sw.aria"><svg class="ico" aria-hidden="true"><use href="#i-welt"/></svg><span class="sw-code" id="sw-code">DE</span><svg class="sw-pfeil" aria-hidden="true" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button type="button" class="sw-knopf" id="sw-knopf" aria-haspopup="true" aria-expanded="false" aria-controls="sw-panel" aria-label="Choisir la langue" data-i18n-a="aria-label:sw.aria"><svg class="ico" aria-hidden="true"><use href="#i-welt"/></svg><span class="sw-text"><span class="sw-label" translate="no">Sprache / Language</span><span class="sw-code" id="sw-code" translate="no">Deutsch</span></span><svg class="sw-pfeil" aria-hidden="true" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   <div class="sw-tipp" id="sw-tipp" role="note" hidden><span id="sw-tipp-t" data-wechsel="Langue|Sprache|Language|Lingua|Idioma|Dil|Język|Мова" data-i18n-a="data-wechsel:sw.tipp" data-i18n="sw.tipp.1">Langue · Language · Lingua</span></div>
   <div class="sw-panel" id="sw-panel" hidden>
     <input type="search" class="sw-suche" id="sw-suche" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Chercher une langue …" aria-label="Chercher une langue …" data-i18n-a="placeholder:sw.suche;aria-label:sw.suche">
@@ -66,6 +67,15 @@
     </ul>
     <p class="sw-leer" id="sw-leer" hidden data-i18n="sw.leer">Aucune langue trouvée</p>
   </div>
+</div>
+<section class="vl-pille" id="vorlesen" aria-label="Lecture à voix haute" data-i18n-a="aria-label:vl.aria" hidden>
+  <button type="button" class="vl-play" id="vl-play" aria-label="Lire la page à voix haute" data-i18n-a="aria-label:vl.start"><svg class="vl-ring" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="vl-bahn" cx="24" cy="24" r="22.5"/><circle class="vl-fort" id="vl-fort" cx="24" cy="24" r="22.5" pathLength="100"/></svg><svg class="vl-sym" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path id="vl-ico" d="M9 5l10 7-10 7z"/></svg></button>
+  <div class="vl-text"><span class="vl-titel" id="vl-text" data-i18n="vl.start">Lire la page à voix haute</span><span class="vl-status" id="vl-info" role="status" aria-live="polite"></span></div>
+  <button type="button" class="vl-zahn" id="vl-zahn" aria-haspopup="true" aria-expanded="false" aria-controls="vl-pop" aria-label="Réglages : vitesse" data-i18n-a="aria-label:vl.einst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+  <button type="button" class="vl-urh" id="vl-urh" aria-haspopup="true" aria-expanded="false" aria-controls="vl-urh-pop" aria-label="Remarque sur la voix" data-i18n-a="aria-label:vl.urh.aria" translate="no">©</button>
+  <div class="vl-pop" id="vl-pop" role="group" aria-label="Vitesse" data-i18n-a="aria-label:vl.tempo" hidden></div>
+  <div class="vl-pop vl-pop-text" id="vl-urh-pop" role="note" hidden><span data-i18n="vl.urh">Voix : générée par IA (HeyGen)</span></div>
+</section>
 </div>
   <svg class="konfetti" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
     <path d="M-20 60C140 10 260 130 420 70S700 -10 860 60" fill="none" stroke="url(#gStr1)" stroke-width="9" stroke-linecap="round" opacity=".75"/>
@@ -168,11 +178,6 @@
   <svg class="wellen" viewBox="0 0 640 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
 </header>
 <main>
-<section class="vorlesen" id="vorlesen" aria-label="Lecture à voix haute" data-i18n-a="aria-label:vl.aria" hidden>
-  <button type="button" class="vl-play" id="vl-play"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><path id="vl-ico" d="M8 5l11 7-11 7z" fill="currentColor"/></svg><span id="vl-text" data-i18n="vl.start">Lire la page à voix haute</span></button>
-  <button type="button" class="vl-stop" id="vl-stop" hidden data-i18n="vl.stopp">Stop</button>
-  <p class="vl-info" id="vl-info" aria-live="polite"></p>
-</section>
 <section class="block idee">
   <h2 data-i18n="idee.1">L'idée en trois phrases</h2>
   <ol class="drei">

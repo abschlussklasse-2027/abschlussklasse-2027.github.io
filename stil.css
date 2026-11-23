@@ -256,7 +256,8 @@ h3{letter-spacing:-.02em}
   .frage{padding:16px 10px 8px}
   .karte{padding:12px}
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  .sw-knopf.sw-hinweis,.vl-pille.sw-hinweis{animation:sw-puls 2s ease-in-out 1!important}}
 
 .luca-karte{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin:18px 0 26px;padding:18px;border-radius:24px;background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(34,211,238,.10));border:1px solid rgba(139,92,246,.45)}
 .luca-karte .videorahmen.hoch{margin:0;height:min(60vh,60dvh,480px)}
@@ -308,29 +309,36 @@ h3{letter-spacing:-.02em}
 @media (prefers-reduced-motion:reduce){.sync-aktiv .ls-text,.ls-pfeil{transition:none!important}}
 
 /* Sprachschalter oben rechts und Vorlesen-Kasten */
-.sprachwahl{position:absolute;top:max(10px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:20}
+/* Kopf-Steuerung: Sprachschalter und Vorlese-Pille. Ab 900 px rechtsbuendig im Inhaltsraster, darunter im Fluss (Pille volle Breite). */
+.kopf-steuer{position:relative;z-index:20;display:flex;flex-direction:column;align-items:stretch;gap:12px;max-width:1040px;margin:52px auto 22px}
+@media (min-width:900px){.kopf-steuer{position:absolute;top:max(14px,env(safe-area-inset-top));left:20px;right:20px;margin:0 auto;align-items:flex-end;pointer-events:none}.kopf-steuer>*{pointer-events:auto}}
+.sprachwahl{position:relative;z-index:25;align-self:stretch}
+@media (min-width:900px){.sprachwahl{align-self:flex-end}}
 @property --sw-a{syntax:"<angle>";initial-value:0deg;inherits:false}
-.sw-knopf{--sw-hl:transparent;position:relative;display:inline-flex;align-items:center;gap:9px;min-height:48px;min-width:48px;padding:8px 16px 8px 14px;font:800 1.05rem/1 var(--mono);letter-spacing:.08em;color:#fff;border:3px solid transparent;border-radius:999px;cursor:pointer;
-  background:linear-gradient(#0d0d28,#0d0d28) padding-box,conic-gradient(from var(--sw-a),var(--hl-c,transparent) 0,var(--sw-hl) 6%,transparent 14%,transparent 100%) border-box,linear-gradient(100deg,var(--pink),var(--cyan)) border-box;
-  box-shadow:0 0 12px rgba(255,79,163,.6),0 0 26px rgba(34,211,238,.4),inset 0 0 10px rgba(34,211,238,.22);text-shadow:0 0 8px rgba(34,211,238,.7);-webkit-tap-highlight-color:transparent}
-.sw-knopf:hover,.sw-knopf:focus-visible{box-shadow:0 0 18px rgba(255,79,163,.85),0 0 36px rgba(34,211,238,.6),inset 0 0 12px rgba(34,211,238,.3)}
-.sw-knopf:focus-visible{outline:3px solid var(--gelb);outline-offset:3px}
-.sw-knopf .ico{width:1.45em;height:1.45em;color:var(--cyan);filter:drop-shadow(0 0 5px var(--cyan))}
+/* Neon: Rand pink-cyan, Glow, umlaufendes Licht (conic) nur waehrend .sw-hinweis; Pulsieren auch bei reduzierter Bewegung */
+.sw-knopf,.vl-pille{--sw-hl:transparent;border:3px solid transparent;
+  background:linear-gradient(#0d0d28,#0d0d28) padding-box,conic-gradient(from var(--sw-a),transparent 0,var(--sw-hl) 9%,transparent 22%,transparent 100%) border-box,linear-gradient(100deg,var(--pink),var(--cyan)) border-box;
+  box-shadow:0 0 14px rgba(255,79,163,.7),0 0 30px rgba(34,211,238,.45),inset 0 0 10px rgba(34,211,238,.22);-webkit-tap-highlight-color:transparent}
+.sw-knopf{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:58px;padding:8px 20px 8px 16px;font:800 1.05rem/1.1 var(--schrift);color:#fff;border-radius:999px;cursor:pointer;text-shadow:0 0 8px rgba(34,211,238,.6)}
+@media (min-width:900px){.sw-knopf{width:auto;justify-content:flex-start}}
+.sw-knopf:hover,.sw-knopf:focus-visible{box-shadow:0 0 20px rgba(255,79,163,.9),0 0 40px rgba(34,211,238,.65),inset 0 0 12px rgba(34,211,238,.3)}
+.sw-knopf:focus-visible,.vl-pille button:focus-visible{outline:3px solid var(--gelb);outline-offset:3px}
+.sw-knopf .ico{width:1.9em;height:1.9em;color:var(--cyan);filter:drop-shadow(0 0 5px var(--cyan))}
+.sw-text{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left}
+.sw-label{font:700 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+.sw-code{font:800 1.2rem/1.1 var(--schrift);letter-spacing:.01em}
+.sw-pfeil{width:14px;height:10px;color:var(--cyan);transition:transform .2s;flex:none}
+.sw-knopf[aria-expanded="true"] .sw-pfeil{transform:rotate(180deg)}
 .sw-tipp{position:absolute;right:calc(100% + 14px);top:50%;transform:translateY(-50%);white-space:nowrap;padding:9px 14px;font:700 .9rem/1.2 var(--mono);letter-spacing:.04em;color:#fff;background:rgba(13,13,40,.96);border:2px solid var(--pink);border-radius:14px;box-shadow:0 0 16px rgba(255,79,163,.6);cursor:pointer;opacity:0;transition:opacity .4s}
 .sw-tipp::after{content:"";position:absolute;left:100%;top:50%;margin-top:-7px;border:7px solid transparent;border-left:9px solid var(--pink);border-right:0}
 .sw-tipp.zeigen{opacity:1}
 .sw-tipp #sw-tipp-t{display:inline-block;transition:opacity .25s}
 .sw-tipp #sw-tipp-t.aus{opacity:0}
-/* Neon-Auftritt: einmal je Sitzung (Klasse sw-intro setzt sprache.js) - Flackern, Lichtlauf, dann höchstens 3 sanfte Pulse */
-.sw-intro{animation:sw-flacker 1s linear 1,sw-lauf 2s linear 1s 1,sw-puls 2.6s ease-in-out 4s 3}
-.sw-intro{--sw-hl:#fff}
+@media (max-width:899px){.sw-tipp{right:0;top:auto;bottom:calc(100% + 12px);transform:none}.sw-tipp::after{left:auto;right:36px;top:100%;margin:0;border:7px solid transparent;border-top:9px solid var(--pink);border-bottom:0}}
+/* Lichtlauf: Klasse .sw-hinweis setzt sprache.js (erst alle ~6 s, nach 60 s alle ~20 s, bis zum ersten Klick) */
+.sw-hinweis{--sw-hl:#fff;animation:sw-lauf 2s linear 1,sw-puls 2s ease-in-out 1}
 @keyframes sw-lauf{from{--sw-a:0deg}to{--sw-a:360deg}}
-@keyframes sw-flacker{0%{opacity:.25}8%{opacity:1}14%{opacity:.2}22%{opacity:.95}30%{opacity:.35}38%,100%{opacity:1}}
-@keyframes sw-puls{0%,100%{box-shadow:0 0 12px rgba(255,79,163,.6),0 0 26px rgba(34,211,238,.4),inset 0 0 10px rgba(34,211,238,.22)}50%{box-shadow:0 0 22px rgba(255,79,163,.95),0 0 48px rgba(34,211,238,.7),inset 0 0 14px rgba(34,211,238,.35)}}
-@media (max-width:520px){.sw-tipp{font-size:.8rem;padding:8px 11px}}
-@media (prefers-reduced-motion:reduce){.sw-pfeil{transition:none}.sw-intro{animation:none}.sw-tipp,.sw-tipp #sw-tipp-t{transition:none}}
-.sw-pfeil{width:14px;height:10px;color:var(--cyan);transition:transform .2s}
-.sw-knopf[aria-expanded="true"] .sw-pfeil{transform:rotate(180deg)}
+@keyframes sw-puls{0%,100%{box-shadow:0 0 14px rgba(255,79,163,.7),0 0 30px rgba(34,211,238,.45),inset 0 0 10px rgba(34,211,238,.22)}50%{box-shadow:0 0 0 3px rgba(255,79,163,.55),0 0 30px rgba(255,79,163,1),0 0 64px rgba(34,211,238,.85),inset 0 0 16px rgba(34,211,238,.4)}}
 .sw-panel{position:absolute;right:0;top:calc(100% + 8px);width:min(300px,calc(100vw - 24px));padding:10px;background:rgba(16,16,43,.97);border:2px solid var(--pink);border-radius:18px;box-shadow:0 0 22px rgba(255,79,163,.45),0 18px 40px rgba(0,0,0,.55)}
 .sw-suche{width:100%;min-height:44px;padding:8px 14px;font:inherit;font-size:1rem;color:var(--text);background:var(--bg);border:2px solid var(--rand);border-radius:12px}
 .sw-suche:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,.35)}
@@ -343,12 +351,32 @@ h3{letter-spacing:-.02em}
 .sw-liste a[aria-current="true"]{background:linear-gradient(90deg,var(--vio),var(--pink));color:#fff}
 .sw-liste a[aria-current="true"] span{color:#fff}
 .sw-leer{margin:8px 4px 2px;color:var(--leise);font-size:.95rem}
-.vorlesen{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin:0 0 20px;padding:12px 16px;background:linear-gradient(160deg,var(--kart),var(--bg2));border:1px solid rgba(255,255,255,.14);border-radius:18px}
-.vorlesen[hidden]{display:none}
-.vl-play,.vl-stop{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:8px 18px;font:800 1rem/1.2 var(--schrift);color:var(--dunkel);background:var(--gelb);border:0;border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent}
-.vl-play .ico{fill:currentColor;width:1.3em;height:1.3em}
-.vl-stop{background:transparent;color:var(--text);border:2px solid var(--rand)}
-.vl-info{margin:0;font-size:.92rem;color:var(--leise);flex:1 1 200px}
+/* Vorlese-Pille: dunkle Kapsel (Vorbild brauckmann.ch), grosser runder Play-Button, Titel + Dauer, Zahnrad (Tempo), (c) Hinweis */
+.vl-pille{position:relative;z-index:20;display:flex;align-items:center;gap:12px;align-self:stretch;padding:7px 14px 7px 8px;border-radius:999px;color:#fff;font-family:var(--schrift)}
+.vl-pille[hidden]{display:none}
+@media (min-width:900px){.vl-pille{align-self:flex-end;min-width:310px}}
+.vl-play{position:relative;flex:0 0 46px;width:46px;height:46px;padding:0;border:0;border-radius:50%;background:#fff;color:#2e9e99;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent;transition:transform .2s}
+.vl-play:hover{transform:scale(1.05)}
+.vl-ring{position:absolute;inset:-5px;width:calc(100% + 10px);height:calc(100% + 10px);transform:rotate(-90deg);pointer-events:none}
+.vl-ring circle{fill:none;stroke-width:1.6}
+.vl-bahn{stroke:rgba(255,255,255,.85)}
+.vl-fort{stroke:#2e9e99;stroke-width:3;stroke-linecap:round;stroke-dasharray:0 100;transition:stroke-dasharray .4s linear}
+.vl-sym{width:24px;height:24px;fill:currentColor;stroke:currentColor;stroke-width:1.75;stroke-linejoin:round;stroke-linecap:round}
+.vl-text{display:flex;flex-direction:column;min-width:0;flex:1 1 auto}
+.vl-titel{font-weight:700;font-size:1.05rem;line-height:1.3;white-space:nowrap}
+.vl-status{font-size:.85rem;line-height:1.3;font-weight:500;color:rgba(255,255,255,.78);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vl-zahn,.vl-urh{flex:0 0 auto;display:grid;place-items:center;width:44px;height:44px;padding:0;margin:0;background:transparent;border:0;border-radius:50%;color:rgba(255,255,255,.86);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.vl-zahn svg{width:26px;height:26px}
+.vl-urh{position:relative;font:500 .85rem/1 var(--schrift)}
+.vl-urh::before{content:"";position:absolute;inset:6px;border:1.5px solid rgba(255,255,255,.7);border-radius:50%}
+.vl-zahn:hover,.vl-urh:hover,.vl-zahn[aria-expanded="true"],.vl-urh[aria-expanded="true"]{color:#fff;background:rgba(255,255,255,.14)}
+.vl-pop{position:absolute;right:0;top:calc(100% + 10px);z-index:30;display:flex;flex-wrap:wrap;gap:8px;max-width:min(320px,calc(100vw - 32px));padding:12px;background:rgba(16,16,43,.98);border:2px solid var(--pink);border-radius:18px;box-shadow:0 0 22px rgba(255,79,163,.45),0 18px 40px rgba(0,0,0,.55)}
+.vl-pop[hidden]{display:none}
+.vl-pop-text{padding:12px 16px;font-size:.95rem;font-weight:600;flex-wrap:nowrap}
+.vl-tempo{min-width:56px;min-height:44px;padding:6px 12px;font:700 .95rem var(--schrift);color:var(--text);background:transparent;border:2px solid var(--rand);border-radius:999px;cursor:pointer}
+.vl-tempo[aria-pressed="true"]{background:linear-gradient(90deg,var(--vio),var(--pink));border-color:transparent;color:#fff}
+@media (max-width:420px){.vl-titel{font-size:1rem}.vl-pille{gap:8px;padding-right:8px}}
 .video-hinweis{margin:0 0 12px;font-size:.95rem}
 .video-hinweis[hidden]{display:none}
-@media (max-width:520px){.kopf{padding-top:64px}.tag{font-size:.7rem}}
+@media (max-width:899px){.kopf{padding-top:6px}}
+@media (max-width:520px){.tag{font-size:.7rem}}
