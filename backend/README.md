@@ -55,3 +55,31 @@ Neue Ereignistypen (z. B. `steckbrief`) mit eigener `schema_version` anhängen; 
 - `POST /m` (oeffentlich, CORS nur Klassenseite): `{"e":[["seite","de|mobil"], ...]}`. Nur Ereignisse aus der Erlaubnisliste in `src/messung.js`; gezaehlt wird in Tabelle `messung` (Tag, Ereignis, Merkmal, n), keine Besucherzeilen, keine Zeit unter Tagesgenauigkeit, keine Cookies. Grenzen: `MESSUNG_IP_MAX` (600 Ereignisse/Tag und Absender-Hash), `MESSUNG_TAGESMAX` (20000/Tag).
 - `GET /admin/messung?von=&bis=` (Bearer): Zaehler je Tag und Summen. Lesbare Uebersicht: `scripts/auswertung_messung.py` (schreibt nach `~/entwuerfe/abschlussklasse-export/messung-<Tag>.md`). Die Messung steht auch in `/admin/export`.
 - `POST /api/freigabe` (oeffentlich): Rueckmeldung der Schule als Ereignis `schulfreigabe` (append-only). Grenzen: `FREIGABE_RATE_MAX` (5/Tag und Absender-Hash), `FREIGABE_TAGESMAX` (200/Tag). Lesen: `GET /admin/freigaben` (Bearer); die Sammelmeldung hebt neue Rueckmeldungen hervor. Eine Rueckmeldung ist keine rechtsverbindliche Genehmigung.
+
+## Steckbrief (Phase A)
+
+Kern fuer «Kind beschreibt Kind» (Fachlogik: `~/auftraege/anlagen/prompt-baustein-steckbrief-portraet.md`). Additiv: Migration `0003_steckbrief.sql`, Code in `src/steckbrief/`, Routen unter `/steckbrief/*` (in `src/index.js` nur eingehaengt, Cron ruft zusaetzlich `steckbriefAufraeumen`). Tests: `test/steckbrief.test.js`. Nur lokal, nicht deployt, nur Platzhalterdaten.
+
+- **Anmeldung:** `POST /steckbrief/login {klasse,email}` schickt einen Magic Link (HMAC-signiert, 15 Min., einmalig; Kennung in `sb_tokens`). Antwort immer gleich, verraet nicht, ob die Adresse bekannt ist. `POST /steckbrief/verify {class,token}` gibt eine Sitzung (HMAC, 2 Std.) zurueck. Mailadressen nur als gesalzener HMAC-Hash. Mail-Adapter `mail.js`: Phase A nur Konsole (Adresse maskiert) plus Postausgang im Speicher fuer Tests.
+- **Fluss:** `entwurf` -> `freigabe_kind` -> (unter 16: `freigabe_eltern`, Eltern-Link 7 Tage, einmalig) -> `sichtbar`; daneben `abgelehnt`, `widerrufen`, `geloescht`. Entwurf sieht nur das beschriebene Kind (der Autor bleibt ihm verborgen). Ablehnen und Widerruf loeschen den Text sofort, ohne Freigabe nach 30 Tagen per Cron (`0 5 * * *`). Oeffentlich lesbar (`GET /steckbrief/oeffentlich?class=`) ist nur `sichtbar` und nicht gesperrt, mit Vorname, ohne Autor/Mail/Personenliste.
+- **Pruefung beim Schreiben** (`moderation.js`, `ki.js`, `inhalt.js`): Stufe 1 Wortlisten und Muster (Deutsch, Mundart, Jugendsprache, heikle Themen; Leetspeak, Leerzeichen/Trennzeichen, Wiederholungen, Homoglyphen, unsichtbare Zeichen; Muster fuer Angriffe ohne Schimpfwort, verpackte Bosheit, Gerüchte, Kontaktdaten, Anweisungen an die KI). Stufe 2 KI-Adapter (`MODERATION_ANBIETER` = `openai` | `claude`, Schluessel nur als Worker-Secret `MODERATION_KEY`; ohne Anbieter nur Stufe 1; Ausfall = nicht speichern, Meldung «spaeter nochmal»). Stufe 3 Positivvorlage (feste Felder mit Laengen, Portraet max. 120 Woerter). Blockierter Text wird nicht gespeichert, nicht zurueckgegeben und nicht protokolliert; das Audit enthaelt nur Stufencodes.
+- **Missbrauchsschutz:** Rate Limits (Anmeldung je Adresse/Anschluss, Schreiben je Kind, Melden, Lesen), Body max. 4 KB, CORS nur `ERLAUBTER_ORIGIN`, Klassentrennung ueber Klassen-Id in Sitzung und jeder Abfrage, Secrets nur als Worker-Secrets (`STECKBRIEF_SECRET` mind. 16 Zeichen, `ADMIN_TOKEN`, optional `MODERATION_KEY`).
+- **Gremium/Lehrkraft:** `GET /steckbrief/gremium/offen`, `POST /steckbrief/gremium/sperren|entsperren/:id`; Logs und Audit tragen nur zufaellige Ids. Klassen und Personen legt `POST /steckbrief/admin/klassen|personen` an (Bearer `ADMIN_TOKEN`).
+- **Grenzen:** Wortlisten fangen nie alles; deshalb erscheint nichts ohne Freigabe des Kindes (bei unter 16 plus Eltern) und Gremium kann sperren. Listen sind bewusst streng (auch Themen wie Familie, Aussehen, Herkunft werden blockiert, Fehlalarme sind moeglich). Eine Frist fuer bereits `sichtbare` Texte (nach Abschlussparty/Schuljahr) ist noch nicht eingebaut.
+
+### Anbieter-Vergleich Moderation (Schaetzung, Stand Nov 2026, nach bestem Wissen, nicht geprueft)
+
+| Anbieter | Kosten je Text (50-150 Zeichen) | Staerke | Datenschutz / Standort |
+|---|---|---|---|
+| OpenAI Moderation (`omni-moderation-latest`) | 0 $ (API kostenlos, nur Schluessel) | Hass, Gewalt, Sexuelles; erkennt «freundlich verpackte Bosheit» kaum | USA, Daten verlassen die EU; Vertrag/Auftragsverarbeitung klaeren |
+| Claude Haiku (Pruefung per Prompt, Adapter `claude`) | rund 0,0001-0,0003 $ (ca. 300 Eingabe-, 30 Ausgabe-Token) | Bester Ton-/Kontext-Check, auch Angriffe ohne Schimpfwort, Regeln frei formulierbar | Anthropic, USA; Zero-Data-Retention nur nach Vereinbarung; Eingabe zwischen `<DATEN>`-Marken |
+| Google Perspective / Cloud Natural Language | Perspective 0 $ (Kontingent, Dienst laut Google auslaufend, pruefen); NL Moderation rund 0,0005 $ je 1000 Zeichen | Toxizitaet, Beleidigung; schwach bei Mundart und Umgehung | USA, EU-Region bei Cloud NL waehlbar |
+
+Empfehlung: Wortlisten (Stufe 1) immer; als Stufe 2 Claude Haiku (Kosten bei einigen hundert Texten im Rappenbereich), OpenAI Moderation optional als kostenlose Zweitmeinung. Datenschutz bei Kindertexten: nur Text ohne Namen senden (Phase A sendet nur die Feldwerte), Einwilligung der Eltern einholen.
+
+### Offen fuer Phase B (nicht ohne Andreas)
+1. Cloudflare-Konto fuer die Klasse mit API-Token fuer Workers und D1; `wrangler d1 migrations apply DB --remote` (0003).
+2. Entscheid Mail-Absender (Anbieter, Absenderdomain; Mailadressen der Kinder und Eltern kommen von Elternhaus/Schule); `mail.js` um den echten Versand erweitern.
+3. Schluessel fuer die gewaehlte Moderation (`MODERATION_ANBIETER`, `MODERATION_KEY`, ggf. `MODERATION_MODELL`) und Worker-Secret `STECKBRIEF_SECRET` setzen.
+4. Rueckmeldung der Schule/Eltern zur Einwilligung; Datenschutz-Hinweis fuer die Seite; Frist fuer sichtbare Texte festlegen.
+5. Frontend (`steckbrief.html` auf der Klassenseite, `LINK_BASIS`), Foto-Upload (R2, Bildmoderation) und echte Klassen/Personen anlegen.

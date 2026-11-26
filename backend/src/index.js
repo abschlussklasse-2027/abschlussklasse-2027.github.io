@@ -5,6 +5,7 @@ import { entscheidungAnlegen, entscheidungenLesen } from "./entscheidungen.js";
 import { json, ndjson, gleich, sha256Hex, tag, zaehlerErhoehen } from "./util.js";
 import { pruefeMessung, messungSpeichern, messungLesen, MAX_BYTES_MESSUNG } from "./messung.js";
 import { pruefeFreigabe } from "./freigabe.js";
+import { steckbrief, steckbriefAufraeumen } from "./steckbrief/routen.js";
 
 const RATE_MAX_STANDARD = 20;     // Antworten je Tag und Absender-Hash (Schulnetz teilt oft eine IP)
 const TAGESMAX_STANDARD = 3000;   // gespeicherte Stimmen je Tag insgesamt
@@ -175,6 +176,7 @@ export default {
     if (url.pathname === "/api/stimmen") return stimme(req, env);
     if (url.pathname === "/api/freigabe") return freigabe(req, env);
     if (url.pathname === "/m") return messung(req, env);
+    if (url.pathname.startsWith("/steckbrief/")) return steckbrief(req, env, url);
     if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin/")) {
       if (!istAdmin(req, env)) return json({ fehler: "kein zugang" }, 401);
       return admin(req, env, url);
@@ -184,5 +186,6 @@ export default {
   async scheduled(event, env) {
     // Taeglich: alte Zaehler aufraeumen. Der Worker sendet keine Mails; Sammelmeldung und Sicherung holt scripts/sammelmeldung.py ab.
     await env.DB.prepare("DELETE FROM ratenzaehler WHERE tag < ?").bind(tag(new Date(Date.now() - 2 * 864e5))).run();
+    await steckbriefAufraeumen(env);
   },
 };

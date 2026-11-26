@@ -16,4 +16,5 @@ KLASSE = "abschlussklasse-2027"
 ERLAUBTER_ORIGIN = "https://abschlussklasse-2027.github.io"
 RATE_MAX = "20"               # Stimmen je Tag und Absender-Hash
 TAGESMAX = "3000"             # Stimmen je Tag insgesamt (Free-Limit D1: 100 000 Schreibzeilen/Tag)
-# Secrets (nie hier): ADMIN_TOKEN, RATE_SALT. Lokal in .dev.vars.
+LINK_BASIS = "https://abschlussklasse-2027.github.io/steckbrief.html"  # Ziel der Magic Links
+# Secrets (nie hier): ADMIN_TOKEN, RATE_SALT, STECKBRIEF_SECRET (mind. 16 Zeichen), optional MODERATION_KEY. Lokal in .dev.vars.

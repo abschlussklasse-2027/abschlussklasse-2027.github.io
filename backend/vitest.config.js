@@ -11,7 +11,7 @@ export default defineWorkersConfig(async () => {
           singleWorker: true,
           wrangler: { configPath: "./wrangler.toml" },
           miniflare: {
-            bindings: { TEST_MIGRATIONS: migrations, ADMIN_TOKEN: "test-token", RATE_SALT: "test-salt", RATE_MAX: "3" },
+            bindings: { TEST_MIGRATIONS: migrations, ADMIN_TOKEN: "test-token", RATE_SALT: "test-salt", RATE_MAX: "3", STECKBRIEF_SECRET: "test-steckbrief-geheimnis-0123456789" },
           },
         },
       },
